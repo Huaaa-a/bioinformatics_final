@@ -24,10 +24,16 @@ venv/
 **/biopython/Bio/Entrez/DTDs/
 **/biopython/Bio/Entrez/XSDs/
 
-# 数据(已上传的 pubmed 数据视情况决定要不要忽略,这里默认不忽略)
-# data/*.json
-# data/*.csv
+# 运行日志(运行时生成,不入库)
+data/*.log
+run.log
+extract_run.log
 
-# 临时修补/验证脚本
-data/_patch_*.py
-data/_verify_*.py
+# 计划/规划文档(过程性产物,不入库)
+.trae/documents/
+
+# 临时修补/验证/草稿
+data/_*.py
+data/_*.txt
+data/_*.md
+*.tmp
