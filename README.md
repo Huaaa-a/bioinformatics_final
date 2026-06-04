@@ -142,8 +142,8 @@
 │
 ├── receptor_list_classic_neurotransmitter_gpcr.xlsx   # 24 受体清单(输入)
 ├── 神经递质GPCR知识库_项目目标.docx                # 项目目标说明
-├── c6.自选实验.pdf                               # 课程实验要求
-├── c6b.基于LLM的生物医学文献知识库建立.pdf        # 参考实现 PDF
+├── c6_experiment.pdf                          # 课程实验要求
+├── c6b_llm_biomedical_kb.pdf                  # 参考实现 PDF
 │
 ├── scripts/                                      # 全部可执行脚本
 │   ├── fetch_pubmed_test_set.py                  # ① PubMed 抓取 + 文本扫描
@@ -357,6 +357,6 @@ v1 让 LLM 从 abstract 猜 journal/year/doi,导致 69% journal 名不一致。v
 - [NCBI Entrez (PubMed)](https://www.ncbi.nlm.nih.gov/books/NBK25501/) — 摘要抓取
 - [阿里云百炼 Qwen](https://bailian.console.aliyun.com/) — 字段抽取
 
-**参考实现**:课程材料 `c6b.基于LLM的生物医学文献知识库建立.pdf`
+**参考实现**:课程材料 [`c6b_llm_biomedical_kb.pdf`](c6b_llm_biomedical_kb.pdf)
 
 **数据集**:PubMed 为公开领域数据,本仓库只存摘要(abstract)与抽取出的结构化字段,无全文,不涉及版权风险。
