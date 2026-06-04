@@ -6,6 +6,19 @@ import openpyxl
 
 sys.stdout.reconfigure(encoding="utf-8")
 
+
+def strip_html(text: str) -> str:
+    if not text:
+        return ""
+    # 只剥真正的 HTML 标签(以字母开头),避免误删 "P < 0.05" / "(>35 years)" 里的尖括号
+    return re.sub(r"<[a-zA-Z][^>]*>", "", text)
+
+
+def normalize(text: str) -> str:
+    """剥 HTML 并去连字符,使 HRH-4 / DRD-2 等价于 HRH4 / DRD2。"""
+    return re.sub(r"-", "", strip_html(text))
+
+
 wb = openpyxl.load_workbook(
     "receptor_list_classic_neurotransmitter_gpcr.xlsx", data_only=True, read_only=True
 )
@@ -27,10 +40,11 @@ print(f"测试集 {len(d)} 条\n")
 
 
 def find(text, genes, names):
-    text = text or ""
-    text_l = text.lower()
-    g = [x for x in genes if re.search(rf"\b{re.escape(x)}\b", text, re.I)]
-    n = [x for x in names if x and x.lower() in text_l]
+    text_clean = strip_html(text or "")
+    text_low = text_clean.lower()
+    text_norm = re.sub(r"-", "", text_clean)
+    g = [x for x in genes if re.search(rf"\b{re.escape(x)}\b", text_norm, re.I)]
+    n = [x for x in names if x and x.lower() in text_low]
     return g, n
 
 

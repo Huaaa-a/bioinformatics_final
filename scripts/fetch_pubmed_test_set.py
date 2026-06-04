@@ -206,26 +206,32 @@ def efetch_batched(pmids: list[str], batch: int = EFETCH_BATCH) -> list[dict]:
 # ---------- 文本扫描:在 abstract 中找 24 个受体 ----------
 
 def _strip_html(text: str) -> str:
-    """把 <sub>HR</sub>H2</sub> 这类 PubMed XML 残存的 HTML 标签剥掉,避免打断匹配。"""
+    """把 <sub>HR</sub>H2</sub> 这类 PubMed XML 残存的 HTML 标签剥掉,避免打断匹配。
+
+    注意:只剥真正的 HTML 标签(以字母开头、标签内不含数学符号),避免误删
+    "P < 0.05" / "(>35 years)" 这类统计表达式里的尖括号。
+    """
     if not text:
         return ""
-    return re.sub(r"<[^>]+>", "", text)
+    return re.sub(r"<[a-zA-Z][^>]*>", "", text)
 
 
 def scan_mentions(text: str, all_genes: list[str], all_names: list[str]) -> tuple[list[str], list[str]]:
     """在 text 中扫描所有 24 个基因符号 + 受体全名 + 常见短别名。"""
     text_clean = _strip_html(text or "")
     text_low = text_clean.lower()
+    # 把 "HRH-4" / "DRD-2" 这种带连字符的写法归一为 "HRH4" / "DRD2",再做词边界匹配
+    text_norm = re.sub(r"-", "", text_clean)
     genes: list[str] = []
     for g in all_genes:
-        if re.search(rf"\b{re.escape(g)}\b", text_clean, re.IGNORECASE) and g not in genes:
+        if re.search(rf"\b{re.escape(g)}\b", text_norm, re.IGNORECASE) and g not in genes:
             genes.append(g)
     names: list[str] = []
     for n in all_names:
         n_l = n.lower()
         if n_l and n_l in text_low and n not in names:
             names.append(n)
-    # 额外:由基因符号派生的常见短别名
+    # 额外:由基因符号派生的常见短别名("5-HT1A" / "H1 receptor" 等),用原文本(保留连字符和空格)匹配
     gene_to_short = {
         "HTR1A": "5-HT1A", "HTR2A": "5-HT2A", "HTR2C": "5-HT2C", "HTR7": "5-HT7",
         "HRH1": "H1 receptor", "HRH2": "H2 receptor",

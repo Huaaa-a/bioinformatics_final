@@ -428,12 +428,9 @@
     "query_receptor_name": "5-hydroxytryptamine receptor 1A",
     "neurotransmitter_system": "serotonin",
     "fetched_at": "2026-06-04T13:01:49.528294+00:00",
-    "mentioned_receptors_in_abstract": [
-      "HTR1A",
-      "HTR2A"
-    ],
+    "mentioned_receptors_in_abstract": [],
     "mentioned_receptor_names": [],
-    "low_confidence_query": false,
+    "low_confidence_query": true,
     "assignment_method": "per_receptor_search"
   },
   {
@@ -902,9 +899,11 @@
     "query_receptor_name": "alpha-2A adrenoceptor",
     "neurotransmitter_system": "adrenergic",
     "fetched_at": "2026-06-04T13:02:07.940531+00:00",
-    "mentioned_receptors_in_abstract": [],
+    "mentioned_receptors_in_abstract": [
+      "ADRA2A"
+    ],
     "mentioned_receptor_names": [],
-    "low_confidence_query": true,
+    "low_confidence_query": false,
     "assignment_method": "per_receptor_search"
   },
   {
@@ -1410,7 +1409,6 @@
     "neurotransmitter_system": "muscarinic acetylcholine",
     "fetched_at": "2026-06-04T13:02:23.091642+00:00",
     "mentioned_receptors_in_abstract": [
-      "CHRM1",
       "CHRM2"
     ],
     "mentioned_receptor_names": [],
@@ -2296,10 +2294,7 @@
     "mentioned_receptors_in_abstract": [
       "HRH2"
     ],
-    "mentioned_receptor_names": [
-      "histamine H2 receptor",
-      "H2 receptor"
-    ],
+    "mentioned_receptor_names": [],
     "low_confidence_query": false,
     "assignment_method": "per_receptor_search"
   },
@@ -2371,12 +2366,17 @@
     "query_receptor_name": "histamine H4 receptor",
     "neurotransmitter_system": "histamine",
     "fetched_at": "2026-06-04T13:03:01.203650+00:00",
-    "mentioned_receptors_in_abstract": [],
+    "mentioned_receptors_in_abstract": [
+      "HRH1",
+      "HRH4"
+    ],
     "mentioned_receptor_names": [
       "histamine H1 receptor",
       "histamine H2 receptor",
       "histamine H3 receptor",
-      "histamine H4 receptor"
+      "histamine H4 receptor",
+      "H1 receptor",
+      "H4 receptor"
     ],
     "low_confidence_query": false,
     "assignment_method": "per_receptor_search"
@@ -2400,6 +2400,979 @@
     "fetched_at": "2026-06-04T13:03:01.203650+00:00",
     "mentioned_receptors_in_abstract": [
       "HRH4"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "31541002",
+    "title": "Nuclear Receptor Nr4a1 Regulates Striatal Striosome Development and Dopamine D<sub>1</sub> Receptor Signaling.",
+    "abstract": "The GABAergic medium-size spiny neuron (MSN), the striatal output neuron, may be classified into striosome, also known as patch, and matrix, based on neurochemical differences between the two compartments. At this time, little is known regarding the regulation of the development of the two compartments. <i>Nr4a1</i>, primarily described as a nuclear receptor/immediate early gene involved in the homeostasis of the dopaminergic system, is a striosomal marker. Using <i>Nr4a1</i>-overexpressing and <i>Nr4a1</i>-null mice, we sought to determine whether Nr4a1 is necessary and/or sufficient for striosome development. We report that <i>in vivo</i> and <i>in vitro</i>, <i>Nr4a1</i> and <i>Oprm1</i> mRNA levels are correlated. In the absence of Nr4a, there is a decrease in the percentage of striatal surface area occupied by striosomes. Alterations in <i>Nr4a1</i> expression leads to dysregulation of multiple mRNAs of members of the dopamine receptor D<sub>1</sub> signal transduction system. Constitutive overexpression of <i>Nr4a1</i> decreases both the induction of phosphorylation of ERK after a single cocaine exposure and locomotor sensitization following chronic cocaine exposure. <i>Nr4a1</i> overexpression increases MSN excitability but reduces MSN long-term potentiation. In the resting state, type 5 adenylyl cyclase (AC5) activity is normal, but the ability of AC5 to be activated by Drd1 G-protein-coupled receptor inputs is decreased. Our results support a role for <i>Nr4a1</i> in determination of striatal patch/matrix structure and in regulation of dopaminoceptive neuronal function.",
+    "authors": [
+      "Maria-Daniela Cirnaru",
+      "Chiara Melis",
+      "Tomas Fanutza",
+      "Swati Naphade",
+      "Kizito-Tshitoko Tshilenge",
+      "Brian S Muntean",
+      "Kirill A Martemyanov",
+      "Joshua L Plotkin",
+      "Lisa M Ellerby",
+      "Michelle E Ehrlich"
+    ],
+    "journal": "eNeuro",
+    "year": "2019",
+    "query_receptor_gene": "DRD1",
+    "query_receptor_name": "dopamine receptor D1",
+    "neurotransmitter_system": "dopamine",
+    "fetched_at": "2026-06-04T13:17:48.491737+00:00",
+    "mentioned_receptors_in_abstract": [
+      "DRD1"
+    ],
+    "mentioned_receptor_names": [
+      "dopamine receptor D1"
+    ],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "34046891",
+    "title": "GPCR-mediated YAP/TAZ inactivation in fibroblasts via EPAC1/2, RAP2C, and MAP4K7.",
+    "abstract": "Yes-associated protein (YAP) and PDZ-binding motif (TAZ) have emerged as important regulators of pathologic fibroblast activation in fibrotic diseases. Agonism of Gαs-coupled G protein coupled receptors (GPCRs) provides an attractive approach to inhibit the nuclear localization and function of YAP and TAZ in fibroblasts that inhibits or reverses their pathological activation. Agonism of the dopamine D1 GPCR has proven effective in preclinical models of lung and liver fibrosis. However, the molecular mechanisms coupling GPCR agonism to YAP and TAZ inactivation in fibroblasts remain incompletely understood. Here, using human lung fibroblasts, we identify critical roles for the cAMP effectors EPAC1/2, the small GTPase RAP2c, and the serine/threonine kinase MAP4K7 as the essential elements in the downstream signaling cascade linking GPCR agonism to LATS1/2-mediated YAP and TAZ phosphorylation and nuclear exclusion in fibroblasts. We further show that this EPAC/RAP2c/MAP4K7 signaling cascade is essential to the effects of dopamine D1 receptor agonism on reducing fibroblast proliferation, contraction, and extracellular matrix production. Targeted modulation of this cascade in fibroblasts may prove a useful strategy to regulate YAP and TAZ signaling and fibroblast activities central to tissue repair and fibrosis.",
+    "authors": [
+      "Kyoung Moo Choi",
+      "Andrew J Haak",
+      "Ana M Diaz Espinosa",
+      "Katherine A Cummins",
+      "Patrick A Link",
+      "Aja Aravamudhan",
+      "David K Wood",
+      "Daniel J Tschumperlin"
+    ],
+    "journal": "Journal of cellular physiology",
+    "year": "2021",
+    "query_receptor_gene": "DRD1",
+    "query_receptor_name": "dopamine receptor D1",
+    "neurotransmitter_system": "dopamine",
+    "fetched_at": "2026-06-04T13:17:48.491737+00:00",
+    "mentioned_receptors_in_abstract": [],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": true,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "37252844",
+    "title": "DRD1 signaling modulates TrkB turnover and BDNF sensitivity in direct pathway striatal medium spiny neurons.",
+    "abstract": "Disturbed motor control is a hallmark of Parkinson's disease (PD). Cortico-striatal synapses play a central role in motor learning and adaption, and brain-derived neurotrophic factor (BDNF) from cortico-striatal afferents modulates their plasticity via TrkB in striatal medium spiny projection neurons (SPNs). We studied the role of dopamine in modulating the sensitivity of direct pathway SPNs (dSPNs) to BDNF in cultures of fluorescence-activated cell sorting (FACS)-enriched D1-expressing SPNs and 6-hydroxydopamine (6-OHDA)-treated rats. DRD1 activation causes enhanced TrkB translocation to the cell surface and increased sensitivity for BDNF. In contrast, dopamine depletion in cultured dSPN neurons, 6-OHDA-treated rats, and postmortem brain of patients with PD reduces BDNF responsiveness and causes formation of intracellular TrkB clusters. These clusters associate with sortilin related VPS10 domain containing receptor 2 (SORCS-2) in multivesicular-like structures, which apparently protects them from lysosomal degradation. Thus, impaired TrkB processing might contribute to disturbed motor function in PD.",
+    "authors": [
+      "Thomas Andreska",
+      "Patrick Lüningschrör",
+      "Daniel Wolf",
+      "Rhonda L McFleder",
+      "Maurilyn Ayon-Olivas",
+      "Marta Rattka",
+      "Christine Drechsler",
+      "Veronika Perschin",
+      "Robert Blum",
+      "Sarah Aufmkolk",
+      "Noelia Granado",
+      "Rosario Moratalla",
+      "Markus Sauer",
+      "Camelia Monoranu",
+      "Jens Volkmann",
+      "Chi Wang Ip",
+      "Christian Stigloher",
+      "Michael Sendtner"
+    ],
+    "journal": "Cell reports",
+    "year": "2023",
+    "query_receptor_gene": "DRD1",
+    "query_receptor_name": "dopamine receptor D1",
+    "neurotransmitter_system": "dopamine",
+    "fetched_at": "2026-06-04T13:17:48.491737+00:00",
+    "mentioned_receptors_in_abstract": [
+      "DRD1"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "33992835",
+    "title": "Dopamine D1 receptor alleviates doxorubicin-induced cardiac injury by inhibiting NLRP3 inflammasome.",
+    "abstract": "Doxorubicin (DOX) is a broad-spectrum antineoplastic drug; however, its serious cardiotoxic side effects in inflammatory responses limit its use in clinical applications. Dopamine D1 receptor (DRD1), a G protein-coupled receptor, is crucial for the development and function of the nervous system; additionally, it also play a role in immune regulation. However, the specific role of DRD1 in DOX-induced cardiac inflammation has not yet been clarified. Here, we discovered that DRD1 expression was induced by DOX treatment in H9C2 cardiomyocytes. DRD1 activation by A-68930, a DRD1-specific agonist, decreased DOX-induced nucleotide-binding domain-like receptor protein 3 (NLRP3) expression, caspase-1 activation, and IL-1β maturation in H9C2 cells. Expression of the cytokines IL-1β and IL-18 in the supernatants was also inhibited by A-68930 treatment. DRD1 knockdown, using siRNA, abolished the effects of A-68930 on the DOX-induced NLRP3 inflammasome. Furthermore, we found that DRD1 signaling downregulated the NLRP3 inflammasome in H9C2 cells through cyclic adenosine monophosphate (cAMP). Moreover, application of A-68930 to activate DRD1 reduced cardiac injury and fibrosis in a DOX-treated mouse model by suppressing the NLRP3 inflammasome in the heart. These findings indicate that DRD1 signaling may protect against DOX-induced cardiac injury by inhibiting the NLRP3 inflammasome-mediated inflammation.",
+    "authors": [
+      "Jiao Liu",
+      "Yuxuan Jin",
+      "Bei Wang",
+      "Yiran Wang",
+      "Shengkai Zuo",
+      "Jinying Zhang"
+    ],
+    "journal": "Biochemical and biophysical research communications",
+    "year": "2021",
+    "query_receptor_gene": "DRD1",
+    "query_receptor_name": "dopamine receptor D1",
+    "neurotransmitter_system": "dopamine",
+    "fetched_at": "2026-06-04T13:17:48.491737+00:00",
+    "mentioned_receptors_in_abstract": [
+      "DRD1"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "37024146",
+    "title": "Dopamine Receptor D1 Is Exempt from Transforming Growth Factor <i>β</i>-Mediated Antifibrotic G Protein-Coupled Receptor Landscape Tampering in Lung Fibroblasts.",
+    "abstract": "Pulmonary fibroblasts are the primary producers of extracellular matrix (ECM) in the lungs, and their pathogenic activation drives scarring and loss of lung function in idiopathic pulmonary fibrosis (IPF). This uncontrolled production of ECM is stimulated by mechanosignaling and transforming growth factor beta 1 (TGF-<i>β</i>1) signaling that together promote transcriptional programs including Yes-associated protein (YAP) and transcriptional coactivator with PDZ-binding motif (TAZ). G protein-coupled receptors (GPCRs) that couple to G <i>α</i> s have emerged as pharmacological targets to inactivate YAP/TAZ signaling and promote lung fibrosis resolution. Previous studies have shown a loss of expression of \"antifibrotic GPCRs\"-receptors that couple to G <i>α</i> s, in IPF patient-derived fibroblasts compared with non-IPF samples. Of the 14 G <i>α</i> s GPCRs we found to be expressed in lung fibroblasts, the dopamine receptor D1 (<i>DRD1</i>) was one of only two not repressed by TGF-<i>β</i>1 signaling, with the <i>β</i>2-adrenergic receptor being the most repressed. We compared the potency and efficacy of multiple D1 and <i>β</i>2 receptor agonists +/- TGF-<i>β</i>1 treatment in vitro for their ability to elevate cAMP, inhibit nuclear localization of YAP/TAZ, regulate expression of profibrotic and antifibrotic genes, and inhibit cellular proliferation and collagen deposition. Consistently, the activity of <i>β</i>2 receptor agonists was lost, whereas D1 receptor agonists was maintained, after stimulating cultured lung fibroblasts with TGF-<i>β</i>1. These data further support the therapeutic potential of the dopamine receptor D1 and highlight an orchestrated and pervasive loss of antifibrotic GPCRs mediated by TGF-<i>β</i>1 signaling. SIGNIFICANCE STATEMENT: Idiopathic pulmonary fibrosis (IPF) is a deadly lung disease with limited therapies. GPCRs have emerged as a primary target for the development of novel antifibrotic drugs; however, a challenge to this approach is the dramatic changes in GPCR expression in response to profibrotic stimuli. Here, we investigate the impact of TGF-<i>β</i>1 on the expression of antifibrotic GPCRs and show the D1 dopamine receptor expression is uniquely maintained in response to TGF-<i>β</i>1, further implicating it as a compelling target to treat IPF.",
+    "authors": [
+      "Ashley Y Gao",
+      "Ana M Diaz Espinosa",
+      "Ba Bao N Nguyen",
+      "Patrick A Link",
+      "Jeffrey Meridew",
+      "Dakota L Jones",
+      "Daniel F Gibbard",
+      "Daniel J Tschumperlin",
+      "Andrew J Haak"
+    ],
+    "journal": "The Journal of pharmacology and experimental therapeutics",
+    "year": "2023",
+    "query_receptor_gene": "DRD1",
+    "query_receptor_name": "dopamine receptor D1",
+    "neurotransmitter_system": "dopamine",
+    "fetched_at": "2026-06-04T13:17:48.491737+00:00",
+    "mentioned_receptors_in_abstract": [
+      "DRD1"
+    ],
+    "mentioned_receptor_names": [
+      "dopamine receptor D1"
+    ],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "40516629",
+    "title": "Exploring the relationship between atenolol use and depression: A network pharmacology approach using NHANES data.",
+    "abstract": "Atenolol, a β-blocker, offers significant cardiovascular benefits, but its potential association with depression remains unclear. The goal of this study is to investigate the relationship between atenolol use and depression, exploring underlying mechanisms through network pharmacology. Data from 11,057 adult participants in the NHANES database (2005-2018) were analyzed. Participants were categorized by their use of atenolol, and depression levels were evaluated using the PHQ-9 scale. Logistic regression was used to analyze the association between atenolol use and depression. Additionally, network pharmacology methods were used to identify potential targets and pathways related to the neuropsychiatric effects of atenolol. A significant link was observed between atenolol use and depression (OR = 2.02, 95 % CI: 1.13-3.59) in the fully adjusted model, with a stronger association in the 40-64 years age group. Network pharmacology identified 19 core targets related to depression, including MAOB, ADRB2, DRD2, and SLC6A3, which showed strong binding affinities with atenolol. Enrichment analysis suggested that atenolol may influence the onset of depression by modulating biological processes such as G protein-coupled receptor signaling and monoamine transport. Our findings indicate a positive correlation between atenolol use and depression, particularly among individuals in the middle-aged demographic. It is important to monitor the mental health of patients when prescribing atenolol.",
+    "authors": [
+      "Yuhan Cao",
+      "Ziqi Wang",
+      "Yan Li"
+    ],
+    "journal": "Journal of affective disorders",
+    "year": "2025",
+    "query_receptor_gene": "DRD2",
+    "query_receptor_name": "dopamine receptor D2",
+    "neurotransmitter_system": "dopamine",
+    "fetched_at": "2026-06-04T13:17:54.183707+00:00",
+    "mentioned_receptors_in_abstract": [
+      "DRD2",
+      "ADRB2"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "35203352",
+    "title": "Identification of Dysregulated Expression of G Protein Coupled Receptors in Endocrine Tumors by Bioinformatics Analysis: Potential Drug Targets?",
+    "abstract": "Many studies link G protein-coupled receptors (GPCRs) to cancer. Some endocrine tumors are unresponsive to standard treatment and/or require long-term and poorly tolerated treatment. This study explored, by bioinformatics analysis, the tumoral profiling of the GPCR transcriptome to identify potential targets in these tumors aiming at drug repurposing. We explored the GPCR differentially expressed genes (DEGs) from public datasets (Gene Expression Omnibus (GEO) database and The Cancer Genome Atlas (TCGA)). The GEO datasets were available for two medullary thyroid cancers (MTCs), eighty-seven pheochromocytomas (PHEOs), sixty-one paragangliomas (PGLs), forty-seven pituitary adenomas and one-hundred-fifty adrenocortical cancers (ACCs). The TCGA dataset covered 92 ACCs. We identified GPCRs targeted by approved drugs from pharmacological databases (ChEMBL and DrugBank). The profiling of dysregulated GPCRs was tumor specific. In MTC, we found 14 GPCR DEGs, including an upregulation of the dopamine receptor (<i>DRD2</i>) and adenosine receptor (<i>ADORA2B</i>), which were the target of many drugs. In PGL, seven GPCR genes were downregulated, including vasopressin receptor (<i>AVPR1A</i>) and PTH receptor (<i>PTH1R</i>), which were targeted by approved drugs. In ACC, <i>PTH1R</i> was also downregulated in both the GEO and TCGA datasets and was the target of osteoporosis drugs. We highlight specific GPCR signatures across the major endocrine tumors. These data could help to identify new opportunities for drug repurposing.",
+    "authors": [
+      "Valentine Suteau",
+      "Mathilde Munier",
+      "Rym Ben Boubaker",
+      "Méline Wery",
+      "Daniel Henrion",
+      "Patrice Rodien",
+      "Claire Briet"
+    ],
+    "journal": "Cells",
+    "year": "2022",
+    "query_receptor_gene": "DRD2",
+    "query_receptor_name": "dopamine receptor D2",
+    "neurotransmitter_system": "dopamine",
+    "fetched_at": "2026-06-04T13:17:54.183707+00:00",
+    "mentioned_receptors_in_abstract": [
+      "DRD2"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "33806345",
+    "title": "Involvement of the Catecholamine Pathway in Glioblastoma Development.",
+    "abstract": "Glioblastoma (GBM) is the most aggressive tumor of the central nervous system (CNS). The standard of care improves the overall survival of patients only by a few months. Explorations of new therapeutic targets related to molecular properties of the tumor are under way. Even though neurotransmitters and their receptors normally function as mediators of interneuronal communication, growing data suggest that these molecules are also involved in modulating the development and growth of GBM by acting on neuronal and glioblastoma stem cells. In our previous DNA CpG methylation studies, gene ontology analyses revealed the involvement of the monoamine pathway in sequential GBM. In this follow-up study, we quantitated the expression levels of four selected catecholamine pathway markers (alpha 1D adrenergic receptor-ADRA1D; adrenergic beta receptor kinase 1 or G protein-coupled receptor kinase 2-ADRBK1/GRK2; dopamine receptor D2-DRD2; and synaptic vesicle monoamine transporter-SLC18A2) by immunohistochemistry, and compared the histological scores with the methylation levels within the promoters + genes of these markers in 21 pairs of sequential GBM and in controls. Subsequently, we also determined the promoter and gene methylation levels of the same markers in an independent database cohort of sequential GBM pairs. These analyses revealed partial inverse correlations between the catecholamine protein expression and promoter + gene methylation levels, when the tumor and control samples were compared. However, we found no differences in the promoter + gene methylation levels of these markers in either our own or in the database primary-recurrent GBM pairs, despite the higher protein expression of all markers in the primary samples. This observation suggests that regulation of catecholamine expression is only partially related to CpG methylation within the promoter + gene regions, and additional mechanisms may also influence the expression of these markers in progressive GBM. These analyses underscore the involvement of certain catecholamine pathway markers in GBM development and suggest that these molecules mediating or modulating tumor growth merit further exploration.",
+    "authors": [
+      "Zoltán Kraboth",
+      "Bela Kajtár",
+      "Bence Gálik",
+      "Attila Gyenesei",
+      "Attila Miseta",
+      "Bernadette Kalman"
+    ],
+    "journal": "Cells",
+    "year": "2021",
+    "query_receptor_gene": "DRD2",
+    "query_receptor_name": "dopamine receptor D2",
+    "neurotransmitter_system": "dopamine",
+    "fetched_at": "2026-06-04T13:17:54.183707+00:00",
+    "mentioned_receptors_in_abstract": [],
+    "mentioned_receptor_names": [
+      "dopamine receptor D2"
+    ],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "36807226",
+    "title": "Coupling between GPR143 and dopamine D2 receptor is required for selective potentiation of dopamine D2 receptor function by L-3,4-dihydroxyphenylalanine in the dorsal striatum.",
+    "abstract": "Dopamine (DA) is involved in neurological and physiological functions such as motor control. L-3,4-dihydroxyphenylalanine (L-DOPA), a precursor of DA, is conventionally believed to be an inert amino acid precursor of DA, and its major therapeutic effects in Parkinson's disease (PD) are mediated through its conversion to DA. On the contrary, accumulating evidence suggests that L-DOPA itself is a neurotransmitter. We here show that L-DOPA potentiates DA D2 receptor (DRD2) signaling through GPR143, the gene product of X-linked ocular albinism 1, a G-protein-coupled receptor for L-DOPA. In Gpr143-gene-deficient (Gpr143<sup>-/y</sup> ) mice, quinpirole, a DRD2/DRD3 agonist, -induced hypolocomotion was attenuated compared to wild-type (WT) mice. Administration of non-effective dose of L-DOPA methyl ester augmented the quinpirole-induced hypolocomotion in WT mice but not in Gpr143<sup>-/y</sup> mice. In cells co-expressing GPR143 and DRD2, L-DOPA enhanced the interaction between GPR143 and DRD2 and augmented quinpirole-induced decrease in cAMP levels. This augmentation by L-DOPA was not observed in cells co-expressing GPR143 and DRD1 or DRD3. Chimeric analysis in which the domain of GPR143 was replaced with GPR37 revealed that GPR143 interacted with DRD2 at the fifth transmembrane domain. Intracerebroventricular administration of a peptide that disrupted the interaction mitigated quinpirole-induced behavioral changes in WT mice but not in Gpr143<sup>-/y</sup> mice. These findings provide evidence that coupling between GPR143 and DRD2 is required for selective DRD2 modulation by L-DOPA in the dorsal striatum.",
+    "authors": [
+      "Daiki Masukawa",
+      "Satoshi Kitamura",
+      "Rei Tajika",
+      "Hiraku Uchimura",
+      "Masami Arai",
+      "Yuuki Takada",
+      "Tetsu Arisawa",
+      "Momoyo Otaki",
+      "Kaori Kanai",
+      "Kenta Kobayashi",
+      "Tomoyuki Miyazaki",
+      "Yoshio Goshima"
+    ],
+    "journal": "Journal of neurochemistry",
+    "year": "2023",
+    "query_receptor_gene": "DRD2",
+    "query_receptor_name": "dopamine receptor D2",
+    "neurotransmitter_system": "dopamine",
+    "fetched_at": "2026-06-04T13:17:54.183707+00:00",
+    "mentioned_receptors_in_abstract": [
+      "DRD1",
+      "DRD2"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "38879471",
+    "title": "Shaoyao Decoction reduced T lymphocyte activation by regulating of intestinal flora and 5-hydroxytryptamine metabolism in ulcerative colitis.",
+    "abstract": "Shaoyao Decoction (SYD) is a widely recognized herbal formula utilized in traditional Chinese medicine for the treatment of diarrhea. Although it has demonstrated significant effectiveness in clinical practice for treating ulcerative colitis, the precise mechanisms by which it operates remain largely elusive. The active ingredients of SYD were obtained by ultra performance liquid chromatography tandem mass spectrometry (UPLC-MS/MS), which were used to explore the potential pharmacological mechanism based on TCMSP (Traditional Chinese Medicine Systems Pharmacology Database and Analysis Platform) and PANTHER (Protein Analysis Through Evolutionary Relationships) classification system. In a mouse model of dextran sulfate sodium (DSS)-induced colitis, mRNA sequencing, 16S rDNA sequencing and targeted metabolomics techniques were used to elucidate the mechanisms of SYD, and immunohistochemistry, immunofluorescence, enzyme linked immunosorbent assay, real time quantitative polymerase chain reaction and western blot were used to test the key targets. In addition, QGP-1 and H9 cells were performed to validate the discoveries from the animal experiments. In the mouse model of DSS-induced colitis, SYD effectively alleviated symptoms such as bloody stool, tissue damage, inflammation, intestinal flora dysbiosis and abnormal gene expression. Analyses of both differential expressed genes in colonic tissue and predicted 16S rDNA genes, as well as the analyses of targeted genes from TCMSP based on the active ingredients in UPLC-MS/MS of SYD, uncovered the enrichment of pathways involved in the biosynthesis and degredation of 5-hydroxytryptamine (5-HT). Interestingly, SYD suppressed the relative abundance of key genes in 5-HT synthesis, Tph1(Tryptophan hydroxylase 1) and Ddc (Dopa decarboxylase), in faeces from DSS-induced mice, leading to a reduction in the concentration of fecal 5-HT. Moreover, SYD augmented the production of butyric acid. Subsequently, increasing butyric acid influenced the metabolism of 5-HT in the organism through G protein-coupled receptor 43 by impeding its synthesis, facilitating its transport and degredation. These findings were additionally corroborated in a model utilizing enterochromaffin cell (QGP-1 cells). Furthermore, reduced levels of 5-HT hindered the activation of T lymphocytes (H9 cells) via the PKC (Protein kinase C) and NF-κB (Nuclear factor kappa-B) signaling pathways, by means of HTR1A (5-HT receptor 1A) and HTR3 (5-HT receptor 3). Additionally, diminished secretion of 5-HT resulted in reduced secretion of associated cytokines, thereby alleviating inflammation in the colon. Through modulation of T lymphocyte activation mediated by 5-HT metabolism in the local colon via the intestinal flora and its metabolite, SYD effectively mitigated colonic inflammation in DSS-induced mice.",
+    "authors": [
+      "Jianhua Zhen",
+      "Yini Li",
+      "Yunan Zhang",
+      "Yali Zhou",
+      "Lu Zhao",
+      "Guangrui Huang",
+      "Anlong Xu"
+    ],
+    "journal": "Chinese medicine",
+    "year": "2024",
+    "query_receptor_gene": "HTR1A",
+    "query_receptor_name": "5-hydroxytryptamine receptor 1A",
+    "neurotransmitter_system": "serotonin",
+    "fetched_at": "2026-06-04T13:17:56.938531+00:00",
+    "mentioned_receptors_in_abstract": [
+      "HTR1A"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "41396999",
+    "title": "Tuning the Response of GPCR-Based Yeast Sensors Using Fluorescent Reporters.",
+    "abstract": "G protein-coupled receptors (GPCRs) recognize ligands on the cell surface, initiating intracellular signaling pathways that control a variety of biological processes, from neurotransmission and hormone regulation to light detection and smell. As entryways into these pathways, GPCRs are key pharmacological targets, with 30% of FDA-approved drugs targeting them. High-throughput GPCR-based sensors in yeast are proven platforms for the identification of novel GPCR ligands. Most human GPCRs (hGPCRs), however, led to small increases in the signal after activation, hindering the development of high-throughput (HT) assays. To streamline the generation of HT assays for biomedically important hGPCRs, here we analyze five fluorescent reporters in the context of hGPCR-based sensors. Using the serotonin receptor 4 (HTR4)-based sensor as a testbed, we identify YPet, a yellow fluorescent protein previously evolved for improved intracellular fluorescence, as the optimal fluorescent reporter when using flow cytometry, fluorescence-activated cell sorting, or a fluorescent plate reader. YPet increases the dynamic range of hGPCR-based sensors in general, enabling the engineering of HTR4-, MC4R- S1PR2-, HTR1A-, and Mel1A-based sensors with vastly higher increases in signal than previously engineered sensors. YPet even allowed the construction of a functional HTR1D-based sensor, a sensor that had been difficult for the field to construct. Finally, the fast maturation of YPet reduces the time to readout from 4 h to 30 min, unlocking point-of-care diagnostic applications previously inaccessible to hGPCR-based sensors in yeast. Looking ahead, the identification of YPet as the optimal fluorescent reporter for yeast hGPCR-based sensors opens the door to the standardized generation of hGPCR high-throughput assays in this host, and sets the stage for ultrahigh-throughput single-cell experiments toward the identification of new ligands for known GPCRs, GPCR deorphanization, and GPCR engineering to bind designer ligands.",
+    "authors": [
+      "Ryan Langevin",
+      "McKenna Martin-Downey",
+      "Amisha Patel",
+      "Haden Archer",
+      "Sara J Davila Severiano",
+      "Pamela Peralta-Yahya"
+    ],
+    "journal": "ACS synthetic biology",
+    "year": "2026",
+    "query_receptor_gene": "HTR1A",
+    "query_receptor_name": "5-hydroxytryptamine receptor 1A",
+    "neurotransmitter_system": "serotonin",
+    "fetched_at": "2026-06-04T13:17:56.938531+00:00",
+    "mentioned_receptors_in_abstract": [
+      "HTR1A"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "37848733",
+    "title": "Anti-angiogenic mechanisms and serotonergic dysfunction in the Rgs2 knockout model for the study of psycho-obstetric risk.",
+    "abstract": "Psychiatric and obstetric diseases are growing threats to public health and share high rates of co-morbidity. G protein-coupled receptor signaling (e.g., vasopressin, serotonin) may be a convergent psycho-obstetric risk mechanism. Regulator of G Protein Signaling 2 (RGS2) mutations increase risk for both the gestational disease preeclampsia and for depression. We previously found preeclampsia-like, anti-angiogenic obstetric phenotypes with reduced placental Rgs2 expression in mice. Here, we extend this to test whether conserved cerebrovascular and serotonergic mechanisms are also associated with risk for neurobiological phenotypes in the Rgs2 KO mouse. Rgs2 KO exhibited anxiety-, depression-, and hedonic-like behaviors. Cortical vascular density and vessel length decreased in Rgs2 KO; cortical and white matter thickness and cell densities were unchanged. In Rgs2 KO, serotonergic gene expression was sex-specifically changed (e.g., cortical Htr2a, Maoa increased in females but all serotonin targets unchanged or decreased in males); redox-related expression increased in paraventricular nucleus and aorta; and angiogenic gene expression was changed in male but not female cortex. Whole-cell recordings from dorsal raphe serotonin neurons revealed altered 5-HT1A receptor-dependent inhibitory postsynaptic currents (5-HT1A-IPSCs) in female but not male KO neurons. Additionally, serotonin transporter blockade by the SSRI sertraline increased the amplitude and time-to-peak of 5-HT1A-IPSCs in KO neurons to a greater extent than in WT neurons in females only. These results demonstrate behavioral, cerebrovascular, and sertraline hypersensitivity phenotypes in Rgs2 KOs, some of which are sex-specific. Disruptions may be driven by vascular and cell stress mechanisms linking the shared pathogenesis of psychiatric and obstetric disease to reveal future targets.",
+    "authors": [
+      "Serena B Gumusoglu",
+      "Michaela D Kiel",
+      "Aleigha Gugel",
+      "Brandon M Schickling",
+      "Kaylee R Weaver",
+      "Marisol C Lauffer",
+      "Hannah R Sullivan",
+      "Kaylie J Coulter",
+      "Brianna M Blaine",
+      "Mushroor Kamal",
+      "Yuping Zhang",
+      "Eric J Devor",
+      "Donna A Santillan",
+      "Stephanie C Gantz",
+      "Mark K Santillan"
+    ],
+    "journal": "Neuropsychopharmacology : official publication of the American College of Neuropsychopharmacology",
+    "year": "2024",
+    "query_receptor_gene": "HTR2A",
+    "query_receptor_name": "5-hydroxytryptamine receptor 2A",
+    "neurotransmitter_system": "serotonin",
+    "fetched_at": "2026-06-04T13:18:00.001619+00:00",
+    "mentioned_receptors_in_abstract": [
+      "HTR2A"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "36671883",
+    "title": "Improved Split TEV GPCR β-arrestin-2 Recruitment Assays via Systematic Analysis of Signal Peptide and β-arrestin Binding Motif Variants.",
+    "abstract": "G protein-coupled receptors (GPCRs) are major disease-relevant drug targets; robust monitoring of their activities upon drug treatment is key to drug discovery. The split TEV cell-based assay technique monitors the interaction of an activated GPCR with β-arrestin-2 through TEV protein fragment complementation using a luminescent signal as the readout. In this work, split TEV GPCR β-arrestin-2 recruitment assays were optimized to monitor the endogenous ligand-induced activities of six GPCRs (DRD1, DRD2, HTR2A, GCGR, AVPR2, and GLP1R). Each GPCR was tested in four forms; i.e., its wildtype form, a variant with a signal peptide (SP) to facilitate receptor expression, a variant containing the C-terminal tail from the V2 vasopressin receptor (V2R tail) to promote β-arrestin-2 recruitment, and a variant containing both the SP and V2R tail. These 24 GPCR variants were systematically tested for assay performance in four cell lines (HEK-293, PC12 Tet-Off, U-2 OS, and HeLa). We found that the assay performance differed significantly for each GPCR variant and was dependent on the cell line. We found that V2R improved the DRD2 split TEV assays and that HEK-293 cells were the preferred cell line across the GPCRs tested. When taking these considerations into account, the defined selection of assay modifications and conditions may improve the performance of drug development campaigns that apply the split TEV technique as a screening tool.",
+    "authors": [
+      "Yuxin Wu",
+      "Isabelle V von Hauff",
+      "Niels Jensen",
+      "Moritz J Rossner",
+      "Michael C Wehr"
+    ],
+    "journal": "Biosensors",
+    "year": "2022",
+    "query_receptor_gene": "HTR2A",
+    "query_receptor_name": "5-hydroxytryptamine receptor 2A",
+    "neurotransmitter_system": "serotonin",
+    "fetched_at": "2026-06-04T13:18:00.001619+00:00",
+    "mentioned_receptors_in_abstract": [
+      "DRD1",
+      "DRD2",
+      "HTR2A"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "28208011",
+    "title": "Glucosylsphingosine Activates Serotonin Receptor 2a and 2b: Implication of a Novel Itch Signaling Pathway.",
+    "abstract": "Recent reports claimed that glucosylsphingosine (GS) is highly accumulated and specifically evoking itch-scratch responses in the skins of atopic dermatitis (AD) patients. However, it was unclear how GS can trigger itch-scratch responses, since there were no known molecular singling pathways revealed yet. In the present study, it was verified for the first time that GS can activate mouse serotonin receptor 2a (mHtr2a) and 2b (mHtr2b), but not 2c (mHtr2c) that are expressed in HEK293T cells. Specifically, effects of GS on all mouse serotonin receptor 2 subfamily were evaluated by calcium imaging techniques. The GS-induced intracellular calcium increase was dose-dependent, and antagonists such as ketanserin (Htr2a antagonist) and RS-127445 (Htr2b antagonist) significantly blocked the GS-induced responses. Moreover, the proposed GS-induced responses appear to be mediated by phospholipase C (PLC), since pretreatment of a PLC inhibitor U-73122 abolished the GS-induced responses. Additionally, the GS-induced calcium influx is probably mediated by endogenous TRPC ion channels in HEK293T cells, since pretreatment of SKF-96365, an inhibitor for TRPC, significantly suppressed GS-induced response. In conclusion, the present study revealed for the first time that GS can stimulate mHtr2a and mHtr2b to induce calcium influx, by utilizing PLC-dependent pathway afterwards. Considering that GS is regarded as a pruritogen in AD, the present study implicates a novel GS-induced itch signaling pathway.",
+    "authors": [
+      "Ramsha Afzal",
+      "Won-Sik Shim"
+    ],
+    "journal": "Biomolecules & therapeutics",
+    "year": "2017",
+    "query_receptor_gene": "HTR2A",
+    "query_receptor_name": "5-hydroxytryptamine receptor 2A",
+    "neurotransmitter_system": "serotonin",
+    "fetched_at": "2026-06-04T13:18:00.001619+00:00",
+    "mentioned_receptors_in_abstract": [
+      "HTR2A"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "30009772",
+    "title": "Different roles of FAT10, FOXO1, and ADRA2A in hepatocellular carcinoma tumorigenesis in patients with alcoholic steatohepatitis (ASH) vs non-alcoholic steatohepatitis (NASH).",
+    "abstract": "Hepatocellular carcinoma (HCC) is the fifth most common cancer and the second leading cause of cancer related deaths worldwide. Among others, non-alcoholic steatohepatitis (NASH) and alcoholic steatohepatitis (ASH) are the two major risk factors as both of them may develop cirrhosis and hepatocellular carcinoma (HCC) if left untreated. However, patients with NASH progress to HCC at a rate around 0.5% annually, while 3-10% ASH patients may progress to HCC annually. The present study is to demonstrate the molecular differences in oncogenesis pathway between NASH and ASH. By using immunofluorescence study and quantitating the fluorescence intensity morphometrically in liver biopsied specimens from NASH and ASH patients, the protein expression of candidate molecules within hepatocytes cytoplasm are studied, including two HCC-related molecules FAT10 and FOXO1, and one GPCR pathway related molecule ADRA2A. Compared with the control group patients, the expression levels of all the molecules were upregulated in the ASH group of patients (p < 0.001 in all molecules), while FAT10 and ADRA2A were upregulated, FOXO1 did not change in the NASH group of patients. The most important finding is that compared with the ASH group of patients, the expression levels of all three molecules were significantly lower than in the NASH group of patients (p < 0.001 in all molecules). These results confirmed our previous finding that there are significant differences of molecules change in ASH compared to NASH. Thus, we conclude that there are significantly different molecules and pathways involved during the pathogenesis of HCC development in ASH compared to NASH which could help explain why the tumorigenic rate is different in ASH and NASH.",
+    "authors": [
+      "Yue Jia",
+      "Barbara French",
+      "Brittany Tillman",
+      "Samuel French"
+    ],
+    "journal": "Experimental and molecular pathology",
+    "year": "2018",
+    "query_receptor_gene": "ADRA2A",
+    "query_receptor_name": "alpha-2A adrenoceptor",
+    "neurotransmitter_system": "adrenergic",
+    "fetched_at": "2026-06-04T13:18:05.855685+00:00",
+    "mentioned_receptors_in_abstract": [
+      "ADRA2A"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "26928540",
+    "title": "Quantification of the mRNA expression of G protein-coupled receptors in human adipose tissue.",
+    "abstract": "G protein-coupled receptors (GPCRs) are important regulators of human physiology and therefore the targets of a large number of modern therapeutics. Although GPCRs are important regulators of adipose tissue endocrine and energy storage functions, the expression and function of a majority of GPCRs in adipose tissue is poorly characterized. A first step in the functional characterization of adipose tissue GPCRs is to accurately quantify the expression of GPCRs in adipose tissue. In this methods chapter, a detailed, step-by-step protocol is presented for the isolation of adipose tissue total RNA, its conversion into cDNA and the real-time PCR quantification of human GPCR mRNA expression relative to the mRNA expression of the stable adipose tissue housekeeping gene peptidylprolyl isomerase A (PPIA). A comprehensive list of 377 manually validated, commercially available GPCR qPCR primers allows facilitated swift quantification of either the entire human GPCRome or individual GPCRs, thus providing a sensitive, flexible, and cost-effective means of determining the mRNA expression of GPCRs in adipose tissue.",
+    "authors": [
+      "Stefan Amisten"
+    ],
+    "journal": "Methods in cell biology",
+    "year": "2016",
+    "query_receptor_gene": "ADRA2A",
+    "query_receptor_name": "alpha-2A adrenoceptor",
+    "neurotransmitter_system": "adrenergic",
+    "fetched_at": "2026-06-04T13:18:05.855685+00:00",
+    "mentioned_receptors_in_abstract": [],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": true,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "36238301",
+    "title": "Dysregulated autoantibodies targeting vaso- and immunoregulatory receptors in Post COVID Syndrome correlate with symptom severity.",
+    "abstract": "Most patients with Post COVID Syndrome (PCS) present with a plethora of symptoms without clear evidence of organ dysfunction. A subset of them fulfills diagnostic criteria of myalgic encephalomyelitis/chronic fatigue syndrome (ME/CFS). Symptom severity of ME/CFS correlates with natural regulatory autoantibody (AAB) levels targeting several G-protein coupled receptors (GPCR). In this exploratory study, we analyzed serum AAB levels against vaso- and immunoregulatory receptors, mostly GPCRs, in 80 PCS patients following mild-to-moderate COVID-19, with 40 of them fulfilling diagnostic criteria of ME/CFS. Healthy seronegative (n=38) and asymptomatic post COVID-19 controls (n=40) were also included in the study as control groups. We found lower levels for various AABs in PCS compared to at least one control group, accompanied by alterations in the correlations among AABs. Classification using random forest indicated AABs targeting ADRB2, STAB1, and ADRA2A as the strongest classifiers (AABs stratifying patients according to disease outcomes) of post COVID-19 outcomes. Several AABs correlated with symptom severity in PCS groups. Remarkably, severity of fatigue and vasomotor symptoms were associated with ADRB2 AAB levels in PCS/ME/CFS patients. Our study identified dysregulation of AAB against various receptors involved in the autonomous nervous system (ANS), vaso-, and immunoregulation and their correlation with symptom severity, pointing to their role in the pathogenesis of PCS.",
+    "authors": [
+      "Franziska Sotzny",
+      "Igor Salerno Filgueiras",
+      "Claudia Kedor",
+      "Helma Freitag",
+      "Kirsten Wittke",
+      "Sandra Bauer",
+      "Nuno Sepúlveda",
+      "Dennyson Leandro Mathias da Fonseca",
+      "Gabriela Crispim Baiocchi",
+      "Alexandre H C Marques",
+      "Myungjin Kim",
+      "Tanja Lange",
+      "Desirée Rodrigues Plaça",
+      "Finn Luebber",
+      "Frieder M Paulus",
+      "Roberta De Vito",
+      "Igor Jurisica",
+      "Kai Schulze-Forster",
+      "Friedemann Paul",
+      "Judith Bellmann-Strobl",
+      "Rebekka Rust",
+      "Uta Hoppmann",
+      "Yehuda Shoenfeld",
+      "Gabriela Riemekasten",
+      "Harald Heidecke",
+      "Otavio Cabral-Marques",
+      "Carmen Scheibenbogen"
+    ],
+    "journal": "Frontiers in immunology",
+    "year": "2022",
+    "query_receptor_gene": "ADRA2A",
+    "query_receptor_name": "alpha-2A adrenoceptor",
+    "neurotransmitter_system": "adrenergic",
+    "fetched_at": "2026-06-04T13:18:05.855685+00:00",
+    "mentioned_receptors_in_abstract": [
+      "ADRA2A",
+      "ADRB2"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "30569177",
+    "title": "Identification of gene biomarkers in patients with postmenopausal osteoporosis.",
+    "abstract": "Postmenopausal osteoporosis (PMOP) is a major public health concern worldwide. The present study aimed to provide evidence to assist in the development of specific novel biomarkers for PMOP. Differentially expressed genes (DEGs) were identified between PMOP and normal controls by integrated microarray analyses of the Gene Expression Omnibus (GEO) database, and the optimal diagnostic gene biomarkers for PMOP were identified with LASSO and Boruta algorithms. Classification models, including support vector machine (SVM), decision tree and random forests models, were established to test the diagnostic value of identified gene biomarkers for PMOP. Functional annotations and protein‑protein interaction (PPI) network constructions were also conducted. Integrated microarray analyses (GSE56815, GSE13850 and GSE7429) of the GEO database were employed, and 1,320 DEGs were identified between PMOP and normal controls. An 11‑gene combination was also identified as an optimal biomarker for PMOP by feature selection and classification methods using SVM, decision tree and random forest models. This combination was comprised of the following genes: Dehydrogenase E1 and transketolase domain containing 1 (DHTKD1), osteoclast stimulating factor 1 (OSTF1), G protein‑coupled receptor 116 (GPR116), BCL2 interacting killer, adrenoceptor β1 (ADRB1), neogenin 1 (NEO1), RB binding protein 4 (RBBP4), GPR87, cylicin 2, EF‑hand calcium binding domain 1 and DEAH‑box helicase 35. RBBP4 (degree=12) was revealed to be the hub gene of this PMOP‑specific PPI network. Among these 11 genes, three genes (OSTF1, ADRB1 and NEO1) were speculated to serve roles in PMOP by regulating the balance between bone formation and bone resorption, while two genes (GPR87 and GPR116) may be involved in PMOP by regulating the nuclear factor‑κB signaling pathway. Furthermore, DHTKD1 and RBBP4 may be involved in PMOP by regulating mitochondrial dysfunction and interacting with ESR1, respectively. In conclusion, the findings of the current study provided an insight for exploring the mechanism and developing novel biomarkers for PMOP. Further studies are required to test the diagnostic value for PMOP prior to use in a clinical setting.",
+    "authors": [
+      "Chenggang Yang",
+      "Jing Ren",
+      "Bangling Li",
+      "Chuandi Jin",
+      "Cui Ma",
+      "Cheng Cheng",
+      "Yaolan Sun",
+      "Xiaofeng Shi"
+    ],
+    "journal": "Molecular medicine reports",
+    "year": "2019",
+    "query_receptor_gene": "ADRB1",
+    "query_receptor_name": "beta-1 adrenoceptor",
+    "neurotransmitter_system": "adrenergic",
+    "fetched_at": "2026-06-04T13:18:08.082684+00:00",
+    "mentioned_receptors_in_abstract": [
+      "ADRB1"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "26773201",
+    "title": "Dynamic mass redistribution reveals diverging importance of PDZ-ligands for G protein-coupled receptor pharmacodynamics.",
+    "abstract": "G protein-coupled receptors (GPCRs) are essential membrane proteins that facilitate cell-to-cell communication and co-ordinate physiological processes. At least 30 human GPCRs contain a Type I PSD-95/DLG/Zo-1 (PDZ) ligand in their distal C-terminal domain; this four amino acid motif of X-[S/T]-X-[φ] sequence facilitates interactions with PDZ domain-containing proteins. Because PDZ protein interactions have profound effects on GPCR ligand pharmacology, cellular localization, signal-transduction effector coupling and duration of activity, we analyzed the importance of Type I PDZ ligands for the function of 23 full-length and PDZ-ligand truncated (ΔPDZ) human GPCRs in cultured human cells. SNAP-epitope tag polyacrylamide gel electrophoresis revealed most Type I PDZ GPCRs exist as both monomers and multimers; removal of the PDZ ligand played minimal role in multimer formation. Additionally, SNAP-cell surface staining indicated removal of the PDZ ligand had minimal effects on plasma membrane localization for most GPCRs examined. Label-free dynamic mass redistribution functional responses, however, revealed diverging effects of the PDZ ligand. While no clear trend was observed across all GPCRs tested or even within receptor families, a subset of GPCRs displayed diminished agonist efficacy in the absence of a PDZ ligand (i.e. HT2RB, ADRB1), whereas others demonstrated enhanced agonist efficacies (i.e. LPAR2, SSTR5). These results demonstrate the utility of label-free functional assays to tease apart the contributions of conserved protein interaction domains for GPCR signal-transduction coupling in cultured cells.",
+    "authors": [
+      "Nathan D Camp",
+      "Kyung-Soon Lee",
+      "Allison Cherry",
+      "Jennifer L Wacker-Mhyre",
+      "Timothy S Kountz",
+      "Ji-Min Park",
+      "Dorathy-Ann Harris",
+      "Marianne Estrada",
+      "Aaron Stewart",
+      "Nephi Stella",
+      "Alejandro Wolf-Yadlin",
+      "Chris Hague"
+    ],
+    "journal": "Pharmacological research",
+    "year": "2016",
+    "query_receptor_gene": "ADRB1",
+    "query_receptor_name": "beta-1 adrenoceptor",
+    "neurotransmitter_system": "adrenergic",
+    "fetched_at": "2026-06-04T13:18:08.082684+00:00",
+    "mentioned_receptors_in_abstract": [
+      "ADRB1"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "36107363",
+    "title": "Effect of Clinical and Genetic Factors on the Development of Postoperative Atrial Fibrillation After Coronary Artery Bypass Grafting (CABG) in Egyptian Patients Receiving Beta-Blockers.",
+    "abstract": "Prophylactic beta-blockers are recommended to prevent postoperative atrial fibrillation (POAF) after coronary artery bypass grafting (CABG). Polymorphisms in the beta-1 adrenergic receptor (ADRB1) and G protein-coupled receptor kinase 5 (GRK5) genes are associated with variable responses to beta-blockers. The aim of this study was to determine the clinical and genetic factors that influence the response to beta-blockers for POAF prophylaxis after CABG. Patients undergoing isolated CABG and receiving prophylactic beta-blockers (n = 249) were prospectively recruited and followed up for 6 postoperative days. Genotyping of ADRB1 rs1801253, and 3 GRK5 SNPs (rs3740563, rs10787959, and rs17098707) was performed. Of the 249 patients, 52 patients (20.8%) experienced POAF. Age, hypertension, vasopressor use, calculated POAF risk score, GRK5 rs2230345 T-allele, and GRK5 rs3740563 A-allele were associated with POAF despite beta-blocker prophylaxis. The multivariate analysis revealed that age [odds ratio (OR) 1.06, 95% CI 1.02-1.11, p = 0.003] and GRK5 rs2230345 T-allele [OR 2.81, 95% CI 1.39-5.67, p = 0.004] were independent predictors of POAF after CABG despite beta-blocker prophylaxis. GRK5 rs2230345 T-allele carriers were less responsive than AA genotype carriers to prophylactic beta-blockers for the prevention of POAF after CABG. The study was registered on http://clinicaltrials.gov in March 2019, with trial registration number (TRN): NCT03871647.",
+    "authors": [
+      "Dina M K El Gindy",
+      "Mohamed H Solayman",
+      "Ramy Khorshid",
+      "Mona F Schaalan",
+      "Lamia M El Wakeel"
+    ],
+    "journal": "Cardiovascular drugs and therapy",
+    "year": "2024",
+    "query_receptor_gene": "ADRB1",
+    "query_receptor_name": "beta-1 adrenoceptor",
+    "neurotransmitter_system": "adrenergic",
+    "fetched_at": "2026-06-04T13:18:08.082684+00:00",
+    "mentioned_receptors_in_abstract": [
+      "ADRB1"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "28501616",
+    "title": "Identification of phosphorylation sites on β1-adrenergic receptor in the mouse heart.",
+    "abstract": "β1-adrenergic receptor (Adrb1) belongs to the superfamily of G-protein-coupled receptors (GPCRs) and plays a critical role in the regulation of heart rate and myocardial contraction force. GPCRs are phosphorylated at multiple sites to regulate distinct signal transduction pathways in different tissues. However, little is known about the location and function of distinct phosphorylation sites of Adrb1 in vivo. To clarify the mechanisms underlying functional regulation associated with Adrb1 phosphorylation in vivo, we aimed to identify Adrb1 phosphorylation sites in the mouse heart using phosphoproteomics techniques with nano-flow liquid chromatography/tandem mass spectrometry (LC-MS/MS). We revealed the phosphorylation residues of Adrb1 to be Ser274 and Ser280 in the third intracellular loop and Ser412, Ser417, Ser450, Ser451, and Ser462 at the C-terminus. We also found that phosphorylation at Ser274, Ser280, and Ser462 was enhanced in response to stimulation with an Adrb1 agonist. This is the first study to identify Adrb1 phosphorylation sites in vivo. These findings will provide novel insights into the regulatory mechanisms mediated by Adrb1 phosphorylation.",
+    "authors": [
+      "Kozo Hayashi",
+      "Masamitsu Gotou",
+      "Toshikatsu Matsui",
+      "Kenichi Imahashi",
+      "Tomoyuki Nishimoto",
+      "Hiroyuki Kobayashi"
+    ],
+    "journal": "Biochemical and biophysical research communications",
+    "year": "2017",
+    "query_receptor_gene": "ADRB1",
+    "query_receptor_name": "beta-1 adrenoceptor",
+    "neurotransmitter_system": "adrenergic",
+    "fetched_at": "2026-06-04T13:18:08.082684+00:00",
+    "mentioned_receptors_in_abstract": [
+      "ADRB1"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "41303600",
+    "title": "Novel SNP Combination for Predictive Osteoporotic Diagnosis.",
+    "abstract": "Osteoporosis is a multifactorial disease, the pathogenesis of which is caused by a complex interaction of genetic, hormonal, and metabolic factors. The challenges of early diagnosis highlight the need to identify genetic predictors to prevent bone mineral density (BMD) loss. Given the critical role of G-protein-coupled receptors (GPCRs) in bone development and remodeling, we investigated osteoporosis-associated single-nucleotide polymorphisms (SNPs) within GPCR genes using next-generation sequencing of patient cohorts. Subsequent screening via Sanger sequencing identified three SNPs for further analysis: rs1991517 in the thyroid-stimulating hormone receptor gene (<i>TSHR</i>), rs6166 in the follicle-stimulating hormone receptor gene (<i>FSHR</i>), and rs1042713 in the β2-adrenergic receptor gene (<i>ADRB2</i>). Our results reveal a significant association between osteoporosis and a specific homozygous genotype combination (TSHR rs1991517 CC, FSHR rs6166 AA, and ADRB2 rs1042713 AA). The functional impairment in osteodifferentiation was further validated in patient-derived cell lines harboring this triple-SNP combination. Thus, this study is the first to identify a specific combination of GPCR gene polymorphisms that may serve as a predictive biomarker for osteoporosis in early genetic screening.",
+    "authors": [
+      "Julia V Sopova",
+      "Olga A Krasnova",
+      "Polina I Semenova",
+      "Julia D Kryukova",
+      "Giomar V Vasileva",
+      "Anna S Zhuk",
+      "Olga M Lesnyak",
+      "Vitaliy V Karelkin",
+      "Irina E Neganova"
+    ],
+    "journal": "International journal of molecular sciences",
+    "year": "2025",
+    "query_receptor_gene": "ADRB2",
+    "query_receptor_name": "beta-2 adrenoceptor",
+    "neurotransmitter_system": "adrenergic",
+    "fetched_at": "2026-06-04T13:18:10.998168+00:00",
+    "mentioned_receptors_in_abstract": [
+      "ADRB2"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "40564937",
+    "title": "Uridine, a Therapeutic Nucleoside, Exacerbates Alcoholic Liver Disease via SRC Kinase Activation: A Network Toxicology and Molecular Dynamics Perspective.",
+    "abstract": "This study looked into the underlying mechanisms and causal relationship between alcoholic liver disease (ALD) and the blood metabolite uridine using a variety of analytical methods, such as Mendelian randomization and molecular dynamics simulations. We discovered uridine to be a possible hepatotoxic agent aggravating ALD by using Mendelian randomization (MR) analysis with genome-wide association study (GWAS) data from 1416 ALD cases and 217,376 controls, as well as with 1091 blood metabolites and 309 metabolite concentration ratios as exposure factors. According to network toxicology analysis, uridine interacts with important targets such as SRC, FYN, LYN, ADRB2, and GSK3B. The single-cell RNA sequencing analysis of ALD tissues revealed that SRC was upregulated in hepatocytes and activated hepatic stellate cells. Subsequently, we determined the stable binding between uridine and SRC through molecular docking and molecular dynamics simulation (RMSD = 1.5 ± 0.3 Å, binding energy < -5.0 kcal/mol). These targets were connected to tyrosine kinase activity, metabolic reprogramming, and GPCR signaling by Gene Ontology (GO) and KEGG studies. These findings elucidate uridine's role in ALD progression via immunometabolic pathways, offering novel therapeutic targets for precision intervention. These findings highlight the necessity of systems biology frameworks in drug safety evaluation, particularly for metabolites with dual therapeutic and toxicological roles.",
+    "authors": [
+      "Zhenyu Liu",
+      "Zhihao Wang",
+      "Jie Wang",
+      "Shiquan Xu",
+      "Tong Zhang"
+    ],
+    "journal": "International journal of molecular sciences",
+    "year": "2025",
+    "query_receptor_gene": "ADRB2",
+    "query_receptor_name": "beta-2 adrenoceptor",
+    "neurotransmitter_system": "adrenergic",
+    "fetched_at": "2026-06-04T13:18:10.998168+00:00",
+    "mentioned_receptors_in_abstract": [
+      "ADRB2"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "27601178",
+    "title": "Evidence of a M<sub>1</sub>-muscarinic GPCR homolog in unicellular eukaryotes: featuring Acanthamoeba spp bioinformatics 3D-modelling and experimentations.",
+    "abstract": "Acetylcholine affects the target cellular function via muscarinic and nicotinic cholinergic receptors that are seen to exist in humans. Both the cholinergic receptors are G-protein coupled receptors (GPCRs) that perform cardinal functions in humans. Anti-muscarinic drugs, particularly the ones that target M1 subtype (mAChR1), have consistently shown to kill unicellular pathogenic eukaryotes like Acanthamoeba spp. As the M1 receptor subtype has not been reported to be expressed in the above protist, the presence of an ancient form of the M1 muscarinic receptor was inferred. Bioinformatic tools and experimental assays were performed to establish the presence of a ligand-binding site. A search for sequence homology of amino acids of human M1 receptor failed to uncover an equivalent ligand-binding site on Acanthamoeba, but structural bioinformatics showed a hypothetical protein L8HIA6 to be a receptor homolog of the human mAChR1. Immunostaining with an anti-mAChR1 antibody showed cellular staining. Growth assays showed proliferation and lethal effects of exposure to mAChR1 agonist and antagonist respectively. With the recent authentication of human mAChR1 structure and its addition to the database, it was possible to discover its structural analog in Acanthamoeba; which could explain the effects of anticholinergics observed in the past on Acanthamoeba spp. The discovery of a receptor homolog of human mAChR1 on Acanthamoeba with future studies planned to show its expression and binding to cholinergic agonist and antagonist would help clarify its role in the biology of this protist pathogen.",
+    "authors": [
+      "Abdul Mannan Baig",
+      "H R Ahmad"
+    ],
+    "journal": "Journal of receptor and signal transduction research",
+    "year": "2017",
+    "query_receptor_gene": "CHRM1",
+    "query_receptor_name": "muscarinic acetylcholine receptor M1",
+    "neurotransmitter_system": "muscarinic acetylcholine",
+    "fetched_at": "2026-06-04T13:18:13.145841+00:00",
+    "mentioned_receptors_in_abstract": [],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": true,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "41700814",
+    "title": "Integrating qHTS and QSAR Models to Identify Safe GPCR-Targeted Compounds: A Focus on hERG-Dependent Cardiotoxicity.",
+    "abstract": "G-protein-coupled receptors (GPCRs) are a diverse family of seven-transmembrane domain receptors that play pivotal roles in various physiological and neurological processes by mediating extracellular signals through G proteins. Notable GPCRs such as ADRB2, CHRM1, DRD2, and HTR2A are important therapeutic targets linked to conditions ranging from asthma to schizophrenia. The human ether-à-go-go-related gene (hERG), encoding the Kv11.1 potassium channel, is critical for cardiac repolarization, the inhibition of which can lead to prolonged QT intervals and an increased risk of arrhythmias. Consequently, assessing hERG-GPCR interactions is essential during drug development to enhance safety and ensure regulatory compliance. In this study, we utilized quantitative high-throughput screening (qHTS) to identify GPCR agonists and inhibitors in the Tox21 10K compound library. We applied machine-learning (ML)-based quantitative structure-activity relationship (QSAR) models to predict selective GPCR-targeting compounds with reduced hERG liability, employing different data processing sequences. Our models trained on the Tox21 10K library screening data were subsequently validated by using the Library of Pharmacologically Active Compounds (LOPAC). Furthermore, the models were applied to virtually screen approximately 360 K diverse compounds, with the top predictions experimentally validated, revealing new GPCR modulators with minimal hERG liability. The findings provide efficient strategies for the development of lead compounds targeting GPCRs while minimizing the cardiac risks associated with hERG inhibition.",
+    "authors": [
+      "Xi Luo",
+      "Jinghua Zhao",
+      "Srilatha Sakamuru",
+      "Menghang Xia",
+      "Tuan Xu",
+      "Jameson Travers",
+      "Carleen Klumpp-Thomas",
+      "Hu Zhu",
+      "Matthew D Hall",
+      "Stephen S Ferguson",
+      "David M Reif",
+      "Ruili Huang"
+    ],
+    "journal": "Journal of chemical information and modeling",
+    "year": "2026",
+    "query_receptor_gene": "CHRM1",
+    "query_receptor_name": "muscarinic acetylcholine receptor M1",
+    "neurotransmitter_system": "muscarinic acetylcholine",
+    "fetched_at": "2026-06-04T13:18:13.145841+00:00",
+    "mentioned_receptors_in_abstract": [
+      "DRD2",
+      "HTR2A",
+      "ADRB2",
+      "CHRM1"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "42134865",
+    "title": "Investigating the Impact of Bisphenol A on Gastric Cancer Through Network Toxicology and Molecular Docking.",
+    "abstract": "The extensive application of bisphenol A (BPA), an endocrine-disrupting substance in polymer-based products and consumer commodities, has sparked concerns over its carcinogenic potential. However, the molecular mechanisms underlying BPA-induced gastric carcinogenesis remain poorly understood. We used network toxicology and molecular docking analysis to uncover the pivotal targets and mechanisms underlying BPA-associated gastric carcinogenesis. Potential BPA-related targets and differentially expressed genes in gastric cancer (GC) were collected from publicly available databases to identify hub genes. A prognostic risk assessment model utilizing hub genes, with molecular docking simulations, was performed to confirm the binding interactions between BPA and target proteins. A total of 27 potential targets associated with both BPA exposure and GC were identified. The protein-protein interaction network analysis revealed 19 hub genes, with core targets including MMP9, ADRB2, PTGS1, SLC6A4, ERBB2, MAPT, AR, SLC6A3, CNR1, PDE5A, DRD2, KCNH2, MC4R, CALCR, CHRM1, ADRB3, CXCR2, MMP1, and SHBG. Enrichment analysis demonstrated these hub genes were significantly involved in neuroactive ligand-receptor interaction, calcium signaling pathway, cGMP-PKG signaling pathway, and chemical carcinogenesis-receptor activation pathways. Prognostic analysis identified six hub genes (CALCR, ADRB3, CNR1, HRH2, KCNH2, and AR) significantly associated with patient survival. Molecular docking simulations demonstrated robust interaction affinities of BPA with the identified core target proteins. This study reveals that BPA may influence GC development and progression through multiple targets and signaling pathways, particularly involving G protein-coupled receptor signaling, hormone regulation, and neurological pathways.",
+    "authors": [
+      "Wen-Yan Yu",
+      "Yue Zhang"
+    ],
+    "journal": "International journal of toxicology",
+    "year": "2026",
+    "query_receptor_gene": "CHRM1",
+    "query_receptor_name": "muscarinic acetylcholine receptor M1",
+    "neurotransmitter_system": "muscarinic acetylcholine",
+    "fetched_at": "2026-06-04T13:18:13.145841+00:00",
+    "mentioned_receptors_in_abstract": [
+      "DRD2",
+      "ADRB2",
+      "CHRM1",
+      "HRH2"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "32248644",
+    "title": "Phenotypic profiling of mGlu<sub>7</sub> knockout mice reveals new implications for neurodevelopmental disorders.",
+    "abstract": "Neurodevelopmental disorders are characterized by deficits in communication, cognition, attention, social behavior and/or motor control. Previous studies have pointed to the involvement of genes that regulate synaptic structure and function in the pathogenesis of these disorders. One such gene, GRM7, encodes the metabotropic glutamate receptor 7 (mGlu<sub>7</sub> ), a G protein-coupled receptor that regulates presynaptic neurotransmitter release. Mutations and polymorphisms in GRM7 have been associated with neurodevelopmental disorders in clinical populations; however, limited preclinical studies have evaluated mGlu<sub>7</sub> in the context of this specific disease class. Here, we show that the absence of mGlu<sub>7</sub> in mice is sufficient to alter phenotypes within the domains of social behavior, associative learning, motor function, epilepsy and sleep. Moreover, Grm7 knockout mice exhibit an attenuated response to amphetamine. These findings provide rationale for further investigation of mGlu<sub>7</sub> as a potential therapeutic target for neurodevelopmental disorders such as idiopathic autism, attention deficit hyperactivity disorder and Rett syndrome.",
+    "authors": [
+      "Nicole M Fisher",
+      "Robert W Gould",
+      "Rocco G Gogliotti",
+      "Annalise J McDonald",
+      "Hana Badivuku",
+      "Susmita Chennareddy",
+      "Aditi B Buch",
+      "Annah M Moore",
+      "Matthew T Jenkins",
+      "W Hudson Robb",
+      "Craig W Lindsley",
+      "Carrie K Jones",
+      "P Jeffrey Conn",
+      "Colleen M Niswender"
+    ],
+    "journal": "Genes, brain, and behavior",
+    "year": "2020",
+    "query_receptor_gene": "GRM7",
+    "query_receptor_name": "metabotropic glutamate receptor 7",
+    "neurotransmitter_system": "metabotropic glutamate",
+    "fetched_at": "2026-06-04T13:18:24.432312+00:00",
+    "mentioned_receptors_in_abstract": [
+      "GRM7"
+    ],
+    "mentioned_receptor_names": [
+      "metabotropic glutamate receptor 7"
+    ],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "41594647",
+    "title": "Integrated Analysis of ATAC-Seq and RNA-Seq Reveals the Signal Transduction Regulation of the Molting Cycle in the Muscle of Chinese Mitten Crab (<i>Eriocheir sinensis</i>).",
+    "abstract": "Molting is a critical physiological process for the growth and development of <i>Eriocheir sinensis</i>. Any disruption in this process can significantly affect both survival rates and crab quality. The regulatory mechanisms of molting vary across different stages of the molting cycle and remain poorly understood. In this study, ATAC-seq and RNA-seq were combined to identify the integrated differentially expressed genes (IDEGs) in muscle across adjacent stages of the molting cycle. A total of 17, 491, 84, and 491 IDEGs were identified in the comparisons of inter-molt_vs_pre-molt, pre-molt_vs_molt, molt_vs_post-molt, and post-molt_vs_inter-molt stages, respectively. GO enrichment analysis of these IDEGs revealed several key signaling pathways involved in each adjacent molting stage. The GPCR signaling, steroid hormone-mediated signaling, and smoothened signaling pathways were all active across three molting transitions (pre-molt_vs_molt, molt_vs_post-molt, and post-molt_vs_inter-molt). Among them, the GPCR pathway played a dominant role throughout the process. Further structural analysis and RT-qPCR validation identified eight GPCRs involved in molting regulation: <i>GRM7</i> and <i>moody</i> were specific to the post-molt_vs_inter-molt stage; <i>Kpna6</i>, <i>ADRB2</i>, and <i>SSTR2</i> were unique to the pre-molt_vs_molt stage; <i>FMRFaR</i> and <i>gpr161</i> functioned in both post-molt_vs_inter-molt and pre-molt_vs_molt stages; and <i>mth2</i> was active in both post-molt_vs_inter-molt and molt_vs_post-molt stages. These findings improve the understanding of molting regulation and provide potential targets for further genetic improvement in <i>E. sinensis</i>.",
+    "authors": [
+      "Zhen He",
+      "Jingjing Li",
+      "Jingjing Zhang",
+      "Ruiqi Zhang",
+      "Rongkang Tan",
+      "Jinsheng Sun",
+      "Bin Wang",
+      "Tong Hao"
+    ],
+    "journal": "Biomolecules",
+    "year": "2026",
+    "query_receptor_gene": "GRM7",
+    "query_receptor_name": "metabotropic glutamate receptor 7",
+    "neurotransmitter_system": "metabotropic glutamate",
+    "fetched_at": "2026-06-04T13:18:24.432312+00:00",
+    "mentioned_receptors_in_abstract": [
+      "ADRB2",
+      "GRM7"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "36528230",
+    "title": "Persistent challenges in the development of an mGlu<sub>7</sub> PAM in vivo tool compound: The discovery of VU6046980.",
+    "abstract": "Herein, we report on the further chemical optimization of the first reported mGlu<sub>7</sub> positive allosteric modulator (PAM), VU6027459. Replacement of the quinoline core by a cinnoline scaffold increased mGlu<sub>7</sub> PAM potency by ∼ 10-fold, and concomitant introduction of a chiral tricyclic motif led to potent mGlu<sub>7</sub> PAMs with enantioselective mGlu receptor selectivity profiles. Of these, VU6046980 emerged as a putative in vivo tool compound with excellent CNS penetration (K<sub>p</sub> = 4.1; K<sub>p,uu</sub> = 0.7) and efficacy in preclinical models. However, either off-target activity at the sigma-1 receptor or activity at a target not elucidated by large ancillary pharmacology panels led to sedation not driven by activation of mGlu<sub>7</sub> (validated in Grm7 knockout mice). Thus, despite a significant advance, a viable mGlu<sub>7</sub> PAM in vivo tool remains elusive.",
+    "authors": [
+      "Jacob J Kalbfleisch",
+      "Alice L Rodriguez",
+      "Xia Lei",
+      "Kelly Weiss",
+      "Annie L Blobaum",
+      "Olivier Boutaud",
+      "Colleen M Niswender",
+      "Craig W Lindsley"
+    ],
+    "journal": "Bioorganic & medicinal chemistry letters",
+    "year": "2023",
+    "query_receptor_gene": "GRM7",
+    "query_receptor_name": "metabotropic glutamate receptor 7",
+    "neurotransmitter_system": "metabotropic glutamate",
+    "fetched_at": "2026-06-04T13:18:24.432312+00:00",
+    "mentioned_receptors_in_abstract": [
+      "GRM7"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "35484098",
+    "title": "Different responses to risperidone treatment in Schizophrenia: a multicenter genome-wide association and whole exome sequencing joint study.",
+    "abstract": "Risperidone is routinely used in the clinical management of schizophrenia, but the treatment response is highly variable among different patients. The genetic underpinnings of the treatment response are not well understood. We performed a pharmacogenomic study of the treatment response to risperidone in patients with schizophrenia by using a SNP microarray -based genome-wide association study (GWAS) and whole exome sequencing (WES)-based GWAS. DNA samples were collected from 189 patients for the GWAS and from 222 patients for the WES after quality control in multiple centers of China. Antipsychotic response phenotypes of patients who received eight weeks of risperidone treatment were quantified with percentage change on the Positive and Negative Syndrome Scale (PANSS). The GWAS revealed a significant association between several SNPs and treatment response, such as three GRM7 SNPs (rs141134664, rs57521140, and rs73809055). Gene-based analysis in WES revealed 13 genes that were associated with antipsychotic response, such as GPR12 and MAP2K3. We did not identify shared loci or genes between GWAS and WES, but association signals tended to cluster into the GPCR gene family and GPCR signaling pathway, which may play an important role in the treatment response etiology. This study may provide a research paradigm for pharmacogenomic research, and these data provide a promising illustration of our potential to identify genetic variants underlying antipsychotic responses and may ultimately facilitate precision medicine in schizophrenia.",
+    "authors": [
+      "Mingzhe Zhao",
+      "Jingsong Ma",
+      "Mo Li",
+      "Wenli Zhu",
+      "Wei Zhou",
+      "Lu Shen",
+      "Hao Wu",
+      "Na Zhang",
+      "Shaochang Wu",
+      "Chunpeng Fu",
+      "Xianxi Li",
+      "Ke Yang",
+      "Tiancheng Tang",
+      "Ruoxi Shen",
+      "Lin He",
+      "Cong Huai",
+      "Shengying Qin"
+    ],
+    "journal": "Translational psychiatry",
+    "year": "2022",
+    "query_receptor_gene": "GRM7",
+    "query_receptor_name": "metabotropic glutamate receptor 7",
+    "neurotransmitter_system": "metabotropic glutamate",
+    "fetched_at": "2026-06-04T13:18:24.432312+00:00",
+    "mentioned_receptors_in_abstract": [
+      "GRM7"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "30616226",
+    "title": "A single nucleotide polymorphism in the metabotropic glutamate receptor 7 gene is associated with multiple sclerosis in Iranian population.",
+    "abstract": "Glutamate excitotoxicity has been previously associated with development of multiple sclerosis (MS). The metabotropic glutamate receptor 7 (GRM7) gene is a G protein-coupled receptor that suppresses the cyclic AMP cascade after activation by glutamate. Single nucleotide polymorphisms (SNPs) within this gene have been reported to be associated with neuropsychiatric disorders. In the present study, we assessed associations between two intronic variants of GRM7 (rs6782011 and rs779867) and risk of MS in an Iranian population. The rs779867 was associated with MS risk in recessive model (OR (95% CI) = 0.67 (0.48-0.94)), P-value = 0.02, adjusted P-value = 0.04). There was no significant difference in allele and genotype frequencies of rs6782011 between cases and controls. None of the estimated haplotype blocks of rs6782011 and rs779867 were associated with MS risk in the assessed population. The current study provides some evidence for participation of GRM7 in the pathogenesis of MS and warrants further studies in larger sample sizes.",
+    "authors": [
+      "Mehrdokht Mazdeh",
+      "Rezvan Noroozi",
+      "Alireza Komaki",
+      "Iman Azari",
+      "Soudeh Ghafouri-Fard",
+      "Mohammad Taheri"
+    ],
+    "journal": "Multiple sclerosis and related disorders",
+    "year": "2019",
+    "query_receptor_gene": "GRM7",
+    "query_receptor_name": "metabotropic glutamate receptor 7",
+    "neurotransmitter_system": "metabotropic glutamate",
+    "fetched_at": "2026-06-04T13:18:24.432312+00:00",
+    "mentioned_receptors_in_abstract": [
+      "GRM7"
+    ],
+    "mentioned_receptor_names": [
+      "metabotropic glutamate receptor 7"
+    ],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "36732336",
+    "title": "Simultaneous activation of CXC chemokine receptor 4 and histamine receptor H1 enhances calcium signaling and cancer cell migration.",
+    "abstract": "C-X-C chemokine receptor 4 (CXCR4) is widely overexpressed in various types of cancer and is involved in several cancer phenotypes including tumor growth, survival, and metastasis. The roles of histamine and histamine receptor H1 (HRH1) in cancer pathogenesis remain controversial. Here, we show that HRH1 is widely expressed in various cancer cell lines and cancer tissues and that coexpression of CXCR4 and HRH1 is associated with poor prognosis in breast cancer. Using bimolecular fluorescence complementation and bioluminescence resonance energy transfer donor saturation assays, we demonstrate that CXCR4 and HRH1 can assemble into a heteromeric complex. Simultaneous activation of CXCR4 and HRH1 synergistically increases calcium flux in MDA-MB-231 cells that endogenously express CXCR4 and HRH1 but not in cells deficient in CXCR4 or HRH1. Costimulation of CXCR4 and HRH1 also significantly enhances CXCL12-induced MDA-MB-231 cell migration, while histamine alone does not induce cell migration. Synergistic effects on calcium flux and cell migration are inhibited by the Gα<sub>i</sub> inhibitor pertussis toxin and the Gα<sub>q</sub> inhibitor YM254890, suggesting that the Gα<sub>i</sub> and Gα<sub>q</sub> pathways are involved in the synergy. Enhanced calcium signaling and cell migration are also observed in NCI-H23 and HeLa cells, which coexpress CXCR4 and HRH1. Taken together, our findings demonstrate an interplay between CXCR4 and HRH1, and suggest the possibility of the CXCR4-HRH1 heteromer as a potential therapeutic target for anticancer therapy.",
+    "authors": [
+      "Chulo Park",
+      "Jin-Woo Lee",
+      "Kiheon Kim",
+      "Dong-Seung Seen",
+      "Jae-Yeon Jeong",
+      "Won-Ki Huh"
+    ],
+    "journal": "Scientific reports",
+    "year": "2023",
+    "query_receptor_gene": "HRH1",
+    "query_receptor_name": "histamine H1 receptor",
+    "neurotransmitter_system": "histamine",
+    "fetched_at": "2026-06-04T13:18:29.845224+00:00",
+    "mentioned_receptors_in_abstract": [
+      "HRH1"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "40158234",
+    "title": "Sensitive detection of pertussis toxin in acellular pertussis vaccines using HRH1-mediated calcium signaling.",
+    "abstract": "Accurate detection and quantification of residual pertussis toxin (PTx), a key virulence factor of Bordetella pertussis, are essential for the production and safety testing of acellular pertussis vaccines. Traditional methods, such as the histamine sensitization test and the CHO cell clustering assay, face challenges including low reproducibility, difficulty in standardization, and interference from vaccine adjuvants. To address these limitations, we developed a biosensor for PTx detection based on histamine receptor H1 (HRH1)-induced calcium signaling in MDA-MB-231 cells, representing an unexplored approach for PTx detection. Using mini G protein recruitment and Gα activation assays, we found that HRH1 activates both Gα<sub>q</sub> and Gα<sub>i</sub> heterotrimers. The presence of PTx disrupts histamine-induced Gα<sub>i</sub> binding to HRH1, resulting in a compensatory increase in Gα<sub>q</sub> binding and enhanced calcium signaling. By normalizing sustained calcium levels to the percentage of the maximal calcium response, we achieved higher accuracy and reliability in detecting PTx, even in the presence of adjuvants. Our method provides quantitative detection of PTx activity with high sensitivity, achieving a limit of detection in the pg/ml range in acellular pertussis vaccines spiked with PTx. This work introduces a robust and convenient calcium assay using MDA-MB-231 cells, which predominantly express HRH1 with negligible expression of other HRH receptors, as an effective method for PTx detection in vaccine safety testing.",
+    "authors": [
+      "Jin-Woo Lee",
+      "Dong-Yeop Lee",
+      "Seungwon Baek",
+      "Jae-Yeon Jeong",
+      "Won-Ki Huh"
+    ],
+    "journal": "Vaccine",
+    "year": "2025",
+    "query_receptor_gene": "HRH1",
+    "query_receptor_name": "histamine H1 receptor",
+    "neurotransmitter_system": "histamine",
+    "fetched_at": "2026-06-04T13:18:29.845224+00:00",
+    "mentioned_receptors_in_abstract": [
+      "HRH1"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "31500698",
+    "title": "MRGPRX4 is a bile acid receptor for human cholestatic itch.",
+    "abstract": "Patients with liver diseases often suffer from chronic itch, yet the pruritogen(s) and receptor(s) remain largely elusive. Here, we identify bile acids as natural ligands for MRGPRX4. MRGPRX4 is expressed in human dorsal root ganglion (hDRG) neurons and co-expresses with itch receptor HRH1. Bile acids elicited Ca<sup>2+</sup> responses in cultured hDRG neurons, and bile acids or a MRGPRX4 specific agonist induced itch in human subjects. However, a specific agonist for another bile acid receptor TGR5 failed to induce itch in human subjects and we find that human TGR5 is not expressed in hDRG neurons. Finally, we show positive correlation between cholestatic itch and plasma bile acids level in itchy patients and the elevated bile acids is sufficient to activate MRGPRX4. Taken together, our data strongly suggest that MRGPRX4 is a novel bile acid receptor that likely underlies cholestatic itch in human, providing a promising new drug target for anti-itch therapies.",
+    "authors": [
+      "Huasheng Yu",
+      "Tianjun Zhao",
+      "Simin Liu",
+      "Qinxue Wu",
+      "Omar Johnson",
+      "Zhaofa Wu",
+      "Zihao Zhuang",
+      "Yaocheng Shi",
+      "Luxin Peng",
+      "Renxi He",
+      "Yong Yang",
+      "Jianjun Sun",
+      "Xiaoqun Wang",
+      "Haifeng Xu",
+      "Zheng Zeng",
+      "Peng Zou",
+      "Xiaoguang Lei",
+      "Wenqin Luo",
+      "Yulong Li"
+    ],
+    "journal": "eLife",
+    "year": "2019",
+    "query_receptor_gene": "HRH1",
+    "query_receptor_name": "histamine H1 receptor",
+    "neurotransmitter_system": "histamine",
+    "fetched_at": "2026-06-04T13:18:29.845224+00:00",
+    "mentioned_receptors_in_abstract": [
+      "HRH1"
+    ],
+    "mentioned_receptor_names": [],
+    "low_confidence_query": false,
+    "assignment_method": "per_receptor_search"
+  },
+  {
+    "pmid": "36688618",
+    "title": "Integrative analysis of small non-coding RNAs predicts a piRNA/miRNA-CCND1/BRAF/HRH1/ATXN3 regulatory circuit that drives oncogenesis in glioblastoma.",
+    "abstract": "The high-grade astrocytoma, glioblastoma multiforme (GBM), is the most common primary tumour of the brain, known for being aggressive and developing drug resistance. The non-coding RNAs (ncRNAs), such as microRNAs (miRNAs) and Piwi-interacting RNAs (piRNAs), have critical functions in tumorigenesis and cancer drug resistance. Hence, we profiled miRNAs, piRNAs, and genes in U-87 MG GBM cells by next-generation sequencing and performed target prediction, pathway enrichment, protein-protein interaction, co-expression studies, and qRT-PCR validations to predict their possible roles in the malignancy. The study identified 335 miRNAs, 665 piRNAs, and 4286 genes differentially expressed (DE) in GBM. Among them 128 DE genes (DEGs) were targeted by both miRNAs and piRNAs, while 1817 and 192 were targeted solely by miRNAs or piRNAs, respectively. Interestingly, all the DEG targets enriched in cancer processes were overexpressed in GBM. Among these, BRAF was solely targeted by two piRNAs and this was found to be co-expressed with 19 sole targets of 5 miRNAs, including CCND1, and both were found to regulate cell proliferation in cancer. We conjectured that upregulated HRH1 and ATXN3 were targeted by both piRNAs and miRNAs, and along with BRAF and CCND1 might induce cell proliferation in GBM through G-protein-coupled receptor or Akt signalling pathways due to downregulation of the respective targeting small RNAs. These targets were also linked to the progression and overall survival of GBM patients, suggesting that they could be used as biomarkers. Overall, this study has identified a few novel ncRNA targets, which might aid in a better understanding of GBM pathogenesis.",
+    "authors": [
+      "Rojalin Nayak",
+      "Trisha Chattopadhyay",
+      "Pooja Gupta",
+      "Bibekanand Mallick"
+    ],
+    "journal": "Molecular omics",
+    "year": "2023",
+    "query_receptor_gene": "HRH1",
+    "query_receptor_name": "histamine H1 receptor",
+    "neurotransmitter_system": "histamine",
+    "fetched_at": "2026-06-04T13:18:29.845224+00:00",
+    "mentioned_receptors_in_abstract": [
+      "HRH1"
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,

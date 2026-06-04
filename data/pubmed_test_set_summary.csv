@@ -1,25 +1,25 @@
 neurotransmitter_system,receptor_gene,receptor_name,hits,new_pmids,downloaded,low_confidence_count,status
-dopamine,DRD1,dopamine receptor D1,10,5,5,0,ok
-dopamine,DRD2,dopamine receptor D2,10,5,5,0,ok
-serotonin,HTR1A,5-hydroxytryptamine receptor 1A,7,5,5,0,ok
-serotonin,HTR2A,5-hydroxytryptamine receptor 2A,10,5,5,0,ok
-serotonin,HTR2C,5-hydroxytryptamine receptor 2C,1,1,1,0,ok
-serotonin,HTR7,5-hydroxytryptamine receptor 7,4,2,2,0,ok
-adrenergic,ADRA1A,alpha-1A adrenoceptor,6,5,5,0,ok
-adrenergic,ADRA2A,alpha-2A adrenoceptor,10,5,5,1,ok
-adrenergic,ADRB1,beta-1 adrenoceptor,10,5,5,0,ok
-adrenergic,ADRB2,beta-2 adrenoceptor,10,5,5,0,ok
-muscarinic acetylcholine,CHRM1,muscarinic acetylcholine receptor M1,9,5,5,0,ok
-muscarinic acetylcholine,CHRM2,muscarinic acetylcholine receptor M2,6,4,4,0,ok
-muscarinic acetylcholine,CHRM3,muscarinic acetylcholine receptor M3,6,3,3,0,ok
-muscarinic acetylcholine,CHRM4,muscarinic acetylcholine receptor M4,6,3,3,0,ok
-metabotropic glutamate,GRM1,metabotropic glutamate receptor 1,3,3,3,0,ok
-metabotropic glutamate,GRM2,metabotropic glutamate receptor 2,1,1,1,0,ok
-metabotropic glutamate,GRM5,metabotropic glutamate receptor 5,6,4,4,0,ok
-metabotropic glutamate,GRM7,metabotropic glutamate receptor 7,10,5,5,0,ok
-GABA_B,GABBR1,GABA type B receptor subunit 1,2,2,2,0,ok
-GABA_B,GABBR2,GABA type B receptor subunit 2,1,1,1,0,ok
-histamine,HRH1,histamine H1 receptor,10,5,5,0,ok
-histamine,HRH2,histamine H2 receptor,8,5,5,0,ok
+dopamine,DRD1,dopamine receptor D1,10,0,0,0,all_already_fetched
+dopamine,DRD2,dopamine receptor D2,10,0,0,0,all_already_fetched
+serotonin,HTR1A,5-hydroxytryptamine receptor 1A,7,0,0,0,all_already_fetched
+serotonin,HTR2A,5-hydroxytryptamine receptor 2A,10,0,0,0,all_already_fetched
+serotonin,HTR2C,5-hydroxytryptamine receptor 2C,1,0,0,0,all_already_fetched
+serotonin,HTR7,5-hydroxytryptamine receptor 7,4,0,0,0,all_already_fetched
+adrenergic,ADRA1A,alpha-1A adrenoceptor,6,0,0,0,all_already_fetched
+adrenergic,ADRA2A,alpha-2A adrenoceptor,10,0,0,0,all_already_fetched
+adrenergic,ADRB1,beta-1 adrenoceptor,10,0,0,0,all_already_fetched
+adrenergic,ADRB2,beta-2 adrenoceptor,10,0,0,0,all_already_fetched
+muscarinic acetylcholine,CHRM1,muscarinic acetylcholine receptor M1,9,0,0,0,all_already_fetched
+muscarinic acetylcholine,CHRM2,muscarinic acetylcholine receptor M2,6,0,0,0,all_already_fetched
+muscarinic acetylcholine,CHRM3,muscarinic acetylcholine receptor M3,6,0,0,0,all_already_fetched
+muscarinic acetylcholine,CHRM4,muscarinic acetylcholine receptor M4,6,0,0,0,all_already_fetched
+metabotropic glutamate,GRM1,metabotropic glutamate receptor 1,3,0,0,0,all_already_fetched
+metabotropic glutamate,GRM2,metabotropic glutamate receptor 2,1,0,0,0,all_already_fetched
+metabotropic glutamate,GRM5,metabotropic glutamate receptor 5,6,0,0,0,all_already_fetched
+metabotropic glutamate,GRM7,metabotropic glutamate receptor 7,10,0,0,0,all_already_fetched
+GABA_B,GABBR1,GABA type B receptor subunit 1,2,0,0,0,all_already_fetched
+GABA_B,GABBR2,GABA type B receptor subunit 2,1,0,0,0,all_already_fetched
+histamine,HRH1,histamine H1 receptor,10,0,0,0,all_already_fetched
+histamine,HRH2,histamine H2 receptor,8,0,0,0,all_already_fetched
 histamine,HRH3,histamine H3 receptor,2,0,0,0,all_already_fetched
-histamine,HRH4,histamine H4 receptor,3,2,2,0,ok
+histamine,HRH4,histamine H4 receptor,3,0,0,0,all_already_fetched
