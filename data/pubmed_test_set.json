@@ -28,7 +28,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.neuron.2024.07.003",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40583147",
@@ -59,7 +64,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1002/advs.202502276",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "32052915",
@@ -83,7 +93,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1002/stem.3156",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "35364139",
@@ -111,7 +127,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.pneurobio.2022.102266",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40311121",
@@ -139,7 +161,13 @@
       "dopamine receptor D1"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1021/acs.biochem.4c00877",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "34648896",
@@ -175,7 +203,13 @@
       "dopamine receptor D2"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.jhep.2021.09.032",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "37409929",
@@ -209,7 +243,13 @@
       "dopamine receptor D2"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1080/15548627.2023.2233872",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "32528175",
@@ -237,7 +277,14 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1038/s41586-020-2379-5",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "31538542",
@@ -269,7 +316,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1080/15548627.2019.1668606",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "29673577",
@@ -297,7 +350,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.molmet.2018.03.016",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "31371490",
@@ -323,7 +382,13 @@
       "5-HT7"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1242/jcs.230334",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "37525034",
@@ -355,7 +420,12 @@
       "5-hydroxytryptamine receptor 1A"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1007/978-3-031-31978-5_7",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "34600545",
@@ -381,7 +451,13 @@
       "5-hydroxytryptamine receptor 1A"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1186/s12920-021-01087-7",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "35491707",
@@ -408,7 +484,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1080/07391102.2022.2068072",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41621550",
@@ -431,7 +512,12 @@
     "mentioned_receptors_in_abstract": [],
     "mentioned_receptor_names": [],
     "low_confidence_query": true,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.fsi.2026.111148",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "32946782",
@@ -465,7 +551,15 @@
       "5-HT2A"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.cell.2020.08.024",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't",
+      "Research Support, U.S. Gov't, Non-P.H.S."
+    ],
+    "is_review": false
   },
   {
     "pmid": "40925315",
@@ -493,7 +587,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.scitotenv.2025.180414",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40885319",
@@ -531,7 +630,12 @@
       "5-HT2A"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.bcp.2025.117285",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "39766808",
@@ -555,7 +659,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/genes15121541",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40926959",
@@ -580,7 +689,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.53555/rd5d9s46",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "39511179",
@@ -607,7 +721,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1038/s41537-024-00523-8",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41237175",
@@ -632,7 +751,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1371/journal.pone.0335398",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "27698822",
@@ -657,7 +781,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3892/ol.2016.5024",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "27460988",
@@ -689,7 +818,15 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1126/scisignal.aag0245",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, N.I.H., Intramural",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33402011",
@@ -716,7 +853,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1177/2472555220979793",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41726659",
@@ -740,7 +883,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1021/acsomega.5c09253",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33862102",
@@ -770,7 +918,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.jep.2021.114119",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "42237231",
@@ -802,7 +955,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1186/s12865-026-00862-4",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "38788722",
@@ -834,7 +992,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.chom.2024.04.020",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "27376152",
@@ -857,7 +1020,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1172/jci.insight.86870",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "38230433",
@@ -880,7 +1048,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1242/jcs.261685",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40663777",
@@ -904,7 +1078,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1093/humrep/deaf118",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36253428",
@@ -929,7 +1108,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1038/s41598-022-21063-0",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "32703433",
@@ -952,7 +1137,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.bbrc.2020.06.017",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40364562",
@@ -975,7 +1166,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1111/crj.70080",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33372534",
@@ -1004,7 +1200,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1161/JAHA.120.016364",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41734179",
@@ -1036,7 +1238,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1371/journal.pone.0343264",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "29514624",
@@ -1059,7 +1266,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1186/s12881-018-0544-6",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "34280464",
@@ -1085,7 +1298,15 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.jid.2021.05.031",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't",
+      "Research Support, U.S. Gov't, Non-P.H.S."
+    ],
+    "is_review": false
   },
   {
     "pmid": "41545427",
@@ -1112,7 +1333,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1038/s41467-026-68503-3",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36731712",
@@ -1143,7 +1369,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.ab.2023.115062",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "31408338",
@@ -1166,7 +1398,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1021/acs.jcim.9b00054",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "39769358",
@@ -1192,7 +1430,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/ijms252413594",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36244968",
@@ -1216,7 +1459,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1186/s12906-022-03753-4",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "30564629",
@@ -1243,7 +1491,13 @@
       "M4 receptor"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1523/ENEURO.0340-18.2018",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36068422",
@@ -1267,7 +1521,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1007/s12020-022-03181-x",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "39026356",
@@ -1299,7 +1558,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1186/s13578-024-01276-8",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "35370785",
@@ -1323,7 +1587,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3389/fphys.2022.857563",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "37775760",
@@ -1351,7 +1620,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1186/s12974-023-02906-7",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41985299",
@@ -1374,7 +1648,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.compbiomed.2026.111681",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "39740827",
@@ -1413,7 +1692,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.21873/anticanres.17395",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "29133212",
@@ -1445,7 +1729,14 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.phrs.2017.11.005",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "38010846",
@@ -1489,7 +1780,13 @@
       "M3 receptor"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1111/jch.14753",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "38047980",
@@ -1514,7 +1811,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1007/s10695-023-01272-8",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "34314386",
@@ -1548,7 +1850,14 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1172/jci.insight.132585",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, U.S. Gov't, Non-P.H.S."
+    ],
+    "is_review": false
   },
   {
     "pmid": "33398073",
@@ -1579,7 +1888,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1038/s42003-020-01549-1",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "42163039",
@@ -1603,7 +1918,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1002/acn3.70438",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "38248654",
@@ -1628,7 +1948,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/md22010028",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41620186",
@@ -1657,7 +1982,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.nbd.2026.107296",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "29416686",
@@ -1683,7 +2013,12 @@
       "metabotropic glutamate receptor 1"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.18632/oncotarget.23455",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "37391170",
@@ -1710,7 +2045,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.modpat.2023.100264",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33412755",
@@ -1731,7 +2071,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.5808/GI.2020.18.4.e39",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40109668",
@@ -1755,7 +2100,12 @@
       "metabotropic glutamate receptor 5"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.eng.2024.12.016",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36079577",
@@ -1779,7 +2129,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/plants11172196",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "32205144",
@@ -1804,7 +2159,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.mce.2020.110794",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33785412",
@@ -1828,7 +2189,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.neures.2021.03.005",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33500274",
@@ -1855,7 +2221,13 @@
       "metabotropic glutamate receptor 7"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1523/JNEUROSCI.2108-20.2021",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40637957",
@@ -1886,7 +2258,12 @@
       "metabotropic glutamate receptor 7"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1007/s12035-025-05183-y",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33476302",
@@ -1920,7 +2297,13 @@
       "metabotropic glutamate receptor 7"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1172/jci.insight.143324",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36532433",
@@ -1953,7 +2336,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3389/fmicb.2022.1045490",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33607172",
@@ -1979,7 +2367,14 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.mad.2021.111463",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41792070",
@@ -2001,7 +2396,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.29271/jcpsp.2026.01.71",
+    "pub_types": [
+      "Journal Article",
+      "Observational Study"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33996539",
@@ -2026,7 +2427,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3389/fonc.2021.596789",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "34000025",
@@ -2057,7 +2463,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1210/clinem/dgab343",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "38458750",
@@ -2092,7 +2504,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1136/gutjnl-2023-331715",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40600649",
@@ -2118,7 +2536,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1096/fj.202501493R",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40288207",
@@ -2153,7 +2576,12 @@
       "H1 receptor"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.jpet.2025.103573",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "29467651",
@@ -2183,7 +2611,12 @@
       "H1 receptor"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3389/fphar.2018.00038",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41946080",
@@ -2214,7 +2647,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.bbrc.2026.153717",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "31369218",
@@ -2246,7 +2684,13 @@
       "H2 receptor"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1002/mbo3.908",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+    ],
+    "is_review": false
   },
   {
     "pmid": "34761361",
@@ -2272,7 +2716,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1007/7854_2021_259",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "39117262",
@@ -2296,7 +2745,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.ejphar.2024.176870",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "35930594",
@@ -2323,7 +2777,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1021/acssynbio.2c00205",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+    ],
+    "is_review": false
   },
   {
     "pmid": "37366936",
@@ -2347,7 +2807,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/bios13060571",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "30742585",
@@ -2379,7 +2844,12 @@
       "H4 receptor"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.18433/jpps29971",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "30658649",
@@ -2403,7 +2873,15 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1186/s12931-018-0968-8",
+    "pub_types": [
+      "Clinical Trial, Phase II",
+      "Journal Article",
+      "Multicenter Study",
+      "Randomized Controlled Trial"
+    ],
+    "is_review": false
   },
   {
     "pmid": "31541002",
@@ -2434,7 +2912,14 @@
       "dopamine receptor D1"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1523/ENEURO.0305-19.2019",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "34046891",
@@ -2459,7 +2944,13 @@
     "mentioned_receptors_in_abstract": [],
     "mentioned_receptor_names": [],
     "low_confidence_query": true,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1002/jcp.30459",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+    ],
+    "is_review": false
   },
   {
     "pmid": "37252844",
@@ -2496,7 +2987,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.celrep.2023.112575",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33992835",
@@ -2521,7 +3018,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.bbrc.2021.04.098",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "37024146",
@@ -2551,7 +3054,14 @@
       "dopamine receptor D1"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1124/jpet.122.001442",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't",
+      "Research Support, N.I.H., Extramural"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40516629",
@@ -2574,7 +3084,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.jad.2025.119675",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "35203352",
@@ -2600,7 +3115,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/cells11040703",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "33806345",
@@ -2625,7 +3146,13 @@
       "dopamine receptor D2"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/cells10030549",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36807226",
@@ -2657,7 +3184,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1111/jnc.15789",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "38879471",
@@ -2683,7 +3216,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1186/s13020-024-00958-2",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41396999",
@@ -2708,7 +3246,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1021/acssynbio.5c00466",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "37848733",
@@ -2742,7 +3285,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1038/s41386-023-01749-3",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36671883",
@@ -2768,7 +3316,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/bios13010048",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "28208011",
@@ -2789,7 +3342,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.4062/biomolther.2016.207",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "30009772",
@@ -2812,7 +3370,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.yexmp.2018.07.005",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural"
+    ],
+    "is_review": false
   },
   {
     "pmid": "26928540",
@@ -2830,7 +3394,12 @@
     "mentioned_receptors_in_abstract": [],
     "mentioned_receptor_names": [],
     "low_confidence_query": true,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/bs.mcb.2015.10.004",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36238301",
@@ -2877,7 +3446,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3389/fimmu.2022.981532",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "30569177",
@@ -2904,7 +3479,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3892/mmr.2018.9752",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "26773201",
@@ -2935,7 +3515,14 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.phrs.2016.01.003",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36107363",
@@ -2959,7 +3546,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1007/s10557-022-07380-6",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "28501616",
@@ -2984,7 +3576,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.bbrc.2017.05.054",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41303600",
@@ -3012,7 +3609,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/ijms262211117",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40564937",
@@ -3036,7 +3638,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/ijms26125473",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "27601178",
@@ -3055,7 +3662,12 @@
     "mentioned_receptors_in_abstract": [],
     "mentioned_receptor_names": [],
     "low_confidence_query": true,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1080/10799893.2016.1217884",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "41700814",
@@ -3089,7 +3701,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1021/acs.jcim.5c02291",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "42134865",
@@ -3113,7 +3730,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1177/10915818261451203",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "32248644",
@@ -3148,7 +3770,15 @@
       "metabotropic glutamate receptor 7"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1111/gbb.12654",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, N.I.H., Extramural",
+      "Research Support, Non-U.S. Gov't",
+      "Research Support, U.S. Gov't, Non-P.H.S."
+    ],
+    "is_review": false
   },
   {
     "pmid": "41594647",
@@ -3176,7 +3806,12 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.3390/biom16010108",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36528230",
@@ -3203,7 +3838,14 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.bmcl.2022.129106",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, U.S. Gov't, Non-P.H.S.",
+      "Research Support, N.I.H., Extramural"
+    ],
+    "is_review": false
   },
   {
     "pmid": "35484098",
@@ -3239,7 +3881,14 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1038/s41398-022-01942-w",
+    "pub_types": [
+      "Journal Article",
+      "Multicenter Study",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "30616226",
@@ -3266,7 +3915,12 @@
       "metabotropic glutamate receptor 7"
     ],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.msard.2019.01.012",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36732336",
@@ -3291,7 +3945,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1038/s41598-023-28531-1",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "40158234",
@@ -3315,7 +3975,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1016/j.vaccine.2025.127056",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "31500698",
@@ -3353,7 +4019,13 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.7554/eLife.48431",
+    "pub_types": [
+      "Journal Article",
+      "Research Support, Non-U.S. Gov't"
+    ],
+    "is_review": false
   },
   {
     "pmid": "36688618",
@@ -3376,6 +4048,11 @@
     ],
     "mentioned_receptor_names": [],
     "low_confidence_query": false,
-    "assignment_method": "per_receptor_search"
+    "assignment_method": "per_receptor_search",
+    "doi": "10.1039/d2mo00245k",
+    "pub_types": [
+      "Journal Article"
+    ],
+    "is_review": false
   }
 ]

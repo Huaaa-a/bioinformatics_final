@@ -179,6 +179,17 @@ def _parse_articles(records) -> list[dict]:
         year = str(pub_date.get("Year", "")) or ""
         if not year and pub_date.get("MedlineDate"):
             year = str(pub_date.get("MedlineDate", "")).split(" ")[0]
+        # 提取 DOI
+        doi = ""
+        article_ids = art.get("PubmedData", {}).get("ArticleIdList", [])
+        for aid in article_ids:
+            if str(aid.attributes.get("IdType", "")) == "doi":
+                doi = str(aid)
+                break
+        # 提取文献类型
+        pub_type_list = medline.get("Article", {}).get("PublicationTypeList", [])
+        pub_types = [str(pt) for pt in pub_type_list]
+        is_review = any("review" in pt.lower() or "meta-analysis" in pt.lower() for pt in pub_types)
         parsed.append(
             {
                 "pmid": pmid,
@@ -187,6 +198,9 @@ def _parse_articles(records) -> list[dict]:
                 "authors": authors,
                 "journal": journal,
                 "year": year,
+                "doi": doi or None,
+                "pub_types": pub_types,
+                "is_review": is_review,
             }
         )
     return parsed
@@ -216,8 +230,8 @@ def _strip_html(text: str) -> str:
     return re.sub(r"<[a-zA-Z][^>]*>", "", text)
 
 
-def scan_mentions(text: str, all_genes: list[str], all_names: list[str]) -> tuple[list[str], list[str]]:
-    """在 text 中扫描所有 24 个基因符号 + 受体全名 + 常见短别名。"""
+def scan_mentions(text: str, all_genes: list[str], all_names: list[str], all_aliases: dict[str, list[str]] | None = None) -> tuple[list[str], list[str]]:
+    """在 text 中扫描所有 24 个基因符号 + 受体全名 + 常见短别名 + xlsx 别名。"""
     text_clean = _strip_html(text or "")
     text_low = text_clean.lower()
     # 把 "HRH-4" / "DRD-2" 这种带连字符的写法归一为 "HRH4" / "DRD2",再做词边界匹配
@@ -242,6 +256,13 @@ def scan_mentions(text: str, all_genes: list[str], all_names: list[str]) -> tupl
     for g, short in gene_to_short.items():
         if g in genes and short.lower() in text_low and short not in names:
             names.append(short)
+    # xlsx 中的 common_aliases
+    if all_aliases:
+        for g, aliases in all_aliases.items():
+            if g in genes:
+                for alias in aliases:
+                    if alias and alias.lower() in text_low and alias not in names:
+                        names.append(alias)
     return genes, names
 
 
@@ -293,6 +314,7 @@ def fetch_for_receptor(
     by_pmid: dict[str, dict],
     all_genes: list[str],
     all_names: list[str],
+    all_aliases: dict[str, list[str]] | None = None,
 ) -> tuple[list[dict], int, int, int, str]:
     """单受体 esearch + efetch,带校验。
 
@@ -331,7 +353,7 @@ def fetch_for_receptor(
     low_conf = 0
     for r in records:
         combined = _strip_html((r.get("title") or "") + " " + (r.get("abstract") or ""))
-        genes_found, names_found = scan_mentions(combined, all_genes, all_names)
+        genes_found, names_found = scan_mentions(combined, all_genes, all_names, all_aliases)
         in_abstract = (
             receptor.receptor_gene in genes_found
             or receptor.receptor_name in names_found
@@ -377,6 +399,10 @@ def main() -> None:
 
     all_genes = [r.receptor_gene for r in receptors]
     all_names = [r.receptor_name for r in receptors]
+    all_aliases = {
+        r.receptor_gene: [a.strip() for a in r.common_aliases.split(";") if a.strip()]
+        for r in receptors if r.common_aliases
+    }
 
     records, by_pmid = load_existing()
     log.info("已有 %d 条历史记录", len(records))
@@ -393,7 +419,7 @@ def main() -> None:
             rec.neurotransmitter_system,
         )
         new_recs, hits, new_pmid_n, low_conf_n, status = fetch_for_receptor(
-            rec, args.per_receptor, by_pmid, all_genes, all_names
+            rec, args.per_receptor, by_pmid, all_genes, all_names, all_aliases
         )
 
         for r in new_recs:
@@ -415,8 +441,8 @@ def main() -> None:
                 )
                 existing["mentioned_receptors_in_abstract"] = merged_genes
                 existing["mentioned_receptor_names"] = merged_names
-                # 如果新受体命中"中"了,而旧记录没标记过,降级 low_confidence_query
-                if r["query_receptor_gene"] in merged_genes and existing.get("low_confidence_query"):
+                # 如果原记录的 query_receptor_gene 现在在合并后的基因列表中了,取消 low_confidence_query
+                if existing.get("query_receptor_gene") in merged_genes and existing.get("low_confidence_query"):
                     existing["low_confidence_query"] = False
                 log.info(
                     "  -> PMID %s 已存在,合并 mentioned_* (新增基因 %s)",

@@ -27,3 +27,7 @@ venv/
 # 数据(已上传的 pubmed 数据视情况决定要不要忽略,这里默认不忽略)
 # data/*.json
 # data/*.csv
+
+# 临时修补/验证脚本
+data/_patch_*.py
+data/_verify_*.py

@@ -3,8 +3,11 @@ import json
 import re
 import sys
 import openpyxl
+from pathlib import Path
 
 sys.stdout.reconfigure(encoding="utf-8")
+
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
 
 def strip_html(text: str) -> str:
@@ -20,7 +23,7 @@ def normalize(text: str) -> str:
 
 
 wb = openpyxl.load_workbook(
-    "receptor_list_classic_neurotransmitter_gpcr.xlsx", data_only=True, read_only=True
+    REPO_ROOT / "receptor_list_classic_neurotransmitter_gpcr.xlsx", data_only=True, read_only=True
 )
 ws = wb["included_receptors"]
 rows = list(ws.iter_rows(values_only=True))
@@ -35,7 +38,7 @@ for r in rows[1:]:
 all_genes = [r["gene"] for r in receptors]
 all_names = [r["name"] for r in receptors]
 
-d = json.load(open("data/pubmed_test_set.json", encoding="utf-8"))
+d = json.load(open(REPO_ROOT / "data" / "pubmed_test_set.json", encoding="utf-8"))
 print(f"测试集 {len(d)} 条\n")
 
 

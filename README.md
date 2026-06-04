@@ -24,17 +24,17 @@
 
 | 阶段 | 状态 | 产物 |
 |---|---|---|
-| ① 测试文献集准备 | ✓ 完成 | `data/pubmed_test_set.json`(121 条 PubMed 摘要) |
-| ② LLM 字段抽取 | ✓ 完成 | `data/pubmed_extracted.json`(121 条 × 14 字段) |
-| ③ 质量审计 | ✓ 完成 | `_check_assignments.py`,错配率 1%(剩 1 条牡蛎异源) |
-| ④ 二审 / needs_human_review | ✓ 完成 | 37 条标 review,8 条做了二审升档 |
+| ① 测试文献集准备 | ✓ 完成 | `data/pubmed_test_set.json`(121 条 PubMed 摘要,含 DOI) |
+| ② LLM 字段抽取 | ✓ 完成(v2) | `data/pubmed_extracted.json`(121 条 × 14 字段,白名单校验) |
+| ③ 质量审计 | ✓ 完成(v2) | `_check_assignments.py`,错配率 1%;journal/year/DOI 100% 准确 |
+| ④ 二审 / needs_human_review | ✓ 完成(v2) | 22 条标 review,24 条做了二审升档 |
 | ⑤ Web UI / 检索 | ⏳ 待做 | — |
 
 ---
 
 ## 数据快照
 
-> 数据截至 2026-06-04,生成命令 `python data/_stats_for_readme.py`
+> 数据截至 2026-06-05 (v2 审计修复后),生成命令 `python data/_stats_for_readme.py`
 
 ### 抓取结果(121 条 PubMed 摘要)
 
@@ -84,14 +84,14 @@
 
 | confidence | 数量 | 占比 |
 |---|---|---|
-| high | 41 | 34% |
-| medium | 52 | 43% |
-| low | 28 | 23% |
+| high | 50 | 41% |
+| medium | 49 | 40% |
+| low | 22 | 18% |
 | **合计** | **121** | **100%** |
 
-**needs_human_review**:**37 / 121 (31%)**
-- 36 条由 `receptor_gene_mismatch` 触发(异源二聚体、综述、数据库类论文)
-- 1 条由 LLM 自然低置信触发
+**needs_human_review**:**22 / 121 (18%)**
+- 14 条由 `receptor_gene_mismatch` 触发(异源二聚体、数据库类论文)
+- 8 条由 LLM 自然低置信触发
 
 **质量**:`parse_error=0`、`api_error=0`,0 失败。
 
@@ -103,11 +103,11 @@
 | `receptor` | 受体全名 | 120/121 (99%) |
 | `receptor_gene` | 基因符号 | 121/121 (100%) |
 | `receptor_family` | 受体家族 | 121/121 (100%) |
-| `ligand` | 配体 | 111/121 (92%) |
-| `location` | 位置 | 70/121 (58%) |
-| `cell_type` | 细胞类型 | 59/121 (49%) |
-| `downstream_pathway` | 下游通路 | 74/121 (61%) |
-| `function` | 功能 | 118/121 (98%) |
+| `ligand` | 配体 | 114/121 (94%) |
+| `location` | 位置 | 66/121 (55%) |
+| `cell_type` | 细胞类型 | 62/121 (51%) |
+| `downstream_pathway` | 下游通路 | 72/121 (60%) |
+| `function` | 功能 | 119/121 (98%) |
 | `species` | 物种 | 112/121 (93%) |
 | `evidence` | 证据句 | 121/121 (100%) |
 
@@ -117,18 +117,18 @@
 
 | ligand | 数量 |
 |---|---|
-| norepinephrine/epinephrine | 26 |
+| norepinephrine/epinephrine | 27 |
 | dopamine | 20 |
-| acetylcholine | 16 |
+| acetylcholine | 17 |
 | serotonin | 16 |
 | glutamate | 16 |
 | histamine | 15 |
-| GABA | 2 |
-| `(null)` | 10 |
+| `(null)` | 7 |
+| GABA | 3 |
 
-> 10 条 `null` 多为非经典 7 配体的 GPCR(HCAR1 / CXCR3 / TACR3 等),或被 mismatch 标记后 ligand 也被冲掉。
+> 7 条 `null` 多为非经典 7 配体的 GPCR(HCAR1 / CXCR3 / TACR3 等),或被 mismatch 标记后 ligand 也被冲掉。
 
-**source 分布**:`original_research` 118 / `review` 3(其余 0)
+**source 分布**:`original_research` 121（查询已排除 Review）
 
 ---
 
@@ -148,8 +148,8 @@
 ├── scripts/                                      # 全部可执行脚本
 │   ├── fetch_pubmed_test_set.py                  # ① PubMed 抓取 + 文本扫描
 │   ├── extract_fields_qwen.py                    # ② Qwen 抽 14 字段
-│   ├── .env.example                              # Entrez 配置模板
-│   └── .env.qwen.example                         # Qwen API 配置模板
+│   ├── .env.example                              # 全部 API 配置模板(Entrez + Qwen)
+│   └── .env.qwen.example                         # Qwen API 配置模板(旧版,仍可用)
 │
 ├── data/                                         # 全部数据 + 日志
 │   ├── pubmed_test_set.json                      # 121 条原始摘要
@@ -195,11 +195,10 @@ pip install -r requirements.txt
 
 ### 2. 配置 API 凭据
 
-把两个 `.env.example` 复制成 `.env` 并填值:
+把 `scripts/.env.example` 复制成 `scripts/.env` 并填值:
 
 ```powershell
 copy scripts\.env.example scripts\.env
-copy scripts\.env.qwen.example scripts\.env
 ```
 
 | Key | 来源 | 必填 |
@@ -244,9 +243,9 @@ python data\_check_assignments.py
 ┌────────────────────────────────────────────────────────┐
 │  ① fetch_pubmed_test_set.py                            │
 │  · per-receptor esearch(receptor_gene[Title/Abstract]) │
-│  · efetch 拿 abstract + journal + year                 │
+│  · efetch 拿 abstract + journal + year + DOI + pub_types│
 │  · 文本扫描:抽 mentioned_receptors / mentioned_names   │
-│    (剥 HTML <sub>、去连字符 HRH-4 → HRH4)              │
+│    (剥 HTML <sub>、去连字符 HRH-4 → HRH4、xlsx 别名)  │
 │  · 跨受体合并:同一 PMID 多受体提及则合一处              │
 │  · 输出:data/pubmed_test_set.json (121 条)             │
 └──────────────────┬─────────────────────────────────────┘
@@ -255,8 +254,12 @@ python data\_check_assignments.py
 ┌────────────────────────────────────────────────────────┐
 │  ② extract_fields_qwen.py                              │
 │  · 第一遍:基础 prompt 抽 14 字段                       │
+│    (prompt 含 24 受体标准 gene/family/aliases 列表)    │
+│  · literature 字段直接用 PubMed 源数据,不让 LLM 猜    │
+│  · source 字段优先用 PubMed PublicationTypeList 判定    │
+│  · receptor_gene / receptor_family 白名单校验+fallback │
 │  · 解析失败 / API 失败 → 兜底填 null + confidence=low │
-│  · 第二遍:对 confidence=low 的非错误记录               │
+│  · 第二遍:对 confidence=low 或 mismatch 的非错误记录   │
 │    用更详细的 review prompt 升档                       │
 │  · 内置:receptor_gene_query 对照 + mismatch 标记       │
 │    (query≠LLM 时自动 needs_human_review + 降档)        │
@@ -319,16 +322,23 @@ LLM 抽出的 `receptor_gene` 与 `query_receptor_gene` 不一致时,自动 `nee
 ### 5. 顺序 + 0.5s 限速
 不并发。原因:Qwen 免费配额下并发会触发 429。本数据量级(121 条)顺序 14 分钟跑完,没必要并发。
 
+### 6. v2 审计修复:literature 字段用 PubMed 源数据
+v1 让 LLM 从 abstract 猜 journal/year/doi,导致 69% journal 名不一致。v2 改为 `literature` 字段直接从 PubMed efetch 的结构化数据填充,LLM 不再负责这部分。DOI 从 `PubmedData/ArticleIdList` 提取。
+
+### 7. v2 审计修复:白名单校验
+- `receptor_gene`:24 个标准基因符号白名单,LLM 输出不在白名单中则 fallback 到 `query_receptor_gene`
+- `receptor_family`:从 xlsx 读取标准映射,LLM 输出不一致时强制替换
+- `source`:优先用 PubMed `PublicationTypeList` 判定 review/original_research
+- `common_aliases`:xlsx 中的别名传入 `scan_mentions()` 和 LLM prompt,减少漏检
+
 ---
 
 ## 已知问题与下一步
 
 ### 已知
-- **1% 错配(1 条)**:PMID 41621550 是牡蛎 `Cg5-HTR1A-like`,被人类 HTR1A 检索命中。物种歧义靠正则解决不了,已标 `low_confidence`。
-- **31% needs_human_review(37/121)**:36 条由 receptor_gene_mismatch 触发(LLM 抽出与 PubMed 检索词不同),1 条由 LLM 自然低置信触发。
-- **20% ligand=null(10 条)**:多为非经典 7 配体的 GPCR(HCAR1 / CXCR3 / TACR3 等),或被 mismatch 标记后 ligand 也被冲掉。这些不该进经典神经递质库,建议在 Web UI 阶段单独分区。
-- **6 条 GABBR1/GABBR2** 数量偏少(各 1-2 条),未来扩库时需专门补抓。
-- **Oyster 论文**触发了一次"误识别为人类基因"的回归测试,顺便验证了连字符归一化反而更严格(牡蛎 `Cg5HTR1Alike` 不会被误判为 `HTR1A`)。
+- **18% needs_human_review(22/121)**:14 条由 receptor_gene_mismatch 触发(LLM 抽出与 PubMed 检索词不同),8 条由 LLM 自然低置信触发。
+- **6% ligand=null(7 条)**:多为非经典 7 配体的 GPCR(HCAR1 / CXCR3 / TACR3 等)。这些不该进经典神经递质库,建议在 Web UI 阶段单独分区。
+- **3 条 GABBR1/GABBR2** 数量偏少(GABBR1:2, GABBR2:1),未来扩库时需专门补抓。
 
 ### 下一步
 - [ ] Web UI(项目目标要求):按受体/通路/位置浏览,`needs_human_review` 单列
@@ -341,7 +351,7 @@ LLM 抽出的 `receptor_gene` 与 `query_receptor_gene` 不一致时,自动 `nee
 
 ## 依赖与致谢
 
-**Python 库**:`biopython` `openpyxl` `pandas` `python-dotenv` `openai`
+**Python 库**:`biopython` `openpyxl` `python-dotenv` `openai`
 
 **外部 API**:
 - [NCBI Entrez (PubMed)](https://www.ncbi.nlm.nih.gov/books/NBK25501/) — 摘要抓取

@@ -1,11 +1,14 @@
 """为 README 生成数据快照(纯文本表格,方便人眼读)。"""
 import json
 from collections import Counter
+from pathlib import Path
 
-src = json.load(open('data/pubmed_test_set.json', encoding='utf-8'))
-ext = json.load(open('data/pubmed_extracted.json', encoding='utf-8'))
+REPO_ROOT = Path(__file__).resolve().parent.parent
 
-print('## 抓取结果(121 条摘要)')
+src = json.load(open(REPO_ROOT / 'data' / 'pubmed_test_set.json', encoding='utf-8'))
+ext = json.load(open(REPO_ROOT / 'data' / 'pubmed_extracted.json', encoding='utf-8'))
+
+print(f'## 抓取结果({len(src)} 条摘要)')
 print()
 print(f'**总文献数**:{len(src)} (唯一 PMID)')
 print()
@@ -24,13 +27,12 @@ print()
 print(f'### 来源 / 置信度')
 n_review = sum(1 for r in src if r.get('low_confidence_query'))
 print(f'- per-receptor 严格查询(query_receptor_gene = 搜索词)')
-print(f'- 审计错配率(纯正则):1%(1/86 牡蛎 Cg5-HTR1A-like)')
 print(f'- low_confidence_query=True:{n_review}')
 
 print()
 print('---')
 print()
-print('## 字段抽取结果(121 条 × 14 字段)')
+print(f'## 字段抽取结果({len(ext)} 条 × 14 字段)')
 print()
 print('### confidence 分布')
 cc = Counter(r['confidence'] for r in ext)

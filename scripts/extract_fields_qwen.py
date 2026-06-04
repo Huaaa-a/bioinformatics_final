@@ -38,14 +38,17 @@ except ImportError:
     sys.stderr.write("缺少 openai 库:pip install openai>=1.0\n")
     sys.exit(1)
 
+import openpyxl
+
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_INPUT = REPO_ROOT / "data" / "pubmed_test_set.json"
 DEFAULT_OUTPUT = REPO_ROOT / "data" / "pubmed_extracted.json"
 DEFAULT_LOG = REPO_ROOT / "data" / "extract_run.log"
+DEFAULT_XLSX = REPO_ROOT / "receptor_list_classic_neurotransmitter_gpcr.xlsx"
 
 QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 DEFAULT_MODEL = "qwen-plus"
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -53,31 +56,73 @@ logging.basicConfig(
 )
 log = logging.getLogger("extract_qwen")
 
+
+# ---------- 白名单加载 ----------
+
+def load_xlsx_metadata(xlsx_path: Path) -> tuple[dict[str, str], set[str], dict[str, list[str]]]:
+    """从 xlsx 加载 receptor_family 映射、valid_genes 集合、common_aliases 映射。"""
+    if not xlsx_path.exists():
+        log.warning("xlsx 不存在: %s,跳过白名单校验", xlsx_path)
+        return {}, set(), {}
+    wb = openpyxl.load_workbook(xlsx_path, data_only=True, read_only=True)
+    ws = wb["included_receptors"]
+    rows = ws.iter_rows(values_only=True)
+    header = next(rows)
+    idx = {name: i for i, name in enumerate(header)}
+    family_map: dict[str, str] = {}
+    valid_genes: set[str] = set()
+    aliases_map: dict[str, list[str]] = {}
+    for row in rows:
+        if not row or row[idx["receptor_gene"]] is None:
+            continue
+        gene = str(row[idx["receptor_gene"]]).strip().upper()
+        valid_genes.add(gene)
+        family = str(row[idx["receptor_family"]] or "").strip()
+        if gene and family:
+            family_map[gene] = family
+        common = str(row[idx.get("common_aliases", -1)] or "").strip() if "common_aliases" in idx else ""
+        if common:
+            aliases_map[gene] = [a.strip() for a in common.split(";") if a.strip()]
+    wb.close()
+    return family_map, valid_genes, aliases_map
+
+
+def _build_alias_hint(aliases_map: dict[str, list[str]]) -> str:
+    """为 LLM prompt 生成别名提示。"""
+    lines = []
+    for gene, aliases in sorted(aliases_map.items()):
+        if aliases:
+            lines.append(f"  {gene}: {', '.join(aliases)}")
+    return "\n".join(lines)
+
 # ---------- Prompt ----------
 
-SYSTEM_PROMPT = (
+SYSTEM_PROMPT_TEMPLATE = (
     "You are a biomedical knowledge extractor for a neurotransmitter GPCR database. "
     "Read the PubMed title+abstract and output ONE strict JSON object with exactly these 14 fields: "
     "pmid, source, receptor, receptor_gene, receptor_family, ligand, location, cell_type, "
     "downstream_pathway, function, species, literature, evidence, confidence.\n"
     "Strict rules:\n"
     "- Output JSON only. No markdown, no ```json fences, no explanation before or after.\n"
-    "- source ∈ {\"review\", \"original_research\"}.\n"
-    "- receptor_gene MUST be a HGNC-style gene symbol (e.g. DRD1, HTR2A, CHRM3, GRM5).\n"
-    "- ligand ∈ one of {dopamine, serotonin, norepinephrine/epinephrine, acetylcholine, "
-    "glutamate, GABA, histamine} or null.\n"
+    "- source ∈ {{\"review\", \"original_research\"}}.\n"
+    "- receptor_gene MUST be one of the 24 standard HGNC symbols listed below.\n"
+    "- receptor_family MUST match the standard family name listed below.\n"
+    "- ligand ∈ one of {{dopamine, serotonin, norepinephrine/epinephrine, acetylcholine, "
+    "glutamate, GABA, histamine}} or null.\n"
     "- location / cell_type / downstream_pathway / function / species: short noun phrases; null if absent.\n"
-    "- literature = {pmid, doi, title, year, journal}; doi is null if unknown.\n"
+    "- literature = {{pmid, doi, title, year, journal}}; doi is null if unknown.\n"
     "- evidence = the SHORTEST sentence in the abstract that directly supports the "
     "receptor+ligand+function claim. Verbatim quote, ≤ 30 words.\n"
     "- confidence:\n"
     '  * "high" — abstract clearly names receptor, ligand, and at least one of '
-    "{location, cell_type, downstream_pathway, function}; evidence is direct.\n"
+    "{{location, cell_type, downstream_pathway, function}}; evidence is direct.\n"
     '  * "medium" — receptor/ligand clear, some fields missing or lightly inferred.\n'
     '  * "low" — receptor unclear, broad review with no focal receptor, or multiple '
     "receptors discussed without a single focal one.\n"
     "- If a field cannot be confirmed, use null AND lower confidence by one step "
-    "(high→medium, medium→low, low stays low)."
+    "(high→medium, medium→low, low stays low).\n"
+    "\nStandard receptor gene symbols and their families/aliases:\n"
+    "{alias_hint}"
 )
 
 USER_TEMPLATE = """Input:
@@ -181,31 +226,94 @@ def _normalize_ligand(v) -> str | None:
     return None
 
 
-def normalize_record(parsed: dict, source_pmid: str, source_record: dict) -> dict:
+def _strip_html(text: str) -> str:
+    """剥 HTML 标签,避免 LLM 输出中残留 <sub>、</sub> 等。"""
+    if not text:
+        return ""
+    # 先剥开标签 <sub>, <i>, <sup> 等
+    text = re.sub(r"<[a-zA-Z][^>]*>", "", text)
+    # 再剥闭标签 </sub>, </i>, </sup> 等
+    text = re.sub(r"</[a-zA-Z][^>]*>", "", text)
+    return text
+
+
+def _truncate_evidence(text: str, max_words: int = 30) -> str:
+    """截断 evidence 到 max_words,优先在句号/分号处截断。"""
+    words = text.split()
+    if len(words) <= max_words:
+        return text
+    truncated = " ".join(words[:max_words])
+    # 尝试在最近句号处截断
+    for sep in [". ", "; "]:
+        last_sep = truncated.rfind(sep)
+        if last_sep > len(truncated) // 2:
+            return truncated[: last_sep + 1].strip()
+    return truncated
+
+
+def normalize_record(
+    parsed: dict,
+    source_pmid: str,
+    source_record: dict,
+    family_map: dict[str, str] | None = None,
+    valid_genes: set[str] | None = None,
+) -> dict:
     """把 LLM 输出的 dict 规整到 14 字段,补默认值。"""
     pmid = _normalize_str(parsed.get("pmid")) or source_pmid
-    source = _normalize_str(parsed.get("source"))
-    if source and source.lower() in {"review", "review_article"}:
-        source = "review"
-    elif source and source.lower() in {"original_research", "research", "article", "original"}:
-        source = "original_research"
+
+    # source: 优先用 PubMed 的 pub_types 判定
+    pub_types = source_record.get("pub_types", [])
+    if pub_types:
+        is_review = any("review" in pt.lower() or "meta-analysis" in pt.lower() for pt in pub_types)
+        source = "review" if is_review else "original_research"
     else:
-        source = None
+        source = _normalize_str(parsed.get("source"))
+        if source and source.lower() in {"review", "review_article"}:
+            source = "review"
+        elif source and source.lower() in {"original_research", "research", "article", "original"}:
+            source = "original_research"
+        else:
+            source = None
 
     receptor = _normalize_str(parsed.get("receptor"))
+    if receptor:
+        receptor = _strip_html(receptor)
+
     receptor_gene = _normalize_str(parsed.get("receptor_gene"))
     if receptor_gene:
         receptor_gene = receptor_gene.upper()
+
+    # receptor_gene 白名单校验
+    query_gene = _normalize_str(source_record.get("query_receptor_gene"))
+    if query_gene:
+        query_gene = query_gene.upper()
+    if valid_genes and receptor_gene and receptor_gene not in valid_genes:
+        if query_gene and query_gene in valid_genes:
+            receptor_gene = query_gene
+        # mismatch 会在后面标记
+
+    # receptor_family 白名单校验
     receptor_family = _normalize_str(parsed.get("receptor_family"))
+    if family_map and receptor_gene and receptor_gene in family_map:
+        standard_family = family_map[receptor_gene]
+        if receptor_family and receptor_family != standard_family:
+            receptor_family = standard_family
+        elif not receptor_family:
+            receptor_family = standard_family
+
     ligand = _normalize_ligand(parsed.get("ligand"))
-    location = _normalize_str(parsed.get("location"))
-    cell_type = _normalize_str(parsed.get("cell_type"))
-    downstream_pathway = _normalize_str(parsed.get("downstream_pathway"))
-    function = _normalize_str(parsed.get("function"))
-    species = _normalize_str(parsed.get("species"))
-    evidence = _normalize_str(parsed.get("evidence"))
-    if evidence and len(evidence.split()) > 35:
-        evidence = " ".join(evidence.split()[:30])
+    location = _strip_html(_normalize_str(parsed.get("location")) or "")
+    location = location or None
+    cell_type = _strip_html(_normalize_str(parsed.get("cell_type")) or "")
+    cell_type = cell_type or None
+    downstream_pathway = _strip_html(_normalize_str(parsed.get("downstream_pathway")) or "")
+    downstream_pathway = downstream_pathway or None
+    function = _strip_html(_normalize_str(parsed.get("function")) or "")
+    function = function or None
+    species = _strip_html(_normalize_str(parsed.get("species")) or "")
+    species = species or None
+    evidence = _strip_html(_normalize_str(parsed.get("evidence")) or "")
+    evidence = _truncate_evidence(evidence) if evidence else None
 
     confidence = _normalize_str(parsed.get("confidence"))
     if confidence and confidence.lower() in {"high", "medium", "low"}:
@@ -213,15 +321,16 @@ def normalize_record(parsed: dict, source_pmid: str, source_record: dict) -> dic
     else:
         confidence = "low"
 
+    # literature: 强制用 PubMed 源数据
     literature = parsed.get("literature") or {}
     if not isinstance(literature, dict):
         literature = {}
     literature_out = {
-        "pmid": _normalize_str(literature.get("pmid")) or source_pmid,
-        "doi": _normalize_str(literature.get("doi")),
-        "title": _normalize_str(literature.get("title")) or _normalize_str(source_record.get("title")),
-        "year": _normalize_str(literature.get("year")) or _normalize_str(source_record.get("year")),
-        "journal": _normalize_str(literature.get("journal")) or _normalize_str(source_record.get("journal")),
+        "pmid": source_pmid,
+        "doi": _normalize_str(literature.get("doi")) or _normalize_str(source_record.get("doi")),
+        "title": _normalize_str(source_record.get("title")),
+        "year": _normalize_str(source_record.get("year")),
+        "journal": _normalize_str(source_record.get("journal")),
     }
 
     # 核心字段缺失就降档
@@ -234,9 +343,6 @@ def normalize_record(parsed: dict, source_pmid: str, source_record: dict) -> dic
         confidence = "low"
 
     # query 对照:如果源记录有 query_receptor_gene,记录并标记 mismatch
-    query_gene = _normalize_str(source_record.get("query_receptor_gene"))
-    if query_gene:
-        query_gene = query_gene.upper()
     mismatch = bool(query_gene) and bool(receptor_gene) and query_gene != receptor_gene
     if mismatch and confidence != "low":
         order = {"high": "medium", "medium": "low"}
@@ -336,7 +442,10 @@ def extract_one(
     client: OpenAI,
     model: str,
     record: dict,
+    system_prompt: str,
     prompt_version: str = PROMPT_VERSION,
+    family_map: dict[str, str] | None = None,
+    valid_genes: set[str] | None = None,
 ) -> dict:
     """对单条 record 抽 14 字段,带 parse_error / api_error 标记。"""
     pmid = record["pmid"]
@@ -345,11 +454,11 @@ def extract_one(
         title=record.get("title", ""),
         abstract=record.get("abstract", ""),
     )
-    raw, err = call_qwen(client, model, SYSTEM_PROMPT, user)
+    raw, err = call_qwen(client, model, system_prompt, user)
     extracted_at = datetime.now(timezone.utc).isoformat()
     if err and not raw:
         # 兜底
-        out = normalize_record({}, pmid, record)
+        out = normalize_record({}, pmid, record, family_map, valid_genes)
         out["extraction_meta"] = {
             "model": model,
             "prompt_version": prompt_version,
@@ -361,7 +470,7 @@ def extract_one(
         return out
     parsed = parse_strict_json(raw)
     if not parsed:
-        out = normalize_record({}, pmid, record)
+        out = normalize_record({}, pmid, record, family_map, valid_genes)
         out["extraction_meta"] = {
             "model": model,
             "prompt_version": prompt_version,
@@ -372,7 +481,7 @@ def extract_one(
         }
         out["needs_human_review"] = True
         return out
-    out = normalize_record(parsed, pmid, record)
+    out = normalize_record(parsed, pmid, record, family_map, valid_genes)
     out["extraction_meta"] = {
         "model": model,
         "prompt_version": prompt_version,
@@ -387,8 +496,11 @@ def review_one(
     model: str,
     record: dict,
     previous: dict,
+    system_prompt: str,
+    family_map: dict[str, str] | None = None,
+    valid_genes: set[str] | None = None,
 ) -> dict:
-    """对 confidence=low 的非错误记录做二审。"""
+    """对 confidence=low 或 mismatch 的记录做二审。"""
     pmid = record["pmid"]
     user = USER_TEMPLATE.format(
         pmid=pmid,
@@ -407,7 +519,7 @@ def review_one(
         previous["extraction_meta"]["review_parse_error"] = True
         previous["extraction_meta"]["review_raw_first_300"] = raw[:300]
         return previous
-    out = normalize_record(parsed, pmid, record)
+    out = normalize_record(parsed, pmid, record, family_map, valid_genes)
     out["extraction_meta"] = {
         "model": model,
         "prompt_version": PROMPT_VERSION + "-review",
@@ -422,12 +534,13 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Qwen 抽 14 字段")
     parser.add_argument("--input", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--xlsx", type=Path, default=DEFAULT_XLSX)
     parser.add_argument("--limit", type=int, default=0, help="只跑前 N 条,0 = 全部")
     parser.add_argument(
         "--two-pass",
         choices=["on", "off"],
         default="on",
-        help="对 confidence=low 的记录做二审",
+        help="对 confidence=low 或 mismatch 的记录做二审",
     )
     parser.add_argument(
         "--force-rerun",
@@ -438,6 +551,15 @@ def main() -> None:
 
     api_key, model = load_env()
     client = make_client(api_key)
+
+    # 加载白名单
+    family_map, valid_genes, aliases_map = load_xlsx_metadata(args.xlsx)
+    log.info("白名单: %d 个 valid_genes, %d 个 family 映射, %d 个别名组",
+             len(valid_genes), len(family_map), len(aliases_map))
+
+    # 构建 system prompt (含别名提示)
+    alias_hint = _build_alias_hint(aliases_map)
+    system_prompt = SYSTEM_PROMPT_TEMPLATE.format(alias_hint=alias_hint)
 
     records = load_input(args.input)
     log.info("读取 %d 条输入", len(records))
@@ -457,18 +579,21 @@ def main() -> None:
     t0 = time.time()
     for i, r in enumerate(todo, 1):
         log.info("[%d/%d] pmid=%s", i, len(todo), r["pmid"])
-        out = extract_one(client, model, r)
+        out = extract_one(client, model, r, system_prompt, PROMPT_VERSION, family_map, valid_genes)
         by_pmid[r["pmid"]] = out
         save_output(args.output, by_pmid)
         time.sleep(0.5)
     log.info("第一轮完成,耗时 %.1fs", time.time() - t0)
 
-    # 二审
+    # 二审: confidence=low 或 receptor_gene_mismatch 的非错误记录
     if args.two_pass == "on":
         review_targets = [
             r for r in records
             if r["pmid"] in by_pmid
-            and by_pmid[r["pmid"]].get("confidence") == "low"
+            and (
+                by_pmid[r["pmid"]].get("confidence") == "low"
+                or by_pmid[r["pmid"]].get("receptor_gene_mismatch")
+            )
             and not by_pmid[r["pmid"]].get("extraction_meta", {}).get("api_error")
             and not by_pmid[r["pmid"]].get("extraction_meta", {}).get("parse_error")
             and not by_pmid[r["pmid"]].get("extraction_meta", {}).get("review_attempted_at")
@@ -478,7 +603,7 @@ def main() -> None:
         for i, r in enumerate(review_targets, 1):
             log.info("[review %d/%d] pmid=%s", i, len(review_targets), r["pmid"])
             prev = by_pmid[r["pmid"]]
-            out = review_one(client, model, r, prev)
+            out = review_one(client, model, r, prev, system_prompt, family_map, valid_genes)
             by_pmid[r["pmid"]] = out
             save_output(args.output, by_pmid)
             time.sleep(0.5)
