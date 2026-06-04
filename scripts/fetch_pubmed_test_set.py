@@ -2,8 +2,21 @@
 fetch_pubmed_test_set.py
 ========================
 
-按受体清单从 PubMed 拉取 20-50 篇摘要(每个受体 3-5 篇),
-输出到 JSON + CSV。
+从 PubMed 按 24 个神经递质 GPCR 受体逐个拉取摘要,保证每条记录
+的 `query_receptor_gene` 与搜索词一致(避免之前的轮询错配)。
+
+数据流:
+  for receptor in 24:
+    pmids = esearch("<gene>[Title/Abstract] AND GPCR ... NOT Review")
+    new = filter(pmids not in known_pmids)[:per_receptor]
+    records = efetch_batched(new, batch=200)         # 批量 efetch
+    for r in records:
+        r["query_receptor_gene"] = receptor.gene    # = 搜索词,天然正确
+        r["mentioned_receptors_in_abstract"] = ...  # 扫描 abstract
+        r["mentioned_receptor_names"]      = ...
+        r["low_confidence_query"]          = ...
+        r["assignment_method"]             = "per_receptor_search"
+        # 若 PMID 已被其他受体先抓到,合并 mentioned_*,不重复入库
 
 依赖:biopython, openpyxl, pandas, python-dotenv
 运行:python scripts/fetch_pubmed_test_set.py
@@ -16,23 +29,25 @@ import csv
 import json
 import logging
 import os
+import re
 import sys
 import time
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Iterable
 
 import openpyxl
 from Bio import Entrez
 from dotenv import load_dotenv
 
-# 路径默认在仓库根,可通过 CLI 覆盖
+# 路径默认在仓库根
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_XLSX = REPO_ROOT / "receptor_list_classic_neurotransmitter_gpcr.xlsx"
 DEFAULT_OUT_DIR = REPO_ROOT / "data"
 JSON_PATH = DEFAULT_OUT_DIR / "pubmed_test_set.json"
 CSV_PATH = DEFAULT_OUT_DIR / "pubmed_test_set_summary.csv"
+
+EFETCH_BATCH = 200  # NCBI 单次 efetch 的稳定上限
 
 logging.basicConfig(
     level=logging.INFO,
@@ -52,8 +67,9 @@ class Receptor:
     source_url: str
 
 
+# ---------- 受体清单 ----------
+
 def load_receptors(xlsx_path: Path) -> list[Receptor]:
-    """读取 xlsx 的 included_receptors 表。"""
     if not xlsx_path.exists():
         raise FileNotFoundError(f"找不到 xlsx: {xlsx_path}")
     wb = openpyxl.load_workbook(xlsx_path, data_only=True, read_only=True)
@@ -80,14 +96,13 @@ def load_receptors(xlsx_path: Path) -> list[Receptor]:
     return receptors
 
 
+# ---------- Entrez 配置 ----------
+
 def configure_entrez() -> None:
-    """从环境变量或 .env 加载邮箱与 API key。"""
     load_dotenv(REPO_ROOT / "scripts" / ".env")
     email = os.getenv("ENTREZ_EMAIL", "").strip()
     if not email:
-        log.error(
-            "Entrez 需要邮箱,请设置 ENTREZ_EMAIL 环境变量或在 scripts/.env 中提供"
-        )
+        log.error("Entrez 需要邮箱,请设置 ENTREZ_EMAIL 环境变量或在 scripts/.env 中提供")
         sys.exit(1)
     Entrez.email = email
 
@@ -100,19 +115,19 @@ def configure_entrez() -> None:
 
 
 def sleep_for_rate_limit() -> None:
-    """根据是否提供 API key 选择暂停时长。"""
     if Entrez.api_key:
         time.sleep(0.1)
     else:
         time.sleep(0.34)
 
 
-def build_query(genes: list[str]) -> str:
-    """按一组基因(同一神经递质系统)构造 esearch 查询,限定近 10 年、非综述。"""
+# ---------- 查询构造 ----------
+
+def build_query(gene: str) -> str:
+    """单基因查询:限定近 10 年、非综述、GPCR 上下文。"""
     current_year = datetime.now().year
-    gene_clause = " OR ".join(f'"{g}"[Title/Abstract]' for g in genes)
     return (
-        f"({gene_clause}) "
+        f'"{gene}"[Title/Abstract] '
         f'AND (GPCR OR "G protein-coupled receptor"[Title/Abstract]) '
         f'AND ("{current_year - 10}/01/01"[Date - Publication] : '
         f'"{current_year}/12/31"[Date - Publication]) '
@@ -120,21 +135,17 @@ def build_query(genes: list[str]) -> str:
     )
 
 
-def esearch(query: str) -> list[str]:
-    """返回 PMID 列表(最多 per_receptor 个)。"""
-    handle = Entrez.esearch(
-        db="pubmed",
-        term=query,
-        retmax=20,  # 给 efetch 留余量,实际取前 per_receptor 个
-        sort="relevance",
-    )
+def esearch(query: str, retmax: int) -> list[str]:
+    handle = Entrez.esearch(db="pubmed", term=query, retmax=retmax, sort="relevance")
     record = Entrez.read(handle)
     handle.close()
     return list(record.get("IdList", []))
 
 
+# ---------- 摘要解析 ----------
+
 def efetch_abstracts(pmids: list[str]) -> list[dict]:
-    """efetch xml 并解析为字段列表。"""
+    """单批 efetch(xml),解析为字段列表。"""
     if not pmids:
         return []
     handle = Entrez.efetch(
@@ -142,6 +153,10 @@ def efetch_abstracts(pmids: list[str]) -> list[dict]:
     )
     records = Entrez.read(handle)
     handle.close()
+    return _parse_articles(records)
+
+
+def _parse_articles(records) -> list[dict]:
     parsed: list[dict] = []
     for art in records.get("PubmedArticle", []):
         medline = art.get("MedlineCitation", {})
@@ -155,25 +170,14 @@ def efetch_abstracts(pmids: list[str]) -> list[dict]:
             abstract = ""
         authors_list = article.get("AuthorList", [])
         authors = [
-            " ".join(
-                filter(
-                    None,
-                    [
-                        str(a.get("ForeName", "")),
-                        str(a.get("LastName", "")),
-                    ],
-                )
-            )
+            " ".join(filter(None, [str(a.get("ForeName", "")), str(a.get("LastName", ""))]))
             for a in authors_list
             if a.get("LastName")
         ]
         journal = str(article.get("Journal", {}).get("Title", "")) or ""
-        pub_date = article.get("Journal", {}).get("JournalIssue", {}).get(
-            "PubDate", {}
-        )
+        pub_date = article.get("Journal", {}).get("JournalIssue", {}).get("PubDate", {})
         year = str(pub_date.get("Year", "")) or ""
         if not year and pub_date.get("MedlineDate"):
-            # e.g. "2022 Jan-Feb"
             year = str(pub_date.get("MedlineDate", "")).split(" ")[0]
         parsed.append(
             {
@@ -188,17 +192,67 @@ def efetch_abstracts(pmids: list[str]) -> list[dict]:
     return parsed
 
 
-def load_existing() -> tuple[dict, set]:
-    """读取已存在的 JSON,返回 (records_list, known_pmids_set)。"""
+def efetch_batched(pmids: list[str], batch: int = EFETCH_BATCH) -> list[dict]:
+    """分批 efetch。NCBI 单批 ID 数过多会 414/400,这里用 200 截断。"""
+    out: list[dict] = []
+    for i in range(0, len(pmids), batch):
+        chunk = pmids[i : i + batch]
+        out.extend(efetch_abstracts(chunk))
+        if i + batch < len(pmids):
+            sleep_for_rate_limit()
+    return out
+
+
+# ---------- 文本扫描:在 abstract 中找 24 个受体 ----------
+
+def _strip_html(text: str) -> str:
+    """把 <sub>HR</sub>H2</sub> 这类 PubMed XML 残存的 HTML 标签剥掉,避免打断匹配。"""
+    if not text:
+        return ""
+    return re.sub(r"<[^>]+>", "", text)
+
+
+def scan_mentions(text: str, all_genes: list[str], all_names: list[str]) -> tuple[list[str], list[str]]:
+    """在 text 中扫描所有 24 个基因符号 + 受体全名 + 常见短别名。"""
+    text_clean = _strip_html(text or "")
+    text_low = text_clean.lower()
+    genes: list[str] = []
+    for g in all_genes:
+        if re.search(rf"\b{re.escape(g)}\b", text_clean, re.IGNORECASE) and g not in genes:
+            genes.append(g)
+    names: list[str] = []
+    for n in all_names:
+        n_l = n.lower()
+        if n_l and n_l in text_low and n not in names:
+            names.append(n)
+    # 额外:由基因符号派生的常见短别名
+    gene_to_short = {
+        "HTR1A": "5-HT1A", "HTR2A": "5-HT2A", "HTR2C": "5-HT2C", "HTR7": "5-HT7",
+        "HRH1": "H1 receptor", "HRH2": "H2 receptor",
+        "HRH3": "H3 receptor", "HRH4": "H4 receptor",
+        "CHRM1": "M1 receptor", "CHRM2": "M2 receptor",
+        "CHRM3": "M3 receptor", "CHRM4": "M4 receptor",
+    }
+    for g, short in gene_to_short.items():
+        if g in genes and short.lower() in text_low and short not in names:
+            names.append(short)
+    return genes, names
+
+
+# ---------- 持久化 ----------
+
+def load_existing() -> tuple[list[dict], dict[str, dict]]:
+    """读取已存在的 JSON,返回 (records_list, by_pmid_dict)。"""
     if JSON_PATH.exists():
         try:
             with JSON_PATH.open("r", encoding="utf-8") as f:
                 data = json.load(f)
             if isinstance(data, list):
-                return data, {r["pmid"] for r in data if "pmid" in r}
+                by_pmid = {r["pmid"]: r for r in data if "pmid" in r}
+                return data, by_pmid
         except (json.JSONDecodeError, OSError) as e:
             log.warning("读取已有 JSON 失败,按空记录继续: %s", e)
-    return [], set()
+    return [], {}
 
 
 def save_records(records: list[dict]) -> None:
@@ -214,7 +268,9 @@ def save_summary(rows: list[dict]) -> None:
         "receptor_gene",
         "receptor_name",
         "hits",
+        "new_pmids",
         "downloaded",
+        "low_confidence_count",
         "status",
     ]
     with CSV_PATH.open("w", encoding="utf-8", newline="") as f:
@@ -223,62 +279,84 @@ def save_summary(rows: list[dict]) -> None:
         writer.writerows(rows)
 
 
+# ---------- 单受体抓取 ----------
+
 def fetch_for_receptor(
-    receptor: Receptor, per_receptor: int, known_pmids: set
-) -> tuple[list[dict], int, str]:
-    """单个受体的检索 + 摘要拉取(兼容旧 CLI,实际 main 已走 per-system 路径)。"""
-    return _fetch_and_label([receptor], per_receptor, known_pmids)
+    receptor: Receptor,
+    per_receptor: int,
+    by_pmid: dict[str, dict],
+    all_genes: list[str],
+    all_names: list[str],
+) -> tuple[list[dict], int, int, int, str]:
+    """单受体 esearch + efetch,带校验。
 
-
-def _fetch_and_label(
-    receptors: list[Receptor], per_group: int, known_pmids: set
-) -> tuple[list[dict], int, str, str]:
-    """按一组受体(同一系统)检索,统一打 query_receptor 标签。返回 (records, hits, status, label)。"""
-    genes = [r.receptor_gene for r in receptors]
-    label = receptors[0].neurotransmitter_system  # 用系统名做日志标签
+    返回 (new_records, hits_count, new_pmid_count, low_conf_count, status)。
+    若 PMID 已被其他受体先抓过,合并 mentioned_* 字段,不重复入库。
+    """
+    label = receptor.receptor_gene
     try:
-        pmids = esearch(build_query(genes))
+        pmids = esearch(build_query(receptor.receptor_gene), retmax=per_receptor * 2)
     except Exception as e:
         log.error("esearch 失败 %s: %s", label, e)
-        return [], 0, f"esearch_error: {e}", label
+        return [], 0, 0, 0, f"esearch_error: {e}"
+
     hits = len(pmids)
     sleep_for_rate_limit()
     if not pmids:
-        return [], hits, "no_hits", label
+        return [], hits, 0, 0, "no_hits"
 
-    target_pmids = [p for p in pmids if p not in known_pmids][:per_group]
-    skipped_existing = len([p for p in pmids[:per_group] if p in known_pmids])
-    if skipped_existing:
-        log.info("Skipped %d already-fetched PMIDs for %s", skipped_existing, label)
+    known = set(by_pmid.keys())
+    target_pmids = [p for p in pmids if p not in known][:per_receptor]
+    skipped = len([p for p in pmids[:per_receptor] if p in known])
+    if skipped:
+        log.info("Skipped %d already-fetched PMIDs for %s", skipped, label)
     if not target_pmids:
-        return [], hits, "all_already_fetched", label
+        return [], hits, 0, 0, "all_already_fetched"
 
     try:
-        records = efetch_abstracts(target_pmids)
+        records = efetch_batched(target_pmids)
     except Exception as e:
         log.error("efetch 失败 %s: %s", label, e)
-        return [], hits, f"efetch_error: {e}", label
+        return [], hits, 0, 0, f"efetch_error: {e}"
     sleep_for_rate_limit()
 
     fetched_at = datetime.now(timezone.utc).isoformat()
-    # 把每个 PMID 随机分配到一个受体(轮询),保证 query_receptor 字段有具体值
-    recs = list(receptors)
-    for i, r in enumerate(records):
-        owner = recs[i % len(recs)]
-        r["query_receptor_gene"] = owner.receptor_gene
-        r["query_receptor_name"] = owner.receptor_name
-        r["neurotransmitter_system"] = owner.neurotransmitter_system
+    new_records: list[dict] = []
+    low_conf = 0
+    for r in records:
+        combined = _strip_html((r.get("title") or "") + " " + (r.get("abstract") or ""))
+        genes_found, names_found = scan_mentions(combined, all_genes, all_names)
+        in_abstract = (
+            receptor.receptor_gene in genes_found
+            or receptor.receptor_name in names_found
+        )
+        if not in_abstract:
+            low_conf += 1
+        r["query_receptor_gene"] = receptor.receptor_gene
+        r["query_receptor_name"] = receptor.receptor_name
+        r["neurotransmitter_system"] = receptor.neurotransmitter_system
         r["fetched_at"] = fetched_at
-    return records, hits, "ok", label
+        r["mentioned_receptors_in_abstract"] = genes_found
+        r["mentioned_receptor_names"] = names_found
+        r["low_confidence_query"] = not in_abstract
+        r["assignment_method"] = "per_receptor_search"
+        new_records.append(r)
+    return new_records, hits, len(target_pmids), low_conf, "ok"
 
+
+# ---------- 主流程 ----------
 
 def main() -> None:
     global JSON_PATH, CSV_PATH, DEFAULT_OUT_DIR
-    parser = argparse.ArgumentParser(description="拉取 PubMed 测试文献集")
+    parser = argparse.ArgumentParser(description="按受体逐个从 PubMed 拉取摘要")
     parser.add_argument("--xlsx", type=Path, default=DEFAULT_XLSX)
     parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUT_DIR)
-    parser.add_argument("--per-receptor", type=int, default=5,
-                        help="每系统抓取篇数(per system),默认 5")
+    parser.add_argument(
+        "--per-receptor",
+        type=int,
+        default=5,
+        help="每个受体最多下载的 PMID 数(去重后),默认 5",
+    )
     args = parser.parse_args()
 
     DEFAULT_OUT_DIR = args.output_dir
@@ -291,40 +369,69 @@ def main() -> None:
     receptors = load_receptors(args.xlsx)
     log.info("共 %d 个受体", len(receptors))
 
-    records, known_pmids = load_existing()
-    log.info("已有 %d 条历史记录,跳过对应 PMID", len(records))
+    all_genes = [r.receptor_gene for r in receptors]
+    all_names = [r.receptor_name for r in receptors]
 
-    # 按系统分组,每个系统一次 esearch + 一次 efetch
-    by_system: dict[str, list[Receptor]] = {}
-    for r in receptors:
-        by_system.setdefault(r.neurotransmitter_system, []).append(r)
+    records, by_pmid = load_existing()
+    log.info("已有 %d 条历史记录", len(records))
 
     summary_rows: list[dict] = []
     new_total = 0
-    for system_name, recs in by_system.items():
+    low_conf_total = 0
+    for idx, rec in enumerate(receptors, start=1):
         log.info(
-            "处理系统 [%d/%d] %s (%d 个受体)",
-            len(summary_rows) // max(1, len(recs)) + 1,
-            len(by_system),
-            system_name,
-            len(recs),
+            "处理受体 [%d/%d] %s (%s)",
+            idx,
+            len(receptors),
+            rec.receptor_gene,
+            rec.neurotransmitter_system,
         )
-        new_recs, hits, status, _ = _fetch_and_label(
-            recs, args.per_receptor, known_pmids
+        new_recs, hits, new_pmid_n, low_conf_n, status = fetch_for_receptor(
+            rec, args.per_receptor, by_pmid, all_genes, all_names
         )
-        records.extend(new_recs)
-        known_pmids.update(r["pmid"] for r in new_recs)
-        new_total += len(new_recs)
-        # CSV 中按系统合并,status 写最差的一个
-        genes = "/".join(r.receptor_gene for r in recs)
-        first = recs[0]
+
+        for r in new_recs:
+            pmid = r["pmid"]
+            if pmid in by_pmid:
+                # 跨受体:合并 mentioned_*,保留首次 query_receptor_gene
+                existing = by_pmid[pmid]
+                merged_genes = list(
+                    dict.fromkeys(
+                        existing.get("mentioned_receptors_in_abstract", [])
+                        + r["mentioned_receptors_in_abstract"]
+                    )
+                )
+                merged_names = list(
+                    dict.fromkeys(
+                        existing.get("mentioned_receptor_names", [])
+                        + r["mentioned_receptor_names"]
+                    )
+                )
+                existing["mentioned_receptors_in_abstract"] = merged_genes
+                existing["mentioned_receptor_names"] = merged_names
+                # 如果新受体命中"中"了,而旧记录没标记过,降级 low_confidence_query
+                if r["query_receptor_gene"] in merged_genes and existing.get("low_confidence_query"):
+                    existing["low_confidence_query"] = False
+                log.info(
+                    "  -> PMID %s 已存在,合并 mentioned_* (新增基因 %s)",
+                    pmid,
+                    r["query_receptor_gene"],
+                )
+            else:
+                records.append(r)
+                by_pmid[pmid] = r
+                new_total += 1
+        low_conf_total += low_conf_n
+
         summary_rows.append(
             {
-                "neurotransmitter_system": system_name,
-                "receptor_gene": genes,
-                "receptor_name": first.receptor_name,
+                "neurotransmitter_system": rec.neurotransmitter_system,
+                "receptor_gene": rec.receptor_gene,
+                "receptor_name": rec.receptor_name,
                 "hits": hits,
+                "new_pmids": new_pmid_n,
                 "downloaded": len(new_recs),
+                "low_confidence_count": low_conf_n,
                 "status": status,
             }
         )
@@ -332,6 +439,7 @@ def main() -> None:
     save_records(records)
     save_summary(summary_rows)
     log.info("本次新增 %d 条,累计 %d 条", new_total, len(records))
+    log.info("其中 low_confidence_query=%d 条", low_conf_total)
     log.info("JSON: %s", JSON_PATH)
     log.info("CSV : %s", CSV_PATH)
 
