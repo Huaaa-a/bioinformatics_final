@@ -9,6 +9,7 @@
 ## 目录
 
 - [当前进度](#当前进度)
+- [数据快照](#数据快照)
 - [目录结构](#目录结构)
 - [快速开始](#快速开始)
 - [数据流](#数据流)
@@ -29,7 +30,105 @@
 | ④ 二审 / needs_human_review | ✓ 完成 | 37 条标 review,8 条做了二审升档 |
 | ⑤ Web UI / 检索 | ⏳ 待做 | — |
 
-**最终数据:121 条,high 41 / medium 52 / low 28,0 parse_error / 0 api_error。**
+---
+
+## 数据快照
+
+> 数据截至 2026-06-04,生成命令 `python data/_stats_for_readme.py`
+
+### 抓取结果(121 条 PubMed 摘要)
+
+按神经递质系统分布:
+
+| 系统 | 数量 |
+|---|---|
+| adrenergic(肾上腺素能) | 29 |
+| dopamine(多巴胺) | 19 |
+| serotonin(5-羟色胺) | 18 |
+| muscarinic acetylcholine(毒蕈碱型乙酰胆碱) | 18 |
+| metabotropic glutamate(代谢型谷氨酸) | 18 |
+| histamine(组胺) | 16 |
+| GABA_B | 3 |
+| **合计** | **121** |
+
+按受体基因分布(每个受体的摘要数):
+
+| 受体 | 系统 | 数量 | 受体 | 系统 | 数量 |
+|---|---|---|---|---|---|
+| DRD1 | dopamine | 10 | CHRM1 | muscarinic | 8 |
+| GRM7 | glutamate | 10 | ADRA2A | adrenergic | 8 |
+| DRD2 | dopamine | 9 | HTR1A | serotonin | 7 |
+| ADRB1 | adrenergic | 9 | ADRB2 | adrenergic | 7 |
+| HRH1 | histamine | 9 | ADRA1A | adrenergic | 5 |
+| HTR2A | serotonin | 8 | HRH2 | histamine | 5 |
+| CHRM2 | muscarinic | 4 | GRM5 | glutamate | 4 |
+| CHRM3 | muscarinic | 3 | CHRM4 | muscarinic | 3 |
+| GRM1 | glutamate | 3 | HTR7 | serotonin | 2 |
+| GABBR1 | GABA_B | 2 | HRH4 | histamine | 2 |
+| HTR2C | serotonin | 1 | GRM2 | glutamate | 1 |
+| GABBR2 | GABA_B | 1 | | | |
+
+**抓取质量**:
+- 唯一 PMID:121,无重复
+- 检索方法:per-receptor 严格 esearch(`query_receptor_gene` = 搜索词)
+- 文本扫描(`_strip_html` + 连字符归一化):消歧
+- 跨受体合并:同 PMID 多受体提及只入一次
+- 纯正则审计错配率:**1%**(1/86,牡蛎 `Cg5-HTR1A-like` 物种歧义)
+- `low_confidence_query=True`:4 条
+
+---
+
+### 字段抽取结果(121 条 × 14 字段)
+
+**confidence 分布**:
+
+| confidence | 数量 | 占比 |
+|---|---|---|
+| high | 41 | 34% |
+| medium | 52 | 43% |
+| low | 28 | 23% |
+| **合计** | **121** | **100%** |
+
+**needs_human_review**:**37 / 121 (31%)**
+- 36 条由 `receptor_gene_mismatch` 触发(异源二聚体、综述、数据库类论文)
+- 1 条由 LLM 自然低置信触发
+
+**质量**:`parse_error=0`、`api_error=0`,0 失败。
+
+**字段非空率**:
+
+| 字段 | 说明 | 非空率 |
+|---|---|---|
+| `source` | 文献类型 | 121/121 (100%) |
+| `receptor` | 受体全名 | 120/121 (99%) |
+| `receptor_gene` | 基因符号 | 121/121 (100%) |
+| `receptor_family` | 受体家族 | 121/121 (100%) |
+| `ligand` | 配体 | 111/121 (92%) |
+| `location` | 位置 | 70/121 (58%) |
+| `cell_type` | 细胞类型 | 59/121 (49%) |
+| `downstream_pathway` | 下游通路 | 74/121 (61%) |
+| `function` | 功能 | 118/121 (98%) |
+| `species` | 物种 | 112/121 (93%) |
+| `evidence` | 证据句 | 121/121 (100%) |
+
+> location / cell_type / pathway 非空率较低是因为许多 abstract 不提这些,非抽取质量问题。
+
+**ligand 分布**:
+
+| ligand | 数量 |
+|---|---|
+| norepinephrine/epinephrine | 26 |
+| dopamine | 20 |
+| acetylcholine | 16 |
+| serotonin | 16 |
+| glutamate | 16 |
+| histamine | 15 |
+| GABA | 2 |
+| `(null)` | 10 |
+
+> 10 条 `null` 多为非经典 7 配体的 GPCR(HCAR1 / CXCR3 / TACR3 等),或被 mismatch 标记后 ligand 也被冲掉。
+
+**source 分布**:`original_research` 118 / `review` 3(其余 0)
 
 ---
 
@@ -226,8 +325,9 @@ LLM 抽出的 `receptor_gene` 与 `query_receptor_gene` 不一致时,自动 `nee
 
 ### 已知
 - **1% 错配(1 条)**:PMID 41621550 是牡蛎 `Cg5-HTR1A-like`,被人类 HTR1A 检索命中。物种歧义靠正则解决不了,已标 `low_confidence`。
-- **30% mismatch 标记**:见上"关键设计决策 3"。
-- **20% ligand=null**:部分论文实际讨论非经典 7 配体(HCAR1 / CXCR3 / TACR3 等)的 GPCR,这些不该进经典神经递质库,建议在 Web UI 阶段单独分区。
+- **31% needs_human_review(37/121)**:36 条由 receptor_gene_mismatch 触发(LLM 抽出与 PubMed 检索词不同),1 条由 LLM 自然低置信触发。
+- **20% ligand=null(10 条)**:多为非经典 7 配体的 GPCR(HCAR1 / CXCR3 / TACR3 等),或被 mismatch 标记后 ligand 也被冲掉。这些不该进经典神经递质库,建议在 Web UI 阶段单独分区。
+- **6 条 GABBR1/GABBR2** 数量偏少(各 1-2 条),未来扩库时需专门补抓。
 - **Oyster 论文**触发了一次"误识别为人类基因"的回归测试,顺便验证了连字符归一化反而更严格(牡蛎 `Cg5HTR1Alike` 不会被误判为 `HTR1A`)。
 
 ### 下一步
