@@ -1,7 +1,7 @@
-# 凭据与本地配置
+# 凭据与本地配置(只留 .env.example 作为模板)
 scripts/.env
+scripts/.env.qwen.example
 !scripts/.env.example
-!scripts/.env.qwen.example
 
 # Python
 __pycache__/
@@ -29,11 +29,15 @@ data/*.log
 run.log
 extract_run.log
 
-# 计划/规划文档(过程性产物,不入库)
+# 计划/规划/审计文档(过程性产物,不入库)
 .trae/documents/
+.trae/plans/
 
-# 临时修补/验证/草稿
+# 一次性审计 / 验证 / 草稿脚本与笔记(已合并到主流程或临时用)
 data/_*.py
 data/_*.txt
 data/_*.md
+_*.py
+_*.txt
+_*.md
 *.tmp

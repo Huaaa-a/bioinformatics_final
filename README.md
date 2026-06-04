@@ -26,15 +26,15 @@
 |---|---|---|
 | ① 测试文献集准备 | ✓ 完成 | `data/pubmed_test_set.json`(121 条 PubMed 摘要,含 DOI) |
 | ② LLM 字段抽取 | ✓ 完成(v2) | `data/pubmed_extracted.json`(121 条 × 14 字段,白名单校验) |
-| ③ 质量审计 | ✓ 完成(v2) | `_check_assignments.py`,错配率 1%;journal/year/DOI 100% 准确 |
-| ④ 二审 / needs_human_review | ✓ 完成(v2) | 22 条标 review,24 条做了二审升档 |
+| ③ 质量审计 | ✓ 完成(v2) | 错配率 1%;journal/year/DOI 100% 准确 |
+| ④ 二审 / needs_human_review | ✓ 完成(v2) | 22 条标 review,14 条为 mismatch 触发,8 条为 LLM 自然低置信 |
 | ⑤ Web UI / 检索 | ⏳ 待做 | — |
 
 ---
 
 ## 数据快照
 
-> 数据截至 2026-06-05 (v2 审计修复后),生成命令 `python data/_stats_for_readme.py`
+> 数据截至 2026-06-05 (v2 审计修复后)。表中数值为脚本 `python -c "import json; ..."` 现场统计的快照。
 
 ### 抓取结果(121 条 PubMed 摘要)
 
@@ -138,7 +138,7 @@
 .
 ├── README.md                                     # 本文件
 ├── requirements.txt                              # Python 依赖
-├── .gitignore                                    # 排除 .env / pyc / venv
+├── .gitignore                                    # 排除 .env / 历史审计文件 / 临时脚本
 │
 ├── receptor_list_classic_neurotransmitter_gpcr.xlsx   # 24 受体清单(输入)
 ├── 神经递质GPCR知识库_项目目标.docx                # 项目目标说明
@@ -148,35 +148,27 @@
 ├── scripts/                                      # 全部可执行脚本
 │   ├── fetch_pubmed_test_set.py                  # ① PubMed 抓取 + 文本扫描
 │   ├── extract_fields_qwen.py                    # ② Qwen 抽 14 字段
-│   ├── .env.example                              # 全部 API 配置模板(Entrez + Qwen)
-│   └── .env.qwen.example                         # Qwen API 配置模板(旧版,仍可用)
+│   └── .env.example                              # API 配置模板(Entrez + Qwen)
 │
-├── data/                                         # 全部数据 + 日志
+├── data/                                         # 抓取与抽取结果
 │   ├── pubmed_test_set.json                      # 121 条原始摘要
-│   ├── pubmed_test_set_summary.csv               # 按系统汇总
-│   ├── pubmed_extracted.json                     # 121 条 × 14 字段抽取结果
-│   ├── run.log                                   # 抓取运行日志
-│   ├── extract_run.log                           # 抽取运行日志
-│   └── _check_assignments.py                     # 独立审计脚本
+│   ├── pubmed_test_set_summary.csv               # 按受体汇总
+│   └── pubmed_extracted.json                     # 121 条 × 14 字段抽取结果
 │
-└── .trae/specs/                                  # 两阶段的规格文档
+└── .trae/specs/                                  # 两阶段的规格文档(spec/tasks/checklist)
     ├── prepare-test-literature-set/              # ① 抓文献集
-    │   ├── spec.md
-    │   ├── tasks.md
-    │   └── checklist.md
     └── llm-field-extraction/                     # ② 抽字段
-        ├── spec.md
-        ├── tasks.md
-        └── checklist.md
 ```
+
+> 不入库的文件(`.gitignore` 兜底):`scripts/.env` 真实凭据、`run.log` / `extract_run.log` 运行日志、`data/__pycache__/`、`_check_*.py` / `_verify_*.py` / `_patch_*.py` / `_commit_msg*.txt` / `_tmp_*.py` 等历史一次性脚本与草稿、`.trae/documents/` 计划/审计稿。
 
 **核心文件作用**
 
 | 文件 | 作用 |
 |---|---|
-| `scripts/fetch_pubmed_test_set.py` | 按 24 个受体逐个 esearch PubMed → efetch 摘要 → 文本扫描校验 → 跨受体合并 → 落 `pubmed_test_set.json` |
-| `scripts/extract_fields_qwen.py` | 读 `pubmed_test_set.json` → 调用 qwen-plus 抽 14 字段 → 落 `pubmed_extracted.json`,支持断点续跑和二审 |
-| `data/_check_assignments.py` | 独立审计:用纯正则校验 `query_receptor_gene` 与 abstract 实际内容,给出错配率 |
+| `scripts/fetch_pubmed_test_set.py` | 按 24 个受体逐个 esearch PubMed → efetch 摘要 → 文本扫描校验 → 跨受体合并 → 落 `pubmed_test_set.json`,支持增量断点续跑 |
+| `scripts/extract_fields_qwen.py` | 读 `pubmed_test_set.json` → 调用 qwen-plus 抽 14 字段 → 落 `pubmed_extracted.json`,支持断点续跑、低置信二审、白名单校验 |
+| `scripts/.env.example` | API 配置模板(NCBI Entrez + 阿里云千问);复制为 `scripts/.env` 后填值 |
 | `.trae/specs/*/spec.md` | 每阶段的"为什么 / 改了什么 / 验收" |
 
 ---
@@ -220,13 +212,9 @@ python scripts\extract_fields_qwen.py
 
 **耗时参考**:抓 121 条 ≈ 30-40 分钟(Entrez 限速),抽 121 条 ≈ 14 分钟(Qwen 0.5s/次 + 7s API 延迟)。
 
-### 4. 审计数据
+### 4. 验证数据(可选)
 
-```powershell
-python data\_check_assignments.py
-```
-
-输出每条 `query_receptor_gene` 与 abstract 实际内容的匹配情况,以及 `low_confidence_query` 标记是否准确。
+直接看 `data/pubmed_test_set.json` / `data/pubmed_extracted.json` 即可,或用 `jq`/`pandas` 自行统计;项目里没有再保留独立审计脚本(都合并进主流程了)。
 
 ---
 
@@ -345,7 +333,7 @@ v1 让 LLM 从 abstract 猜 journal/year/doi,导致 69% journal 名不一致。v
 - [ ] 关键词检索(receptor / pathway / ligand)
 - [ ] 导出 CSV / 引用 BibTeX
 - [ ] 扩大检索:per-receptor 50-200 条做完整第一版知识库(从 121 → ~1000 条)
-- [ ] 把 37 条 needs_human_review 的人工复核反馈写回 `_review_notes` 字段,形成闭环
+- [ ] 把 22 条 needs_human_review 的人工复核反馈写回 `_review_notes` 字段,形成闭环
 
 ---
 
