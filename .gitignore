@@ -1,0 +1,29 @@
+# 凭据与本地配置
+scripts/.env
+!scripts/.env.example
+!scripts/.env.qwen.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Office 临时文件
+~*.docx
+~*.xlsx
+~*.pdf
+
+# Biopython 缓存
+**/biopython/Bio/Entrez/DTDs/
+**/biopython/Bio/Entrez/XSDs/
+
+# 数据(已上传的 pubmed 数据视情况决定要不要忽略,这里默认不忽略)
+# data/*.json
+# data/*.csv

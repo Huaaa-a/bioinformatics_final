@@ -1,0 +1,8 @@
+neurotransmitter_system,receptor_gene,receptor_name,hits,downloaded,status
+dopamine,DRD1/DRD2,dopamine receptor D1,20,4,ok
+serotonin,HTR1A/HTR2A/HTR2C/HTR7,5-hydroxytryptamine receptor 1A,20,4,ok
+adrenergic,ADRA1A/ADRA2A/ADRB1/ADRB2,alpha-1A adrenoceptor,20,4,ok
+muscarinic acetylcholine,CHRM1/CHRM2/CHRM3/CHRM4,muscarinic acetylcholine receptor M1,20,4,ok
+metabotropic glutamate,GRM1/GRM2/GRM5/GRM7,metabotropic glutamate receptor 1,20,4,ok
+GABA_B,GABBR1/GABBR2,GABA type B receptor subunit 1,3,0,all_already_fetched
+histamine,HRH1/HRH2/HRH3/HRH4,histamine H1 receptor,20,4,ok
