@@ -7,18 +7,19 @@ fetch_pubmed_test_set.py
 
 数据流:
   for receptor in 24:
-    pmids = esearch("<gene>[Title/Abstract] AND GPCR ... NOT Review")
+    pmids = esearch("(gene OR alias1 ...)[Title/Abstract] AND GPCR ... (保留 Review)")
     new = filter(pmids not in known_pmids)[:per_receptor]
     records = efetch_batched(new, batch=200)         # 批量 efetch
     for r in records:
         r["query_receptor_gene"] = receptor.gene    # = 搜索词,天然正确
         r["mentioned_receptors_in_abstract"] = ...  # 扫描 abstract
         r["mentioned_receptor_names"]      = ...
+        r["mentioned_ligands_in_abstract"] = ...    # canonical ligand 扫描
         r["low_confidence_query"]          = ...
         r["assignment_method"]             = "per_receptor_search"
         # 若 PMID 已被其他受体先抓到,合并 mentioned_*,不重复入库
 
-依赖:biopython, openpyxl, pandas, python-dotenv
+依赖:biopython, openpyxl, python-dotenv
 运行:python scripts/fetch_pubmed_test_set.py
 """
 
@@ -123,15 +124,69 @@ def sleep_for_rate_limit() -> None:
 
 # ---------- 查询构造 ----------
 
-def build_query(gene: str) -> str:
-    """单基因查询:限定近 10 年、非综述、GPCR 上下文。"""
+# canonical ligand 名(由 spec 规范化)→ 出现在文本中的写法(用于文本扫描)
+# 注意:scan 只在 title+abstract 里找,大小写不敏感,别用过于宽泛的词
+CANONICAL_LIGAND_PATTERNS: dict[str, list[str]] = {
+    "dopamine": [r"\bdopamine", r"\bdopaminergic"],
+    "serotonin": [r"\bserotonin", r"\bserotonergic", r"5-HT(?![0-9])"],  # 5-HT 单独,后面不带数字
+    "norepinephrine/epinephrine": [
+        r"\bnorepinephrine", r"\bnoradrenaline", r"\bepinephrine",
+        r"\badrenaline", r"\badrenergic",
+    ],
+    "acetylcholine": [r"\bacetylcholine", r"\bACh\b", r"\bcholinergic"],
+    "glutamate": [r"\bglutamate", r"\bglutamatergic"],
+    "GABA": [r"\bGABA\b", r"\bGABAergic", r"gamma-aminobutyric acid"],
+    "histamine": [r"\bhistamine", r"\bhistaminergic"],
+}
+
+# 受体基因 → canonical ligand(spec 中 14 字段 ligand 的取值)
+GENE_TO_CANONICAL_LIGAND: dict[str, str] = {
+    # dopamine
+    "DRD1": "dopamine", "DRD2": "dopamine", "DRD3": "dopamine",
+    "DRD4": "dopamine", "DRD5": "dopamine",
+    # serotonin
+    "HTR1A": "serotonin", "HTR1B": "serotonin", "HTR1D": "serotonin",
+    "HTR1E": "serotonin", "HTR1F": "serotonin",
+    "HTR2A": "serotonin", "HTR2B": "serotonin", "HTR2C": "serotonin",
+    "HTR4": "serotonin", "HTR5A": "serotonin", "HTR6": "serotonin", "HTR7": "serotonin",
+    # adrenergic
+    "ADRA1A": "norepinephrine/epinephrine", "ADRA1B": "norepinephrine/epinephrine",
+    "ADRA1D": "norepinephrine/epinephrine",
+    "ADRA2A": "norepinephrine/epinephrine", "ADRA2B": "norepinephrine/epinephrine",
+    "ADRA2C": "norepinephrine/epinephrine",
+    "ADRB1": "norepinephrine/epinephrine", "ADRB2": "norepinephrine/epinephrine", "ADRB3": "norepinephrine/epinephrine",
+    # muscarinic acetylcholine
+    "CHRM1": "acetylcholine", "CHRM2": "acetylcholine", "CHRM3": "acetylcholine",
+    "CHRM4": "acetylcholine", "CHRM5": "acetylcholine",
+    # metabotropic glutamate
+    "GRM1": "glutamate", "GRM2": "glutamate", "GRM3": "glutamate", "GRM4": "glutamate",
+    "GRM5": "glutamate", "GRM6": "glutamate", "GRM7": "glutamate", "GRM8": "glutamate",
+    # GABA_B
+    "GABBR1": "GABA", "GABBR2": "GABA",
+    # histamine
+    "HRH1": "histamine", "HRH2": "histamine", "HRH3": "histamine", "HRH4": "histamine",
+}
+
+
+def build_query(gene: str, aliases: list[str] | None = None) -> str:
+    """单受体查询:基因 + 别名 OR 拼接,近 10 年,GPCR 上下文,不再排除 Review。
+
+    aliases 来自 xlsx `common_aliases` 列(以 ';' 分隔),为空时只 query gene。
+    """
     current_year = datetime.now().year
+    terms: list[str] = [gene]
+    if aliases:
+        for a in aliases:
+            a = a.strip()
+            if a and a.lower() != gene.lower():
+                terms.append(a)
+    # 把每个 term 包成 "[Title/Abstract]" 形式,多词/带连字符/希腊字母都加引号
+    quoted = " OR ".join(f'"{t}"[Title/Abstract]' for t in terms)
     return (
-        f'"{gene}"[Title/Abstract] '
+        f'({quoted}) '
         f'AND (GPCR OR "G protein-coupled receptor"[Title/Abstract]) '
         f'AND ("{current_year - 10}/01/01"[Date - Publication] : '
-        f'"{current_year}/12/31"[Date - Publication]) '
-        f'NOT "Review"[Publication Type]'
+        f'"{current_year}/12/31"[Date - Publication])'
     )
 
 
@@ -266,6 +321,25 @@ def scan_mentions(text: str, all_genes: list[str], all_names: list[str], all_ali
     return genes, names
 
 
+def scan_ligands(text: str) -> list[str]:
+    """在 text 中扫 spec 规定的 canonical ligand 名,返回标准名列表(保序去重)。
+
+    canonical ligand 名(标准值)= {dopamine, serotonin, norepinephrine/epinephrine,
+    acetylcholine, glutamate, GABA, histamine}。
+    """
+    if not text:
+        return []
+    text_clean = _strip_html(text)
+    found: list[str] = []
+    for canon, patterns in CANONICAL_LIGAND_PATTERNS.items():
+        for p in patterns:
+            if re.search(p, text_clean, re.IGNORECASE):
+                if canon not in found:
+                    found.append(canon)
+                break
+    return found
+
+
 # ---------- 持久化 ----------
 
 def load_existing() -> tuple[list[dict], dict[str, dict]]:
@@ -322,8 +396,10 @@ def fetch_for_receptor(
     若 PMID 已被其他受体先抓过,合并 mentioned_* 字段,不重复入库。
     """
     label = receptor.receptor_gene
+    # 从 all_aliases 拿当前受体的 alias 列表
+    aliases_for_query = (all_aliases or {}).get(receptor.receptor_gene, [])
     try:
-        pmids = esearch(build_query(receptor.receptor_gene), retmax=per_receptor * 2)
+        pmids = esearch(build_query(receptor.receptor_gene, aliases_for_query), retmax=per_receptor * 2)
     except Exception as e:
         log.error("esearch 失败 %s: %s", label, e)
         return [], 0, 0, 0, f"esearch_error: {e}"
@@ -349,11 +425,13 @@ def fetch_for_receptor(
     sleep_for_rate_limit()
 
     fetched_at = datetime.now(timezone.utc).isoformat()
+    canonical_for_this = GENE_TO_CANONICAL_LIGAND.get(receptor.receptor_gene)
     new_records: list[dict] = []
     low_conf = 0
     for r in records:
         combined = _strip_html((r.get("title") or "") + " " + (r.get("abstract") or ""))
         genes_found, names_found = scan_mentions(combined, all_genes, all_names, all_aliases)
+        ligands_found = scan_ligands(combined)
         in_abstract = (
             receptor.receptor_gene in genes_found
             or receptor.receptor_name in names_found
@@ -366,6 +444,11 @@ def fetch_for_receptor(
         r["fetched_at"] = fetched_at
         r["mentioned_receptors_in_abstract"] = genes_found
         r["mentioned_receptor_names"] = names_found
+        r["mentioned_ligands_in_abstract"] = ligands_found
+        r["canonical_ligand_for_query_receptor"] = canonical_for_this
+        r["canonical_ligand_mentioned"] = (
+            canonical_for_this in ligands_found if canonical_for_this else None
+        )
         r["low_confidence_query"] = not in_abstract
         r["assignment_method"] = "per_receptor_search"
         new_records.append(r)
@@ -439,11 +522,22 @@ def main() -> None:
                         + r["mentioned_receptor_names"]
                     )
                 )
+                merged_ligands = list(
+                    dict.fromkeys(
+                        existing.get("mentioned_ligands_in_abstract", [])
+                        + r.get("mentioned_ligands_in_abstract", [])
+                    )
+                )
                 existing["mentioned_receptors_in_abstract"] = merged_genes
                 existing["mentioned_receptor_names"] = merged_names
+                existing["mentioned_ligands_in_abstract"] = merged_ligands
                 # 如果原记录的 query_receptor_gene 现在在合并后的基因列表中了,取消 low_confidence_query
                 if existing.get("query_receptor_gene") in merged_genes and existing.get("low_confidence_query"):
                     existing["low_confidence_query"] = False
+                # 重新评估 canonical_ligand_mentioned
+                canonical_existing = existing.get("canonical_ligand_for_query_receptor")
+                if canonical_existing:
+                    existing["canonical_ligand_mentioned"] = canonical_existing in merged_ligands
                 log.info(
                     "  -> PMID %s 已存在,合并 mentioned_* (新增基因 %s)",
                     pmid,

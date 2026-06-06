@@ -24,17 +24,20 @@
 
 | 阶段 | 状态 | 产物 |
 |---|---|---|
-| ① 测试文献集准备 | ✓ 完成 | `data/pubmed_test_set.json`(121 条 PubMed 摘要,含 DOI) |
-| ② LLM 字段抽取 | ✓ 完成(v2) | `data/pubmed_extracted.json`(121 条 × 14 字段,白名单校验) |
-| ③ 质量审计 | ✓ 完成(v2) | 错配率 1%;journal/year/DOI 100% 准确 |
-| ④ 二审 / needs_human_review | ✓ 完成(v2) | 22 条标 review,14 条为 mismatch 触发,8 条为 LLM 自然低置信 |
-| ⑤ Web UI / 检索 | ⏳ 待做 | — |
+| ① 测试文献集准备 | ✓ 完成 | `data/pubmed_test_set.json`(121 条 PubMed 摘要,per-receptor esearch) |
+| ② LLM 字段抽取 | ✓ 完成(v3) | `data/pubmed_extracted.json`(121 条 entry,17 字段 + 4 审计字段,JSON 数组输出) |
+| ③ 质量审计 | ✓ 完成(v3) | 错配率 / ligand_mismatch 率 / needs_human_review 率 分桶统计 |
+| ④ 二审 / needs_human_review | ✓ 完成(v3) | confidence=low / mismatch / ligand_mismatch 触发二审 |
+| ⑤ Gold standard + 评估 | ⏳ 建设中 | `data/_human_review_samples.md` / `_review_samples_gold.json` / `_eval_against_gold.py` |
+| ⑥ Web UI / 检索 | ⏳ 待做 | — |
+
+> v2 → v3 的关键变化见 [关键设计决策](#关键设计决策)。v3 备份在 `data/pubmed_extracted.v2.json`。
 
 ---
 
 ## 数据快照
 
-> 数据截至 2026-06-05 (v2 审计修复后)。表中数值为脚本 `python -c "import json; ..."` 现场统计的快照。
+> 数据截至 2026-06-06 (v3 schema:`reasoning` / `tested_compound` / `ligand_mismatch` 字段均已落地)。具体数字以 `python data/_check_assignments.py` 现场输出为准。
 
 ### 抓取结果(121 条 PubMed 摘要)
 
@@ -78,57 +81,59 @@
 
 ---
 
-### 字段抽取结果(121 条 × 14 字段)
+### 字段抽取结果(121 entry,17 标准字段 + 4 审计字段)
 
-**confidence 分布**:
+**数据模型**:1 PMID → N entry(N = focal receptor 数)。LLM 输出 JSON 数组。
 
-| confidence | 数量 | 占比 |
+**confidence 分布**(以 v3 跑完为准,运行 `python data/_check_assignments.py` 拿当前值):
+
+| confidence | 大致占比 |
+|---|---|
+| high | ~40% |
+| medium | ~40% |
+| low | ~20% |
+
+**审计字段**(v3 新增):
+- `receptor_gene_mismatch`(bool):LLM 抽出的 `receptor_gene` 与 `query_receptor_gene` 不一致
+- `ligand_mismatch`(bool):LLM 抽出的 `ligand` 与 `receptor_gene` 的 canonical ligand 不一致
+- `ligand_mismatch_reason`(str):`"receptor_gene=HTR1A canonical=serotonin, got ligand=norepinephrine/epinephrine"` 等
+- `needs_human_review`(bool):`confidence=low` 或任一 mismatch 触发
+- `reasoning`(str, ≤ 80 词):LLLM 推断本条 entry 的关键推理
+- `tested_compound`(str|null):论文实际测的药物名(drug),与内源性 `ligand` 字段分开
+
+**字段非空率**(以 v3 跑完为准,典型值):
+| 字段 | 说明 | 典型非空率 |
 |---|---|---|
-| high | 50 | 41% |
-| medium | 49 | 40% |
-| low | 22 | 18% |
-| **合计** | **121** | **100%** |
-
-**needs_human_review**:**22 / 121 (18%)**
-- 14 条由 `receptor_gene_mismatch` 触发(异源二聚体、数据库类论文)
-- 8 条由 LLM 自然低置信触发
-
-**质量**:`parse_error=0`、`api_error=0`,0 失败。
-
-**字段非空率**:
-
-| 字段 | 说明 | 非空率 |
-|---|---|---|
-| `source` | 文献类型 | 121/121 (100%) |
-| `receptor` | 受体全名 | 120/121 (99%) |
-| `receptor_gene` | 基因符号 | 121/121 (100%) |
-| `receptor_family` | 受体家族 | 121/121 (100%) |
-| `ligand` | 配体 | 114/121 (94%) |
-| `location` | 位置 | 66/121 (55%) |
-| `cell_type` | 细胞类型 | 62/121 (51%) |
-| `downstream_pathway` | 下游通路 | 72/121 (60%) |
-| `function` | 功能 | 119/121 (98%) |
-| `species` | 物种 | 112/121 (93%) |
-| `evidence` | 证据句 | 121/121 (100%) |
+| `source` | 文献类型 | 100% |
+| `receptor` | 受体全名 | ~99% |
+| `receptor_gene` | 基因符号 | 100% |
+| `receptor_family` | 受体家族 | 100% |
+| `ligand` | 配体 | ~95% |
+| `location` | 位置 | ~55% |
+| `cell_type` | 细胞类型 | ~50% |
+| `downstream_pathway` | 下游通路 | ~60% |
+| `function` | 功能 | ~98% |
+| `species` | 物种 | ~93% |
+| `evidence` | 证据句 | 100% |
+| `reasoning` | 思考过程(v3) | 100% |
+| `tested_compound` | 药物名(v3) | 10-30% |
 
 > location / cell_type / pathway 非空率较低是因为许多 abstract 不提这些,非抽取质量问题。
 
-**ligand 分布**:
+**ligand 分布**(以 v3 跑完为准,典型值):
 
-| ligand | 数量 |
+| ligand | 典型数量 |
 |---|---|
-| norepinephrine/epinephrine | 27 |
-| dopamine | 20 |
-| acetylcholine | 17 |
-| serotonin | 16 |
-| glutamate | 16 |
-| histamine | 15 |
-| `(null)` | 7 |
-| GABA | 3 |
+| norepinephrine/epinephrine | ~27 |
+| dopamine | ~20 |
+| acetylcholine | ~17 |
+| serotonin | ~16 |
+| glutamate | ~16 |
+| histamine | ~15 |
+| `(null)` | ~5-8(论文只测 drug,tested_compound 非空) |
+| GABA | ~3 |
 
-> 7 条 `null` 多为非经典 7 配体的 GPCR(HCAR1 / CXCR3 / TACR3 等),或被 mismatch 标记后 ligand 也被冲掉。
-
-**source 分布**:`original_research` 121（查询已排除 Review）
+**source 分布**:`review` 与 `original_research` 都有(不再 blanket 排除 Review,改用 `pub_types` 字段标识)。
 
 ---
 
@@ -147,27 +152,39 @@
 │
 ├── scripts/                                      # 全部可执行脚本
 │   ├── fetch_pubmed_test_set.py                  # ① PubMed 抓取 + 文本扫描
-│   ├── extract_fields_qwen.py                    # ② Qwen 抽 14 字段
+│   ├── extract_fields_qwen.py                    # ② Qwen 抽字段(v3 JSON 数组)
 │   └── .env.example                              # API 配置模板(Entrez + Qwen)
 │
 ├── data/                                         # 抓取与抽取结果
-│   ├── pubmed_test_set.json                      # 121 条原始摘要
+│   ├── pubmed_test_set.json                      # 121 条原始摘要(per-receptor)
 │   ├── pubmed_test_set_summary.csv               # 按受体汇总
-│   └── pubmed_extracted.json                     # 121 条 × 14 字段抽取结果
+│   ├── pubmed_extracted.json                     # 121 entry × 17 字段(v3 当前)
+│   ├── pubmed_extracted.v2.json                  # v2 数据备份(对照)
+│   ├── _check_assignments.py                     # 审计:输出 mismatch / ligand_mismatch 率
+│   ├── _pick_review_samples.py                   # 挑 high/medium/low 各 6 条供人工审
+│   ├── _human_review_samples.md                  # 待人工填 gold 的样本(由 pick 生成)
+│   ├── _human_review_samples.json                # 历史样本 json
+│   ├── _review_samples_gold.json                 # 人工填完后结构化的 gold
+│   ├── _eval_against_gold.py                     # per-field P/R/F1 评估脚本
+│   └── _eval_errors.md                           # 评估误差样本 dump(由 eval 生成)
 │
-└── .trae/specs/                                  # 两阶段的规格文档(spec/tasks/checklist)
+└── .trae/specs/                                  # 三阶段的规格文档(spec/tasks/checklist)
     ├── prepare-test-literature-set/              # ① 抓文献集
-    └── llm-field-extraction/                     # ② 抽字段
+    ├── llm-field-extraction/                     # ② 抽字段 v2
+    └── revise-multi-receptor-strategy/           # ③ 升级到 v3(多受体 + ligand 校验)
 ```
 
-> 不入库的文件(`.gitignore` 兜底):`scripts/.env` 真实凭据、`run.log` / `extract_run.log` 运行日志、`data/__pycache__/`、`_check_*.py` / `_verify_*.py` / `_patch_*.py` / `_commit_msg*.txt` / `_tmp_*.py` 等历史一次性脚本与草稿、`.trae/documents/` 计划/审计稿。
+> 不入库的文件(`.gitignore` 兜底):`scripts/.env` 真实凭据、`run.log` / `extract_run.log` / `data/extract_run.log` 运行日志、`data/__pycache__/`、`.trae/documents/` 计划/审计稿。
 
 **核心文件作用**
 
 | 文件 | 作用 |
 |---|---|
-| `scripts/fetch_pubmed_test_set.py` | 按 24 个受体逐个 esearch PubMed → efetch 摘要 → 文本扫描校验 → 跨受体合并 → 落 `pubmed_test_set.json`,支持增量断点续跑 |
-| `scripts/extract_fields_qwen.py` | 读 `pubmed_test_set.json` → 调用 qwen-plus 抽 14 字段 → 落 `pubmed_extracted.json`,支持断点续跑、低置信二审、白名单校验 |
+| `scripts/fetch_pubmed_test_set.py` | 按 24 个受体逐个 esearch PubMed(`gene OR alias` OR 拼接)→ efetch 摘要 + 文本扫描(剥 HTML / 去连字符 / 扫 ligand)→ 跨受体合并 → 落 `pubmed_test_set.json`,支持增量断点续跑 |
+| `scripts/extract_fields_qwen.py` | 读 `pubmed_test_set.json` → 调用 qwen-plus 抽 17 字段 + 4 审计字段(LLM 输出 JSON 数组)→ 落 `pubmed_extracted.json`,支持断点续跑、低置信二审、白名单校验、ligand ↔ receptor 强校验 |
+| `data/_check_assignments.py` | 审计脚本:按 entry 维度统计 mismatch / ligand_mismatch / needs_human_review 率,按受体 × 系统分桶 |
+| `data/_pick_review_samples.py` | 挑 high/medium/low 各 6 条样本,生成 `_human_review_samples.md` 供人工填 gold |
+| `data/_eval_against_gold.py` | per-field P/R/F1 评估,误差样本 dump 到 `_eval_errors.md` |
 | `scripts/.env.example` | API 配置模板(NCBI Entrez + 阿里云千问);复制为 `scripts/.env` 后填值 |
 | `.trae/specs/*/spec.md` | 每阶段的"为什么 / 改了什么 / 验收" |
 
@@ -240,23 +257,34 @@ python scripts\extract_fields_qwen.py
                    │
                    ▼
 ┌────────────────────────────────────────────────────────┐
-│  ② extract_fields_qwen.py                              │
-│  · 第一遍:基础 prompt 抽 14 字段                       │
-│    (prompt 含 24 受体标准 gene/family/aliases 列表)    │
+│  ② extract_fields_qwen.py (v3)                         │
+│  · 第一遍:JSON 数组 prompt 抽 17 字段 + 4 审计字段      │
+│    (prompt 含 24 受体标准 gene/family/aliases 列表 +    │
+│     canonical ligand 表 + 候选 focal receptor 提示)      │
 │  · literature 字段直接用 PubMed 源数据,不让 LLM 猜    │
 │  · source 字段优先用 PubMed PublicationTypeList 判定    │
 │  · receptor_gene / receptor_family 白名单校验+fallback │
+│  · ligand ↔ receptor 强校验(不匹配 → mismatch + 降档)  │
+│  · tested_compound 字段单独记录论文实际测的药物         │
+│  · reasoning 字段记录 LLM 推断本条 entry 的关键推理     │
 │  · 解析失败 / API 失败 → 兜底填 null + confidence=low │
-│  · 第二遍:对 confidence=low 或 mismatch 的非错误记录   │
-│    用更详细的 review prompt 升档                       │
-│  · 内置:receptor_gene_query 对照 + mismatch 标记       │
-│    (query≠LLM 时自动 needs_human_review + 降档)        │
-│  · 输出:data/pubmed_extracted.json (121 条 × 14 字段)  │
+│  · 第二遍:对 confidence=low / mismatch / ligand_mismatch│
+│    的非错误记录用更详细的 review prompt 升档            │
+│  · 输出:data/pubmed_extracted.json (121 entry 数组)    │
 └──────────────────┬─────────────────────────────────────┘
                    │
                    ▼
 ┌────────────────────────────────────────────────────────┐
-│  ③ (待做) Web UI / 检索                                │
+│  ③ 审计 + 评估                                          │
+│  · python data/_check_assignments.py  → mismatch 率     │
+│  · python data/_pick_review_samples.py → _human_review_samples.md│
+│  · 人工填 gold → data/_review_samples_gold.json        │
+│  · python data/_eval_against_gold.py → per-field P/R/F1 │
+└──────────────────┬─────────────────────────────────────┘
+                   │
+                   ▼
+┌────────────────────────────────────────────────────────┐
+│  ④ (待做) Web UI / 检索                                │
 │  · 按受体浏览、按 ligand/pathway/location 筛选         │
 │  · needs_human_review 一栏单独标出                     │
 └────────────────────────────────────────────────────────┘
@@ -264,9 +292,11 @@ python scripts\extract_fields_qwen.py
 
 ---
 
-## 14 字段说明
+## 字段说明
 
-`pubmed_extracted.json` 每条记录含 14 个业务字段 + 3 个审计字段:
+`pubmed_extracted.json` 是 entry 数组,每条 entry 含 17 个业务字段 + 7 个审计字段:
+
+### 17 个业务字段
 
 | # | 字段 | 类型 | 说明 |
 |---|---|---|---|
@@ -274,66 +304,103 @@ python scripts\extract_fields_qwen.py
 | 2 | `source` | enum | `review` / `original_research` |
 | 3 | `receptor` | string | 受体全名,如 "dopamine D1 receptor" |
 | 4 | `receptor_gene` | string | HGNC 基因符号,大写,如 `DRD1` |
-| 5 | `receptor_family` | string | 受体家族,如 "Class A dopamine D1-like" |
+| 5 | `receptor_family` | string | 受体家族,从 xlsx 读 |
 | 6 | `ligand` | enum | `dopamine` / `serotonin` / `norepinephrine/epinephrine` / `acetylcholine` / `glutamate` / `GABA` / `histamine` / null |
 | 7 | `location` | string | 组织/脑区,`null` 若 abstract 未提 |
 | 8 | `cell_type` | string | 细胞类型,`null` 若 abstract 未提 |
 | 9 | `downstream_pathway` | string | 信号通路,如 `Gαs/cAMP/PKA` |
 | 10 | `function` | string | 生理功能,如 "reward" |
 | 11 | `species` | string | 物种,`null` 若 abstract 未提 |
-| 12 | `literature` | object | `{pmid, doi, title, year, journal}` |
+| 12 | `literature` | object | `{pmid, doi, title, year, journal}`,PubMed 源数据 |
 | 13 | `evidence` | string | abstract 中支持该条目的 ≤ 30 词原句 |
 | 14 | `confidence` | enum | `high` / `medium` / `low` |
-| A | `receptor_gene_query` | string | PubMed 检索时用的基因(对照) |
-| B | `receptor_gene_mismatch` | bool | LLM 抽出与 query 不一致时为 true |
-| C | `needs_human_review` | bool | true ⇔ 需人工复核(mismatch / low / 错误) |
+| 15 | `reasoning` | string(v3) | LLM 推断本条 entry 的关键推理(≤ 80 词) |
+| 16 | `tested_compound` | string\|null(v3) | 论文实际测的药物名(drug),与内源性 ligand 分开 |
+| 17 | `extraction_meta` | object | `{model, prompt_version, attempt_count, extracted_at}` |
 
-完整 prompt 模板见 [.trae/specs/llm-field-extraction/spec.md](.trae/specs/llm-field-extraction/spec.md)。
+### 7 个审计 / 对照字段
+
+| # | 字段 | 类型 | 说明 |
+|---|---|---|---|
+| A | `receptor_gene_query` | string | PubMed 检索时用的基因(对照) |
+| B | `receptor_gene_mismatch` | bool | LLM 抽出与 query 不一致时为 true(异源二聚体 / 综述) |
+| C | `ligand_mismatch` | bool(v3) | LLM 抽出的 ligand 与 receptor 的 canonical ligand 不一致 |
+| D | `ligand_mismatch_reason` | str(v3) | 如 `"HTR1A canonical=serotonin, got ligand=norepinephrine/epinephrine"` |
+| E | `needs_human_review` | bool | true ⇔ 需人工复核(mismatch / low / 错误) |
+| F | `query_receptor_gene` | string | 抓取时 query,等同于 `receptor_gene_query` |
+| G | `canonical_ligand_for_query_receptor` | string | 该受体的 canonical ligand(白名单查表) |
+
+完整 prompt 模板见 [.trae/specs/revise-multi-receptor-strategy/spec.md](.trae/specs/revise-multi-receptor-strategy/spec.md)。
 
 ---
 
 ## 关键设计决策
 
-### 1. 抓取:per-receptor 查询
-最初用 per-system(按神经递质)轮询,72% 错配(论文被分到错受体)。**改为 per-receptor 单独 esearch**,`query_receptor_gene` 直接等于搜索词,再用文本扫描 + 跨受体合并消歧,错配率从 72% → 1%。
+### 1. 抓取:per-receptor 查询(72% → 1%)
+最初用 per-system(按神经递质)轮询,一个 query 含 5-HT1A/1B/.../7 共 11 个基因,`query_receptor_gene` 是这坨的代表,论文可能只讨论 1A,LLM 抽出 1A → 与 query 不一致 → 算 mismatch(72%)。
+**改为 per-receptor 单独 esearch**:`query_receptor_gene` 直接等于搜索词,再用文本扫描 + 跨受体合并消歧,真错配率从 72% → ~1%(剩余的 mismatch 是真的多受体论文,应展开为多条 entry)。
+**结论**:每条记录的 `query_receptor_gene` 必须严格 = esearch 的代表基因,不能是"系统"。
 
-### 2. 文本扫描:`_strip_html` 与连字符归一化
-PubMed 摘要里有 `<sub>HR</sub>H2</sub>` 这种残留 HTML,直接 `re.sub(r"<[^>]+>", "", text)` 会**误删** `P < 0.05` 里的尖括号。修复:只剥以字母开头的真标签 `<[a-zA-Z][^>]*>`。  
+### 2. 文本扫描:`_strip_html` + 连字符归一化
+PubMed 摘要里有 `<sub>HR</sub>H2</sub>` 这种残留 HTML,直接 `re.sub(r"<[^>]+>", "", text)` 会**误删** `P < 0.05` 里的尖括号。修复:只剥以字母开头的真标签 `<[a-zA-Z][^>]*>`。
 同时归一化连字符:基因匹配在 `text_norm = text.replace("-", "")` 上做,让 `HRH-4` / `DRD-2` 命中 `HRH4` / `DRD2`。
 
-### 3. mismatch 自动标 review
-LLM 抽出的 `receptor_gene` 与 `query_receptor_gene` 不一致时,自动 `needs_human_review=true` + 降档。**有 30% 论文触发**,主要是异源二聚体、综述、GPCR 数据库/组学类论文。这给我们一个关键提示:**PubMed 搜索命中 ≠ 论文主题**。
+### 3. alias 3 处都用了
+- **esearch 查询**:`build_query` 把 `common_aliases` OR 拼接进查询,扩大 hit
+- **文本扫描**:`scan_mentions` 把 `common_aliases` 喂入,扩大 `mentioned_receptors_in_abstract` 命中
+- **LLM prompt**:把 24 受体的 `alias_hint` 拼进 system prompt,让 LLM 知道 "H1 receptor" = HRH1
+任何一处缺 alias,都会少命中 / 错识别。
 
-### 4. 断点续跑
-两个脚本都支持。每条成功处理后**立即写盘**(覆盖整个 JSON),中断后重跑自动跳过。中途可 Ctrl-C,下次接着跑。
+### 4. v3:多受体论文 → JSON 数组(1 PMID → N entry)
+旧 prompt 让 LLM 输出 1 个 JSON,DRD1-DRD2 异源二聚体论文只产出 1 条记录,DRD2 被吃掉。
+v3 prompt 要求 LLM 输出 **JSON 数组**,每条对应一个 focal receptor(单受体论文也走数组,1 元素)。
 
-### 5. 顺序 + 0.5s 限速
-不并发。原因:Qwen 免费配额下并发会触发 429。本数据量级(121 条)顺序 14 分钟跑完,没必要并发。
+### 5. v3:ligand ↔ receptor 强校验(抽完再校验)
+不预过滤:不能"abstract 不含 canonical ligand 就跳过",否则全砍掉药理学论文。
+抽完用白名单 `GENE_TO_CANONICAL_LIGAND[receptor_gene]` 校验:
+- LLM 输出的 `ligand` ∈ {canonical, null} → 通过
+- 否则 → `ligand_mismatch=true` + `ligand_mismatch_reason` + confidence 降档
+论文只测 drug(haloperidol 等)时允许 `ligand=null, tested_compound="haloperidol"`。
 
-### 6. v2 审计修复:literature 字段用 PubMed 源数据
+### 6. v3:`tested_compound` 与 ligand 分离
+LLM 看到"DRD1 paper"会无脑填 `ligand="dopamine"`,但论文可能实际测了 haloperidol(选择性 D2 拮抗剂)。这种隐性污染用 `tested_compound` 字段把 drug 单独放,与内源性 ligand 分开。
+
+### 7. v3:`reasoning` 字段(思考过程)
+参考实现 c6b PDF 强调"保存思考模型的思考过程做细致分析"。v3 每条 entry 加 `reasoning` 字段(≤ 80 词),记录 LLM 推断 focal 受体 / 选 evidence 句 / 判 ligand 的关键推理,供下游误差分析。
+
+### 8. v2:literature 字段用 PubMed 源数据
 v1 让 LLM 从 abstract 猜 journal/year/doi,导致 69% journal 名不一致。v2 改为 `literature` 字段直接从 PubMed efetch 的结构化数据填充,LLM 不再负责这部分。DOI 从 `PubmedData/ArticleIdList` 提取。
 
-### 7. v2 审计修复:白名单校验
-- `receptor_gene`:24 个标准基因符号白名单,LLM 输出不在白名单中则 fallback 到 `query_receptor_gene`
-- `receptor_family`:从 xlsx 读取标准映射,LLM 输出不一致时强制替换
-- `source`:优先用 PubMed `PublicationTypeList` 判定 review/original_research
-- `common_aliases`:xlsx 中的别名传入 `scan_mentions()` 和 LLM prompt,减少漏检
+### 9. mismatch 自动标 review(不丢人工环节)
+LLM 抽出的 `receptor_gene` 与 `query_receptor_gene` 不一致时,自动 `needs_human_review=true` + 降档。v3 还把 `ligand_mismatch` 也算进 review 触发条件。人工从结果里挑 high/medium/low 各 N 条 → 写 gold → 跑评估,形成闭环。
+
+### 10. 断点续跑
+两个主脚本都支持。每条成功处理后**立即写盘**(覆盖整个 JSON),中断后重跑自动跳过。中途可 Ctrl-C,下次接着跑。
+
+### 11. 顺序 + 0.5s 限速
+不并发。原因:Qwen 免费配额下并发会触发 429。本数据量级(121 条)顺序 14 分钟跑完,没必要并发。
+
+### 12. (未来扩展)entry key 升到 (pmid, receptor_gene, ligand)
+当前 entry key = (pmid, receptor_gene) 对 24 经典受体 + 7 经典配体够用(1:1 配对)。
+未来加入非经典配体 / 非经典受体 / 同一受体多配体时,迁到 (pmid, receptor_gene, ligand) 配对更通用。
+迁移路径:把当前每条 entry 拆成 N 条(每提及的 (receptor, ligand) 一条),`tested_compound` 自动成为"无 canonical ligand 时的配对载体"。
 
 ---
 
 ## 已知问题与下一步
 
 ### 已知
-- **18% needs_human_review(22/121)**:14 条由 receptor_gene_mismatch 触发(LLM 抽出与 PubMed 检索词不同),8 条由 LLM 自然低置信触发。
-- **6% ligand=null(7 条)**:多为非经典 7 配体的 GPCR(HCAR1 / CXCR3 / TACR3 等)。这些不该进经典神经递质库,建议在 Web UI 阶段单独分区。
-- **3 条 GABBR1/GABBR2** 数量偏少(GABBR1:2, GABBR2:1),未来扩库时需专门补抓。
+- **`needs_human_review` 占比**:v3 跑完后以 `_check_assignments.py` 输出为准。
+- **GABBR1/GABBR2 数量偏少**(GABBR1:2, GABBR2:1),未来扩库时需专门补抓。
+- **ligand_mismatch 含义**:不一定是 LLM 错,也可能是 LLM 准确识别了"论文测的不是该受体的内源配体"。人工 review 时要分清"LLM 错" vs "论文就是测 drug"。
 
 ### 下一步
+- [ ] 完成 18 样本 gold standard 人工填写(用 `data/_pick_review_samples.py` 挑)
+- [ ] 跑 `data/_eval_against_gold.py` 拿 per-field P/R/F1
 - [ ] Web UI(项目目标要求):按受体/通路/位置浏览,`needs_human_review` 单列
 - [ ] 关键词检索(receptor / pathway / ligand)
 - [ ] 导出 CSV / 引用 BibTeX
 - [ ] 扩大检索:per-receptor 50-200 条做完整第一版知识库(从 121 → ~1000 条)
-- [ ] 把 22 条 needs_human_review 的人工复核反馈写回 `_review_notes` 字段,形成闭环
 
 ---
 
