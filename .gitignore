@@ -29,6 +29,10 @@ data/*.log
 run.log
 extract_run.log
 
+# 旧版抽取数据(本地存档,不入库)
+data/pubmed_extracted.v2.json
+data/pubmed_extracted.v3.json
+
 # 计划/规划/审计文档(过程性产物,不入库)
 .trae/documents/
 .trae/plans/
