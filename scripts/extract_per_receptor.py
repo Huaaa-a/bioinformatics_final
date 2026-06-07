@@ -460,9 +460,22 @@ def main():
         },
     )
 
+    # 支持断点续跑：从已有 v5 文件加载已完成的 PMID
     extracted = []
+    done_pmids = set()
+    if args.output.exists():
+        with args.output.open("r", encoding="utf-8") as f:
+            existing = json.load(f)
+        extracted = existing
+        done_pmids = {e["pmid"] for e in existing}
+        log.info("Resuming from existing file: %d entries loaded, %d PMIDs done",
+                 len(extracted), len(done_pmids))
+
     for idx, record in enumerate(pubmed_records):
         pmid = record.get("pmid", "")
+        if pmid in done_pmids:
+            log.info("[%d/%d] Skipping PMID %s (already done)", idx + 1, len(pubmed_records), pmid)
+            continue
         title = record.get("title", "")
         abstract = record.get("abstract", "")
         pub_types = record.get("pub_types", [])
@@ -508,6 +521,11 @@ def main():
             )
             extracted.append(normalized)
             log.info("  Success: confidence=%s", normalized["confidence"])
+            # 增量保存：每10条保存一次，支持断点续跑
+            if len(extracted) % 10 == 0:
+                with args.output.open("w", encoding="utf-8") as f:
+                    json.dump(extracted, f, ensure_ascii=False, indent=2)
+                log.info("  [Incremental save] %d entries saved", len(extracted))
             time.sleep(0.6)
 
     log.info("Saving %d extracted entries to %s", len(extracted), args.output)

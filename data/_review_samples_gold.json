@@ -1,0 +1,10 @@
+{
+  "_comment": [
+    "Gold standard for human review samples.",
+    "Structure: each sample = {pmid, receptor_gene, gold: {field: value}}",
+    "Run `python data/_pick_review_samples.py` first to generate _human_review_samples.md,",
+    "fill in the gold column for each row, then mirror those values into this JSON file.",
+    "After all samples are filled, run `python data/_eval_against_gold.py` to get per-field P/R/F1."
+  ],
+  "samples": []
+}

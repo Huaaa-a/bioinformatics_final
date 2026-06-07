@@ -1,0 +1,3216 @@
+[
+  {
+    "pmid": "39094559",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 3,
+    "positions": [
+      420,
+      650,
+      797
+    ],
+    "abstract_len": 1140
+  },
+  {
+    "pmid": "40583147",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 9,
+    "num_function_fields": 4,
+    "positions": [
+      457,
+      767,
+      790,
+      887,
+      939,
+      1059,
+      1380,
+      1456,
+      444
+    ],
+    "abstract_len": 1573
+  },
+  {
+    "pmid": "32052915",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 9,
+    "num_function_fields": 4,
+    "positions": [
+      143,
+      505,
+      722,
+      875,
+      1090,
+      1281,
+      1498,
+      1566,
+      130
+    ],
+    "abstract_len": 1663
+  },
+  {
+    "pmid": "35364139",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 9,
+    "num_function_fields": 4,
+    "positions": [
+      230,
+      317,
+      503,
+      743,
+      826,
+      951,
+      1011,
+      1170,
+      1295
+    ],
+    "abstract_len": 1415
+  },
+  {
+    "pmid": "35364139",
+    "receptor_gene": "DRD2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 9,
+    "num_function_fields": 4,
+    "positions": [
+      239,
+      326,
+      508,
+      752,
+      831,
+      956,
+      1083,
+      1175,
+      1300
+    ],
+    "abstract_len": 1415
+  },
+  {
+    "pmid": "40311121",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 4,
+    "positions": [
+      445,
+      483,
+      1336,
+      423
+    ],
+    "abstract_len": 1589
+  },
+  {
+    "pmid": "34648896",
+    "receptor_gene": "DRD2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 7,
+    "num_function_fields": 4,
+    "positions": [
+      1420,
+      1554,
+      1661,
+      1729,
+      2271,
+      1398,
+      2249
+    ],
+    "abstract_len": 2444
+  },
+  {
+    "pmid": "37409929",
+    "receptor_gene": "DRD2",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只在背景部分出现",
+      "只出现 2 次"
+    ],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": false,
+    "mention_count": 2,
+    "num_function_fields": 1,
+    "positions": [
+      272,
+      281
+    ],
+    "abstract_len": 999
+  },
+  {
+    "pmid": "32528175",
+    "receptor_gene": "DRD2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 7,
+    "num_function_fields": 3,
+    "positions": [
+      26,
+      129,
+      425,
+      537,
+      760,
+      1331,
+      1388
+    ],
+    "abstract_len": 1453
+  },
+  {
+    "pmid": "31538542",
+    "receptor_gene": "DRD2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 5,
+    "num_function_fields": 1,
+    "positions": [
+      405,
+      628,
+      682,
+      751,
+      887
+    ],
+    "abstract_len": 2570
+  },
+  {
+    "pmid": "29673577",
+    "receptor_gene": "CHRM4",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      1423
+    ],
+    "abstract_len": 1849
+  },
+  {
+    "pmid": "29673577",
+    "receptor_gene": "DRD2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      1430
+    ],
+    "abstract_len": 1849
+  },
+  {
+    "pmid": "31371490",
+    "receptor_gene": "HTR1A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      440
+    ],
+    "abstract_len": 1433
+  },
+  {
+    "pmid": "31371490",
+    "receptor_gene": "HTR7",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": false,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      364
+    ],
+    "abstract_len": 1433
+  },
+  {
+    "pmid": "37525034",
+    "receptor_gene": "HTR1A",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": true,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 1,
+    "positions": [
+      1019,
+      1506,
+      1574
+    ],
+    "abstract_len": 1649
+  },
+  {
+    "pmid": "34600545",
+    "receptor_gene": "HTR1A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 2,
+    "positions": [
+      1412,
+      2105,
+      2212,
+      2284
+    ],
+    "abstract_len": 2513
+  },
+  {
+    "pmid": "35491707",
+    "receptor_gene": "HTR1A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 0,
+    "positions": [
+      1459,
+      1683
+    ],
+    "abstract_len": 1837
+  },
+  {
+    "pmid": "35491707",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 1 次",
+      "没有位置/细胞/通路/功能信息"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 0,
+    "positions": [
+      1473
+    ],
+    "abstract_len": 1837
+  },
+  {
+    "pmid": "35491707",
+    "receptor_gene": "HTR7",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 0,
+    "positions": [
+      1488,
+      1693
+    ],
+    "abstract_len": 1837
+  },
+  {
+    "pmid": "32946782",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 3,
+    "positions": [
+      437,
+      549,
+      737,
+      894
+    ],
+    "abstract_len": 1197
+  },
+  {
+    "pmid": "40925315",
+    "receptor_gene": "GRM5",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1520
+    ],
+    "abstract_len": 2018
+  },
+  {
+    "pmid": "40925315",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1526
+    ],
+    "abstract_len": 2018
+  },
+  {
+    "pmid": "40885319",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 5,
+    "num_function_fields": 3,
+    "positions": [
+      213,
+      533,
+      765,
+      1087,
+      159
+    ],
+    "abstract_len": 1622
+  },
+  {
+    "pmid": "39766808",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      1189
+    ],
+    "abstract_len": 1923
+  },
+  {
+    "pmid": "40926959",
+    "receptor_gene": "ADRA1A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      685
+    ],
+    "abstract_len": 1171
+  },
+  {
+    "pmid": "40926959",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      704
+    ],
+    "abstract_len": 1171
+  },
+  {
+    "pmid": "39511179",
+    "receptor_gene": "DRD1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 2,
+    "positions": [
+      2016,
+      2728,
+      2003
+    ],
+    "abstract_len": 2991
+  },
+  {
+    "pmid": "39511179",
+    "receptor_gene": "DRD2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 2,
+    "positions": [
+      1851,
+      2682,
+      1838
+    ],
+    "abstract_len": 2991
+  },
+  {
+    "pmid": "39511179",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 2,
+    "positions": [
+      1903,
+      2703
+    ],
+    "abstract_len": 2991
+  },
+  {
+    "pmid": "39511179",
+    "receptor_gene": "HTR2C",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 2,
+    "positions": [
+      1956,
+      2696
+    ],
+    "abstract_len": 2991
+  },
+  {
+    "pmid": "41237175",
+    "receptor_gene": "HTR7",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 11,
+    "num_function_fields": 2,
+    "positions": [
+      115,
+      234,
+      335,
+      454,
+      622,
+      689,
+      871,
+      1047,
+      1174,
+      1335,
+      1615
+    ],
+    "abstract_len": 1641
+  },
+  {
+    "pmid": "27698822",
+    "receptor_gene": "HTR7",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 2,
+    "positions": [
+      1165,
+      1508,
+      1584
+    ],
+    "abstract_len": 1718
+  },
+  {
+    "pmid": "27460988",
+    "receptor_gene": "ADRA1A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 3,
+    "positions": [
+      1143,
+      1119
+    ],
+    "abstract_len": 1543
+  },
+  {
+    "pmid": "27460988",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": false,
+    "mention_count": 0,
+    "num_function_fields": 4,
+    "positions": [],
+    "abstract_len": 1543
+  },
+  {
+    "pmid": "27460988",
+    "receptor_gene": "DRD2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": false,
+    "mention_count": 0,
+    "num_function_fields": 4,
+    "positions": [],
+    "abstract_len": 1543
+  },
+  {
+    "pmid": "33402011",
+    "receptor_gene": "ADRA1A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 2,
+    "positions": [
+      605,
+      1764
+    ],
+    "abstract_len": 2098
+  },
+  {
+    "pmid": "33402011",
+    "receptor_gene": "ADRA2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      629
+    ],
+    "abstract_len": 2098
+  },
+  {
+    "pmid": "33402011",
+    "receptor_gene": "ADRB1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      653
+    ],
+    "abstract_len": 2098
+  },
+  {
+    "pmid": "33402011",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 4,
+    "positions": [
+      660,
+      1324,
+      1512,
+      1301
+    ],
+    "abstract_len": 2098
+  },
+  {
+    "pmid": "41726659",
+    "receptor_gene": "ADRA1A",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 1 次",
+      "没有位置/细胞/通路/功能信息"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 0,
+    "positions": [
+      796
+    ],
+    "abstract_len": 2521
+  },
+  {
+    "pmid": "33862102",
+    "receptor_gene": "ADRA1A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1672
+    ],
+    "abstract_len": 2799
+  },
+  {
+    "pmid": "33862102",
+    "receptor_gene": "CHRM2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1692
+    ],
+    "abstract_len": 2799
+  },
+  {
+    "pmid": "42237231",
+    "receptor_gene": "ADRA1A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      1113
+    ],
+    "abstract_len": 2197
+  },
+  {
+    "pmid": "42237231",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      1121
+    ],
+    "abstract_len": 2197
+  },
+  {
+    "pmid": "38788722",
+    "receptor_gene": "ADRA2A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 5,
+    "num_function_fields": 3,
+    "positions": [
+      277,
+      487,
+      600,
+      782,
+      829
+    ],
+    "abstract_len": 1157
+  },
+  {
+    "pmid": "27376152",
+    "receptor_gene": "ADRA2A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 6,
+    "num_function_fields": 4,
+    "positions": [
+      689,
+      769,
+      896,
+      1012,
+      1114,
+      1361
+    ],
+    "abstract_len": 1480
+  },
+  {
+    "pmid": "38230433",
+    "receptor_gene": "ADRA2A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      556
+    ],
+    "abstract_len": 1347
+  },
+  {
+    "pmid": "40663777",
+    "receptor_gene": "ADRA2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      3076
+    ],
+    "abstract_len": 5902
+  },
+  {
+    "pmid": "36253428",
+    "receptor_gene": "ADRA2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      434
+    ],
+    "abstract_len": 1099
+  },
+  {
+    "pmid": "32703433",
+    "receptor_gene": "ADRB1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 4,
+    "positions": [
+      790,
+      924,
+      765
+    ],
+    "abstract_len": 1374
+  },
+  {
+    "pmid": "40364562",
+    "receptor_gene": "ADRB1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1050
+    ],
+    "abstract_len": 1805
+  },
+  {
+    "pmid": "33372534",
+    "receptor_gene": "ADRB1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 8,
+    "num_function_fields": 4,
+    "positions": [
+      11,
+      311,
+      466,
+      674,
+      922,
+      1308,
+      1795,
+      1885
+    ],
+    "abstract_len": 1953
+  },
+  {
+    "pmid": "41734179",
+    "receptor_gene": "ADRB1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 5,
+    "num_function_fields": 1,
+    "positions": [
+      701,
+      1427,
+      1702,
+      1773,
+      673
+    ],
+    "abstract_len": 2404
+  },
+  {
+    "pmid": "41734179",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": true,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 1,
+    "positions": [
+      737,
+      1719,
+      709
+    ],
+    "abstract_len": 2404
+  },
+  {
+    "pmid": "41734179",
+    "receptor_gene": "CHRM3",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 2 次"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 1,
+    "positions": [
+      808,
+      1434
+    ],
+    "abstract_len": 2404
+  },
+  {
+    "pmid": "41734179",
+    "receptor_gene": "CHRM4",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 1,
+    "positions": [
+      854,
+      1444,
+      1790
+    ],
+    "abstract_len": 2404
+  },
+  {
+    "pmid": "29514624",
+    "receptor_gene": "ADRB1",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "没有位置/细胞/通路/功能信息"
+    ],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 0,
+    "positions": [
+      477,
+      982,
+      1385,
+      1556
+    ],
+    "abstract_len": 1720
+  },
+  {
+    "pmid": "34280464",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      571
+    ],
+    "abstract_len": 1477
+  },
+  {
+    "pmid": "41545427",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      386
+    ],
+    "abstract_len": 1223
+  },
+  {
+    "pmid": "36731712",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      1174
+    ],
+    "abstract_len": 1474
+  },
+  {
+    "pmid": "31408338",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      903
+    ],
+    "abstract_len": 1559
+  },
+  {
+    "pmid": "39769358",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      987
+    ],
+    "abstract_len": 1977
+  },
+  {
+    "pmid": "36244968",
+    "receptor_gene": "CHRM1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 2,
+    "positions": [
+      1367,
+      1521,
+      1777
+    ],
+    "abstract_len": 1897
+  },
+  {
+    "pmid": "30564629",
+    "receptor_gene": "CHRM1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 2,
+    "positions": [
+      113,
+      902,
+      1040
+    ],
+    "abstract_len": 1733
+  },
+  {
+    "pmid": "30564629",
+    "receptor_gene": "CHRM2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 2,
+    "positions": [
+      828,
+      1352
+    ],
+    "abstract_len": 1733
+  },
+  {
+    "pmid": "30564629",
+    "receptor_gene": "CHRM3",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 2,
+    "positions": [
+      916,
+      1369
+    ],
+    "abstract_len": 1733
+  },
+  {
+    "pmid": "30564629",
+    "receptor_gene": "CHRM4",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 2,
+    "positions": [
+      845,
+      1397
+    ],
+    "abstract_len": 1733
+  },
+  {
+    "pmid": "36068422",
+    "receptor_gene": "CHRM1",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 1 次"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      1626
+    ],
+    "abstract_len": 2376
+  },
+  {
+    "pmid": "39026356",
+    "receptor_gene": "CHRM1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1202
+    ],
+    "abstract_len": 2697
+  },
+  {
+    "pmid": "35370785",
+    "receptor_gene": "CHRM1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 4,
+    "positions": [
+      247,
+      1170,
+      1233,
+      1505
+    ],
+    "abstract_len": 1628
+  },
+  {
+    "pmid": "35370785",
+    "receptor_gene": "CHRM3",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": false,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      458
+    ],
+    "abstract_len": 1628
+  },
+  {
+    "pmid": "37775760",
+    "receptor_gene": "CHRM2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      2322
+    ],
+    "abstract_len": 3665
+  },
+  {
+    "pmid": "41985299",
+    "receptor_gene": "CHRM2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 2,
+    "positions": [
+      1197,
+      1326
+    ],
+    "abstract_len": 2220
+  },
+  {
+    "pmid": "39740827",
+    "receptor_gene": "CHRM2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 3,
+    "positions": [
+      1151,
+      1412
+    ],
+    "abstract_len": 1584
+  },
+  {
+    "pmid": "29133212",
+    "receptor_gene": "ADRA2A",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 1 次"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      1227
+    ],
+    "abstract_len": 1817
+  },
+  {
+    "pmid": "29133212",
+    "receptor_gene": "CHRM2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      1246
+    ],
+    "abstract_len": 1817
+  },
+  {
+    "pmid": "38010846",
+    "receptor_gene": "CHRM3",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 5,
+    "num_function_fields": 1,
+    "positions": [
+      160,
+      296,
+      680,
+      835,
+      1478
+    ],
+    "abstract_len": 1573
+  },
+  {
+    "pmid": "38047980",
+    "receptor_gene": "CHRM3",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      661
+    ],
+    "abstract_len": 1441
+  },
+  {
+    "pmid": "38047980",
+    "receptor_gene": "GRM1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": false,
+    "mention_count": 0,
+    "num_function_fields": 3,
+    "positions": [],
+    "abstract_len": 1441
+  },
+  {
+    "pmid": "34314386",
+    "receptor_gene": "CHRM3",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": false,
+    "mention_count": 0,
+    "num_function_fields": 4,
+    "positions": [],
+    "abstract_len": 1374
+  },
+  {
+    "pmid": "33398073",
+    "receptor_gene": "CHRM4",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 5,
+    "num_function_fields": 3,
+    "positions": [
+      507,
+      590,
+      661,
+      956,
+      1017
+    ],
+    "abstract_len": 1110
+  },
+  {
+    "pmid": "42163039",
+    "receptor_gene": "CHRM4",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      1037
+    ],
+    "abstract_len": 1781
+  },
+  {
+    "pmid": "38248654",
+    "receptor_gene": "CHRM4",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      969
+    ],
+    "abstract_len": 1381
+  },
+  {
+    "pmid": "38248654",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      984
+    ],
+    "abstract_len": 1381
+  },
+  {
+    "pmid": "41620186",
+    "receptor_gene": "GRM1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      989
+    ],
+    "abstract_len": 1793
+  },
+  {
+    "pmid": "41620186",
+    "receptor_gene": "GRM5",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 3,
+    "positions": [
+      998,
+      123,
+      1483
+    ],
+    "abstract_len": 1793
+  },
+  {
+    "pmid": "29416686",
+    "receptor_gene": "GRM1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 9,
+    "num_function_fields": 4,
+    "positions": [
+      384,
+      630,
+      672,
+      932,
+      1050,
+      1225,
+      1293,
+      1345,
+      1420
+    ],
+    "abstract_len": 1548
+  },
+  {
+    "pmid": "37391170",
+    "receptor_gene": "GRM1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 7,
+    "num_function_fields": 4,
+    "positions": [
+      255,
+      972,
+      995,
+      1019,
+      1187,
+      1457,
+      1758
+    ],
+    "abstract_len": 1945
+  },
+  {
+    "pmid": "33412755",
+    "receptor_gene": "GRM2",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 1 次"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      688
+    ],
+    "abstract_len": 1074
+  },
+  {
+    "pmid": "40109668",
+    "receptor_gene": "DRD1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      756
+    ],
+    "abstract_len": 1524
+  },
+  {
+    "pmid": "40109668",
+    "receptor_gene": "GRM5",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 3,
+    "positions": [
+      824,
+      814,
+      1190,
+      779
+    ],
+    "abstract_len": 1524
+  },
+  {
+    "pmid": "36079577",
+    "receptor_gene": "DRD2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      979
+    ],
+    "abstract_len": 1459
+  },
+  {
+    "pmid": "36079577",
+    "receptor_gene": "GRM5",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      963
+    ],
+    "abstract_len": 1459
+  },
+  {
+    "pmid": "32205144",
+    "receptor_gene": "GRM5",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      808
+    ],
+    "abstract_len": 1184
+  },
+  {
+    "pmid": "33785412",
+    "receptor_gene": "GRM5",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      1023
+    ],
+    "abstract_len": 1231
+  },
+  {
+    "pmid": "33500274",
+    "receptor_gene": "GRM7",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 8,
+    "num_function_fields": 4,
+    "positions": [
+      724,
+      832,
+      904,
+      1006,
+      2150,
+      2246,
+      0,
+      1976
+    ],
+    "abstract_len": 2804
+  },
+  {
+    "pmid": "40637957",
+    "receptor_gene": "GRM7",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 4,
+    "positions": [
+      591,
+      1272,
+      1481,
+      0
+    ],
+    "abstract_len": 1671
+  },
+  {
+    "pmid": "33476302",
+    "receptor_gene": "GRM7",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 3,
+    "positions": [
+      196,
+      331,
+      1156,
+      4
+    ],
+    "abstract_len": 1211
+  },
+  {
+    "pmid": "36532433",
+    "receptor_gene": "GRM7",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 8,
+    "num_function_fields": 3,
+    "positions": [
+      678,
+      707,
+      837,
+      1034,
+      1174,
+      1369,
+      1673,
+      1844
+    ],
+    "abstract_len": 2001
+  },
+  {
+    "pmid": "33607172",
+    "receptor_gene": "GRM7",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 1 次"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      978
+    ],
+    "abstract_len": 1437
+  },
+  {
+    "pmid": "41792070",
+    "receptor_gene": "GABBR1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 2,
+    "positions": [
+      1079,
+      1153
+    ],
+    "abstract_len": 1801
+  },
+  {
+    "pmid": "33996539",
+    "receptor_gene": "GABBR1",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 2 次",
+      "没有位置/细胞/通路/功能信息"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 0,
+    "positions": [
+      656,
+      908
+    ],
+    "abstract_len": 1537
+  },
+  {
+    "pmid": "34000025",
+    "receptor_gene": "GABBR2",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 1 次"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      1276
+    ],
+    "abstract_len": 1731
+  },
+  {
+    "pmid": "38458750",
+    "receptor_gene": "HRH1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 4,
+    "positions": [
+      1361,
+      1491
+    ],
+    "abstract_len": 2046
+  },
+  {
+    "pmid": "38458750",
+    "receptor_gene": "HRH2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 4,
+    "positions": [
+      1371,
+      1580
+    ],
+    "abstract_len": 2046
+  },
+  {
+    "pmid": "40600649",
+    "receptor_gene": "HRH1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      1113
+    ],
+    "abstract_len": 1209
+  },
+  {
+    "pmid": "40288207",
+    "receptor_gene": "HRH1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 9,
+    "num_function_fields": 4,
+    "positions": [
+      333,
+      593,
+      665,
+      747,
+      937,
+      1318,
+      1646,
+      1759,
+      2032
+    ],
+    "abstract_len": 2120
+  },
+  {
+    "pmid": "29467651",
+    "receptor_gene": "HRH1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 11,
+    "num_function_fields": 2,
+    "positions": [
+      689,
+      769,
+      778,
+      813,
+      957,
+      1079,
+      1224,
+      1410,
+      1518,
+      1552,
+      1641
+    ],
+    "abstract_len": 1792
+  },
+  {
+    "pmid": "41946080",
+    "receptor_gene": "HRH1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 5,
+    "num_function_fields": 1,
+    "positions": [
+      21,
+      401,
+      668,
+      1389,
+      1764
+    ],
+    "abstract_len": 2355
+  },
+  {
+    "pmid": "41946080",
+    "receptor_gene": "HRH2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 1,
+    "positions": [
+      659,
+      1418,
+      1802
+    ],
+    "abstract_len": 2355
+  },
+  {
+    "pmid": "41946080",
+    "receptor_gene": "HRH3",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 1,
+    "positions": [
+      711,
+      1726
+    ],
+    "abstract_len": 2355
+  },
+  {
+    "pmid": "41946080",
+    "receptor_gene": "HRH4",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 1,
+    "positions": [
+      26,
+      406,
+      761,
+      1735
+    ],
+    "abstract_len": 2355
+  },
+  {
+    "pmid": "31369218",
+    "receptor_gene": "HRH2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 4,
+    "positions": [
+      582,
+      967,
+      1126,
+      1331
+    ],
+    "abstract_len": 1532
+  },
+  {
+    "pmid": "34761361",
+    "receptor_gene": "HRH1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 5,
+    "num_function_fields": 2,
+    "positions": [
+      117,
+      504,
+      675,
+      767,
+      1783
+    ],
+    "abstract_len": 2012
+  },
+  {
+    "pmid": "34761361",
+    "receptor_gene": "HRH2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 2,
+    "positions": [
+      169,
+      179,
+      681,
+      773
+    ],
+    "abstract_len": 2012
+  },
+  {
+    "pmid": "34761361",
+    "receptor_gene": "HRH3",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 6,
+    "num_function_fields": 2,
+    "positions": [
+      276,
+      365,
+      513,
+      691,
+      783,
+      1198
+    ],
+    "abstract_len": 2012
+  },
+  {
+    "pmid": "39117262",
+    "receptor_gene": "HRH2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 8,
+    "num_function_fields": 2,
+    "positions": [
+      469,
+      632,
+      642,
+      846,
+      865,
+      973,
+      1166,
+      1690
+    ],
+    "abstract_len": 1813
+  },
+  {
+    "pmid": "35930594",
+    "receptor_gene": "HRH2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": false,
+    "mention_count": 0,
+    "num_function_fields": 3,
+    "positions": [],
+    "abstract_len": 1679
+  },
+  {
+    "pmid": "37366936",
+    "receptor_gene": "HRH2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": false,
+    "mention_count": 0,
+    "num_function_fields": 3,
+    "positions": [],
+    "abstract_len": 1764
+  },
+  {
+    "pmid": "30742585",
+    "receptor_gene": "HRH1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": false,
+    "mention_count": 0,
+    "num_function_fields": 3,
+    "positions": [],
+    "abstract_len": 1633
+  },
+  {
+    "pmid": "30742585",
+    "receptor_gene": "HRH2",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 0 次",
+      "没有位置/细胞/通路/功能信息"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": false,
+    "mention_count": 0,
+    "num_function_fields": 0,
+    "positions": [],
+    "abstract_len": 1633
+  },
+  {
+    "pmid": "30742585",
+    "receptor_gene": "HRH3",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 0 次",
+      "没有位置/细胞/通路/功能信息"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": false,
+    "mention_count": 0,
+    "num_function_fields": 0,
+    "positions": [],
+    "abstract_len": 1633
+  },
+  {
+    "pmid": "30742585",
+    "receptor_gene": "HRH4",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": false,
+    "mention_count": 0,
+    "num_function_fields": 3,
+    "positions": [],
+    "abstract_len": 1633
+  },
+  {
+    "pmid": "30658649",
+    "receptor_gene": "HRH4",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      2094
+    ],
+    "abstract_len": 2666
+  },
+  {
+    "pmid": "31541002",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      1401
+    ],
+    "abstract_len": 1605
+  },
+  {
+    "pmid": "34046891",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      1042
+    ],
+    "abstract_len": 1327
+  },
+  {
+    "pmid": "37252844",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      542
+    ],
+    "abstract_len": 1118
+  },
+  {
+    "pmid": "33992835",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 10,
+    "num_function_fields": 4,
+    "positions": [
+      193,
+      383,
+      477,
+      546,
+      576,
+      854,
+      982,
+      1140,
+      1291,
+      180
+    ],
+    "abstract_len": 1412
+  },
+  {
+    "pmid": "37024146",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 4,
+    "positions": [
+      944,
+      1473,
+      919,
+      1634
+    ],
+    "abstract_len": 2323
+  },
+  {
+    "pmid": "40516629",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1005
+    ],
+    "abstract_len": 1499
+  },
+  {
+    "pmid": "40516629",
+    "receptor_gene": "DRD2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1012
+    ],
+    "abstract_len": 1499
+  },
+  {
+    "pmid": "35203352",
+    "receptor_gene": "DRD2",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 1 次"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      1019
+    ],
+    "abstract_len": 1537
+  },
+  {
+    "pmid": "36807226",
+    "receptor_gene": "DRD1",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只出现 1 次",
+      "没有位置/细胞/通路/功能信息"
+    ],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 0,
+    "positions": [
+      1140
+    ],
+    "abstract_len": 1628
+  },
+  {
+    "pmid": "36807226",
+    "receptor_gene": "DRD2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 8,
+    "num_function_fields": 3,
+    "positions": [
+      469,
+      659,
+      941,
+      998,
+      1263,
+      1548,
+      1579,
+      456
+    ],
+    "abstract_len": 1628
+  },
+  {
+    "pmid": "38879471",
+    "receptor_gene": "HTR1A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      2445
+    ],
+    "abstract_len": 2848
+  },
+  {
+    "pmid": "41396999",
+    "receptor_gene": "HTR1A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1202
+    ],
+    "abstract_len": 2025
+  },
+  {
+    "pmid": "37848733",
+    "receptor_gene": "HTR1A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 4,
+    "positions": [
+      1268,
+      1328,
+      1489
+    ],
+    "abstract_len": 1874
+  },
+  {
+    "pmid": "37848733",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      953
+    ],
+    "abstract_len": 1874
+  },
+  {
+    "pmid": "36671883",
+    "receptor_gene": "DRD1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      496
+    ],
+    "abstract_len": 1447
+  },
+  {
+    "pmid": "36671883",
+    "receptor_gene": "DRD2",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 4,
+    "positions": [
+      502,
+      1128
+    ],
+    "abstract_len": 1447
+  },
+  {
+    "pmid": "36671883",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      508
+    ],
+    "abstract_len": 1447
+  },
+  {
+    "pmid": "28208011",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 4,
+    "positions": [
+      415,
+      716,
+      1290
+    ],
+    "abstract_len": 1506
+  },
+  {
+    "pmid": "30009772",
+    "receptor_gene": "ADRA2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 3,
+    "positions": [
+      906,
+      1091
+    ],
+    "abstract_len": 1743
+  },
+  {
+    "pmid": "36238301",
+    "receptor_gene": "ADRA2A",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      957
+    ],
+    "abstract_len": 1496
+  },
+  {
+    "pmid": "36238301",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 2,
+    "positions": [
+      939,
+      1215
+    ],
+    "abstract_len": 1496
+  },
+  {
+    "pmid": "30569177",
+    "receptor_gene": "ADRB1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 2,
+    "num_function_fields": 1,
+    "positions": [
+      1338,
+      1599
+    ],
+    "abstract_len": 2214
+  },
+  {
+    "pmid": "26773201",
+    "receptor_gene": "ADRB1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 4,
+    "positions": [
+      1348
+    ],
+    "abstract_len": 1633
+  },
+  {
+    "pmid": "36107363",
+    "receptor_gene": "ADRB1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 1,
+    "positions": [
+      190,
+      627,
+      162
+    ],
+    "abstract_len": 1463
+  },
+  {
+    "pmid": "28501616",
+    "receptor_gene": "ADRB1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 9,
+    "num_function_fields": 4,
+    "positions": [
+      24,
+      398,
+      488,
+      540,
+      740,
+      981,
+      1032,
+      1155,
+      0
+    ],
+    "abstract_len": 1177
+  },
+  {
+    "pmid": "41303600",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": true,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 3,
+    "num_function_fields": 2,
+    "positions": [
+      811,
+      976,
+      779
+    ],
+    "abstract_len": 1315
+  },
+  {
+    "pmid": "40564937",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      666
+    ],
+    "abstract_len": 1476
+  },
+  {
+    "pmid": "27601178",
+    "receptor_gene": "CHRM1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      543
+    ],
+    "abstract_len": 1612
+  },
+  {
+    "pmid": "41700814",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只在背景部分出现",
+      "只出现 1 次",
+      "没有位置/细胞/通路/功能信息"
+    ],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": false,
+    "mention_count": 1,
+    "num_function_fields": 0,
+    "positions": [
+      250
+    ],
+    "abstract_len": 1623
+  },
+  {
+    "pmid": "41700814",
+    "receptor_gene": "CHRM1",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只在背景部分出现",
+      "只出现 1 次",
+      "没有位置/细胞/通路/功能信息"
+    ],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": false,
+    "mention_count": 1,
+    "num_function_fields": 0,
+    "positions": [
+      257
+    ],
+    "abstract_len": 1623
+  },
+  {
+    "pmid": "41700814",
+    "receptor_gene": "DRD2",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只在背景部分出现",
+      "只出现 1 次",
+      "没有位置/细胞/通路/功能信息"
+    ],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": false,
+    "mention_count": 1,
+    "num_function_fields": 0,
+    "positions": [
+      264
+    ],
+    "abstract_len": 1623
+  },
+  {
+    "pmid": "41700814",
+    "receptor_gene": "HTR2A",
+    "original_confidence": "low",
+    "original_needs_human_review": true,
+    "discard": true,
+    "discard_reasons": [
+      "只在背景部分出现",
+      "只出现 1 次"
+    ],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": false,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      274
+    ],
+    "abstract_len": 1623
+  },
+  {
+    "pmid": "42134865",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      979
+    ],
+    "abstract_len": 1822
+  },
+  {
+    "pmid": "42134865",
+    "receptor_gene": "CHRM1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1065
+    ],
+    "abstract_len": 1822
+  },
+  {
+    "pmid": "42134865",
+    "receptor_gene": "DRD2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1039
+    ],
+    "abstract_len": 1822
+  },
+  {
+    "pmid": "42134865",
+    "receptor_gene": "HRH2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      1402
+    ],
+    "abstract_len": 1822
+  },
+  {
+    "pmid": "32248644",
+    "receptor_gene": "GRM7",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 2,
+    "positions": [
+      296,
+      482,
+      883,
+      314
+    ],
+    "abstract_len": 1181
+  },
+  {
+    "pmid": "41594647",
+    "receptor_gene": "ADRB2",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      1280
+    ],
+    "abstract_len": 1691
+  },
+  {
+    "pmid": "41594647",
+    "receptor_gene": "GRM7",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      1185
+    ],
+    "abstract_len": 1691
+  },
+  {
+    "pmid": "36528230",
+    "receptor_gene": "GRM7",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 1,
+    "positions": [
+      794
+    ],
+    "abstract_len": 911
+  },
+  {
+    "pmid": "35484098",
+    "receptor_gene": "GRM7",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 2,
+    "positions": [
+      883
+    ],
+    "abstract_len": 1553
+  },
+  {
+    "pmid": "30616226",
+    "receptor_gene": "GRM7",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 2,
+    "positions": [
+      140,
+      458,
+      961,
+      105
+    ],
+    "abstract_len": 1044
+  },
+  {
+    "pmid": "36732336",
+    "receptor_gene": "HRH1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": true,
+    "mention_count": 11,
+    "num_function_fields": 4,
+    "positions": [
+      231,
+      301,
+      409,
+      614,
+      697,
+      797,
+      841,
+      874,
+      1372,
+      1450,
+      1497
+    ],
+    "abstract_len": 1569
+  },
+  {
+    "pmid": "40158234",
+    "receptor_gene": "HRH1",
+    "original_confidence": "high",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 4,
+    "num_function_fields": 4,
+    "positions": [
+      527,
+      708,
+      850,
+      1431
+    ],
+    "abstract_len": 1554
+  },
+  {
+    "pmid": "31500698",
+    "receptor_gene": "HRH1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": true,
+    "in_result": false,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      286
+    ],
+    "abstract_len": 975
+  },
+  {
+    "pmid": "36688618",
+    "receptor_gene": "HRH1",
+    "original_confidence": "medium",
+    "original_needs_human_review": false,
+    "discard": false,
+    "discard_reasons": [],
+    "new_needs_human_review": false,
+    "in_background": false,
+    "in_result": true,
+    "mention_count": 1,
+    "num_function_fields": 3,
+    "positions": [
+      1175
+    ],
+    "abstract_len": 1686
+  }
+]

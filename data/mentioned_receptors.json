@@ -1,0 +1,2417 @@
+[
+  {
+    "pmid": "39094559",
+    "receptor_gene": "DRD1",
+    "receptor_name": null,
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "Here, we present cryo-EM structures of LSD/PF6142-bound dopamine D1</sub> receptor (DRD1)-legobody complexes, accompanied by a β-arrestin-mimicking...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Structural basis of psychedelic LSD recognition at dopamine D<sub>1</sub> receptor.",
+      "year": "2024",
+      "journal": "Neuron",
+      "doi": "10.1016/j.neuron.2024.07.003"
+    }
+  },
+  {
+    "pmid": "40583147",
+    "receptor_gene": "DRD1",
+    "receptor_name": null,
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "Here, the dopamine D1 receptor (DRD1), a G protein-coupled receptor with few identified bone-related functions, is identified as a positive regulat...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Dopamine D1 Receptor Contributes to Glucocorticoid-Associated Osteonecrosis of Femoral Head Protection Through the ATF3/CHOP Axis to Inhibit Osteoblastic Apoptosis.",
+      "year": "2025",
+      "journal": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+      "doi": "10.1002/advs.202502276"
+    }
+  },
+  {
+    "pmid": "32052915",
+    "receptor_gene": "DRD1",
+    "receptor_name": null,
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "Dopamine D1 receptor (DRD1) is a typical G protein-coupled receptor (GPCR) mainly expressed in neurogenic area, with high constitutive activity",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Constitutive activity of a G protein-coupled receptor, DRD1, contributes to human cerebral organoid formation.",
+      "year": "2020",
+      "journal": "Stem cells (Dayton, Ohio)",
+      "doi": "10.1002/stem.3156"
+    }
+  },
+  {
+    "pmid": "35364139",
+    "receptor_gene": "DRD1",
+    "receptor_name": null,
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "These dopamine signals can be differentially translated by dopamine receptor type 1 and type 2, DRD1 and DRD2, which are G protein-coupled receptor...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Visualization of differential GPCR crosstalk in DRD1-DRD2 heterodimer upon different dopamine levels.",
+      "year": "2022",
+      "journal": "Progress in neurobiology",
+      "doi": "10.1016/j.pneurobio.2022.102266"
+    }
+  },
+  {
+    "pmid": "35364139",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "These dopamine signals can be differentially translated by dopamine receptor type 1 and type 2, DRD1 and DRD2, which are G protein-coupled receptor...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Visualization of differential GPCR crosstalk in DRD1-DRD2 heterodimer upon different dopamine levels.",
+      "year": "2022",
+      "journal": "Progress in neurobiology",
+      "doi": "10.1016/j.pneurobio.2022.102266"
+    }
+  },
+  {
+    "pmid": "40311121",
+    "receptor_gene": "DRD1",
+    "receptor_name": "dopamine receptor D1",
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "This study establishes a framework for allosterically rescuing loss-of-function (LoF) variants in GPCRs, using the dopamine receptor D1 (DRD1) as a...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Pharmacological Characterization of Dopamine Receptor DRD1 Variants and Exploration of Their Allosteric Activation.",
+      "year": "2025",
+      "journal": "Biochemistry",
+      "doi": "10.1021/acs.biochem.4c00877"
+    }
+  },
+  {
+    "pmid": "34648896",
+    "receptor_gene": "DRD2",
+    "receptor_name": "dopamine receptor D2",
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "To specifically target fibrogenic YAP in macrophages, we utilized a GPCR ligand screening system and identified a dopamine receptor D2 (DRD2) antag...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Dopamine receptor D2 antagonism normalizes profibrotic macrophage-endothelial crosstalk in non-alcoholic steatohepatitis.",
+      "year": "2022",
+      "journal": "Journal of hepatology",
+      "doi": "10.1016/j.jhep.2021.09.032"
+    }
+  },
+  {
+    "pmid": "37409929",
+    "receptor_gene": "DRD2",
+    "receptor_name": "dopamine receptor D2",
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "AMBRA1 autophagy and beclin 1 regulator 1; ATG14 autophagy related 14; ATG5 autophagy related 5; ATG7 autophagy related 7; BECN1 beclin 1; BECN2 be...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "The potent BECN2-ATG14 coiled-coil interaction is selectively critical for endolysosomal degradation of GPRASP1/GASP1-associated GPCRs.",
+      "year": "2023",
+      "journal": "Autophagy",
+      "doi": "10.1080/15548627.2023.2233872"
+    }
+  },
+  {
+    "pmid": "32528175",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "The D2 dopamine receptor (DRD2) is a therapeutic target for Parkinson's disease1</sup> and antipsychotic drugs2</sup>",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Structure of a D2 dopamine receptor-G-protein complex in a lipid membrane.",
+      "year": "2020",
+      "journal": "Nature",
+      "doi": "10.1038/s41586-020-2379-5"
+    }
+  },
+  {
+    "pmid": "31538542",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "The search for novel autophagy inducers indicates that DRD2 (dopamine receptor 2)-DRD3 ligands may also activate autophagy, though critical aspects...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "DRD3 (dopamine receptor D3) but not DRD2 activates autophagy through MTORC1 inhibition preserving protein synthesis.",
+      "year": "2020",
+      "journal": "Autophagy",
+      "doi": "10.1080/15548627.2019.1668606"
+    }
+  },
+  {
+    "pmid": "29673577",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "CB1R, CYSLTR2, PTGER4), and neurotransmitters signaling (CHRM4, DRD2, CRHR2) were also highly enriched in Nav</sub>1",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Profiling of G protein-coupled receptors in vagal afferents reveals novel gut-to-brain sensing mechanisms.",
+      "year": "2018",
+      "journal": "Molecular metabolism",
+      "doi": "10.1016/j.molmet.2018.03.016"
+    }
+  },
+  {
+    "pmid": "29673577",
+    "receptor_gene": "CHRM4",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "CB1R, CYSLTR2, PTGER4), and neurotransmitters signaling (CHRM4, DRD2, CRHR2) were also highly enriched in Nav</sub>1",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Profiling of G protein-coupled receptors in vagal afferents reveals novel gut-to-brain sensing mechanisms.",
+      "year": "2018",
+      "journal": "Molecular metabolism",
+      "doi": "10.1016/j.molmet.2018.03.016"
+    }
+  },
+  {
+    "pmid": "31371490",
+    "receptor_gene": "HTR1A",
+    "receptor_name": "5-HT1A",
+    "receptor_family": "serotonin 5-HT1 receptor",
+    "mentioned_ligands": [],
+    "snippet": "Here, we combined 'linear unmixing FRET' (lux-FRET) with the simultaneous application of a FRET-based biosensor for cAMP to investigate the oligome...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Serotonin receptor oligomerization regulates cAMP-based signaling.",
+      "year": "2019",
+      "journal": "Journal of cell science",
+      "doi": "10.1242/jcs.230334"
+    }
+  },
+  {
+    "pmid": "31371490",
+    "receptor_gene": "HTR7",
+    "receptor_name": "5-HT7",
+    "receptor_family": "serotonin 5-HT7 receptor",
+    "mentioned_ligands": [],
+    "snippet": "Here, we combined 'linear unmixing FRET' (lux-FRET) with the simultaneous application of a FRET-based biosensor for cAMP to investigate the oligome...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Serotonin receptor oligomerization regulates cAMP-based signaling.",
+      "year": "2019",
+      "journal": "Journal of cell science",
+      "doi": "10.1242/jcs.230334"
+    }
+  },
+  {
+    "pmid": "37525034",
+    "receptor_gene": "HTR1A",
+    "receptor_name": "5-hydroxytryptamine receptor 1A",
+    "receptor_family": "serotonin 5-HT1 receptor",
+    "mentioned_ligands": [],
+    "snippet": "Specifically, evolutionary and structural studies on the adrenoceptor alpha 2b (ADRA2B) and the 5-hydroxytryptamine receptor 1A (HTR1A) have been c...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "ADRA2B and HTR1A: An Updated Study of the Biogenic Amine Receptors Reveals Novel Conserved Motifs Which Play Key Role in Mental Disorders.",
+      "year": "2023",
+      "journal": "Advances in experimental medicine and biology",
+      "doi": "10.1007/978-3-031-31978-5_7"
+    }
+  },
+  {
+    "pmid": "34600545",
+    "receptor_gene": "HTR1A",
+    "receptor_name": "5-hydroxytryptamine receptor 1A",
+    "receptor_family": "serotonin 5-HT1 receptor",
+    "mentioned_ligands": [],
+    "snippet": "Seven core genes [neuropeptide Y(NPY), 5-hydroxytryptamine receptor 1A(HTR1A), somatostatin (SST), adenylate cyclase 8 (ADCY8), neuromedin U recept...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Integrated bioinformatics analysis of core regulatory elements involved in keloid formation.",
+      "year": "2021",
+      "journal": "BMC medical genomics",
+      "doi": "10.1186/s12920-021-01087-7"
+    }
+  },
+  {
+    "pmid": "35491707",
+    "receptor_gene": "HTR1A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT1 receptor",
+    "mentioned_ligands": [],
+    "snippet": "We have found five proteins (HTR1A, HTR1B, HTR2A, HTR2B & HTR7) and five best lead compounds (Withanolide A, B, E, Q & Anahygrine) against these ta...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Modulation of GPCR receptors common to gut inflammatory diseases and neuronal disorders, Alzheimer's and Parkinson's diseases as druggable targets through <i>Withania somnifera</i> bioactives: an <i>in silico</i> study.",
+      "year": "2023",
+      "journal": "Journal of biomolecular structure & dynamics",
+      "doi": "10.1080/07391102.2022.2068072"
+    }
+  },
+  {
+    "pmid": "35491707",
+    "receptor_gene": "HTR2A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "We have found five proteins (HTR1A, HTR1B, HTR2A, HTR2B & HTR7) and five best lead compounds (Withanolide A, B, E, Q & Anahygrine) against these ta...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Modulation of GPCR receptors common to gut inflammatory diseases and neuronal disorders, Alzheimer's and Parkinson's diseases as druggable targets through <i>Withania somnifera</i> bioactives: an <i>in silico</i> study.",
+      "year": "2023",
+      "journal": "Journal of biomolecular structure & dynamics",
+      "doi": "10.1080/07391102.2022.2068072"
+    }
+  },
+  {
+    "pmid": "35491707",
+    "receptor_gene": "HTR7",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT7 receptor",
+    "mentioned_ligands": [],
+    "snippet": "We have found five proteins (HTR1A, HTR1B, HTR2A, HTR2B & HTR7) and five best lead compounds (Withanolide A, B, E, Q & Anahygrine) against these ta...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Modulation of GPCR receptors common to gut inflammatory diseases and neuronal disorders, Alzheimer's and Parkinson's diseases as druggable targets through <i>Withania somnifera</i> bioactives: an <i>in silico</i> study.",
+      "year": "2023",
+      "journal": "Journal of biomolecular structure & dynamics",
+      "doi": "10.1080/07391102.2022.2068072"
+    }
+  },
+  {
+    "pmid": "32946782",
+    "receptor_gene": "HTR2A",
+    "receptor_name": "5-HT2A",
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "How psychedelics mediate their actions-both therapeutic and hallucinogenic-are not understood, although activation of the 5-HT2A</sub> serotonin re...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Structure of a Hallucinogen-Activated Gq-Coupled 5-HT<sub>2A</sub> Serotonin Receptor.",
+      "year": "2020",
+      "journal": "Cell",
+      "doi": "10.1016/j.cell.2020.08.024"
+    }
+  },
+  {
+    "pmid": "40925315",
+    "receptor_gene": "HTR2A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "The calcium signaling pathway and osteoclast differentiation ultimately led us to identify 35 genes of IL1B, TNF-α, GRM5, HTR2A, and ITGB that affe...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Analysis of the toxicity and mechanisms of osteoporosis caused by cigarette toxicants using network toxicology and molecular docking techniques.",
+      "year": "2025",
+      "journal": "The Science of the total environment",
+      "doi": "10.1016/j.scitotenv.2025.180414"
+    }
+  },
+  {
+    "pmid": "40925315",
+    "receptor_gene": "GRM5",
+    "receptor_name": null,
+    "receptor_family": "group I metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "The calcium signaling pathway and osteoclast differentiation ultimately led us to identify 35 genes of IL1B, TNF-α, GRM5, HTR2A, and ITGB that affe...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Analysis of the toxicity and mechanisms of osteoporosis caused by cigarette toxicants using network toxicology and molecular docking techniques.",
+      "year": "2025",
+      "journal": "The Science of the total environment",
+      "doi": "10.1016/j.scitotenv.2025.180414"
+    }
+  },
+  {
+    "pmid": "40885319",
+    "receptor_gene": "HTR2A",
+    "receptor_name": "5-HT2A",
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "The serotonin 2A receptor (5-HT2a</sub>R, encoded by Htr2a), a G protein-coupled receptor expressed in the pulmonary vascular wall, has been implic...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "5-HT<sub>2a</sub>R contributes to pulmonary arterial hypertension by modulating the AHR pathway.",
+      "year": "2025",
+      "journal": "Biochemical pharmacology",
+      "doi": "10.1016/j.bcp.2025.117285"
+    }
+  },
+  {
+    "pmid": "39766808",
+    "receptor_gene": "HTR2A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "Additionally, the expression of HTR2A/2B/7</i> was correlated significantly with immune cells and immune checkpoint genes in a variety of cancers, ...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "5-Hydroxytryptamine G-Protein-Coupled Receptor Family Genes: Key Players in Cancer Prognosis, Immune Regulation, and Therapeutic Response.",
+      "year": "2024",
+      "journal": "Genes",
+      "doi": "10.3390/genes15121541"
+    }
+  },
+  {
+    "pmid": "40926959",
+    "receptor_gene": "HTR2A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "The study identified non-synonymous variations in genes associated with both disorders, such as COMT</i>, ADRA1A</i>, and HTR2A</i>, DNAAF4</i>, DC...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Genetic Variants Linked to Dyslexia Co-Morbid ADHD: A Case Study of a Pakistani Outpatient.",
+      "year": "2024",
+      "journal": "Journal of population therapeutics and clinical pharmacology = Journal de la therapeutique des populations et de la pharmacologie clinique",
+      "doi": "10.53555/rd5d9s46"
+    }
+  },
+  {
+    "pmid": "40926959",
+    "receptor_gene": "ADRA1A",
+    "receptor_name": null,
+    "receptor_family": "alpha-1 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "The study identified non-synonymous variations in genes associated with both disorders, such as COMT</i>, ADRA1A</i>, and HTR2A</i>, DNAAF4</i>, DC...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Genetic Variants Linked to Dyslexia Co-Morbid ADHD: A Case Study of a Pakistani Outpatient.",
+      "year": "2024",
+      "journal": "Journal of population therapeutics and clinical pharmacology = Journal de la therapeutique des populations et de la pharmacologie clinique",
+      "doi": "10.53555/rd5d9s46"
+    }
+  },
+  {
+    "pmid": "39511179",
+    "receptor_gene": "DRD1",
+    "receptor_name": null,
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "Aripiprazole's intervention in hyperprolactinemia primarily targets the following core proteins: Solute Carrier Family 6 Member 3 (SLC6A3), monoami...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Exploring the potential pharmacological mechanism of aripiprazole against hyperprolactinemia based on network pharmacology and molecular docking.",
+      "year": "2024",
+      "journal": "Schizophrenia (Heidelberg, Germany)",
+      "doi": "10.1038/s41537-024-00523-8"
+    }
+  },
+  {
+    "pmid": "39511179",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "Aripiprazole's intervention in hyperprolactinemia primarily targets the following core proteins: Solute Carrier Family 6 Member 3 (SLC6A3), monoami...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Exploring the potential pharmacological mechanism of aripiprazole against hyperprolactinemia based on network pharmacology and molecular docking.",
+      "year": "2024",
+      "journal": "Schizophrenia (Heidelberg, Germany)",
+      "doi": "10.1038/s41537-024-00523-8"
+    }
+  },
+  {
+    "pmid": "39511179",
+    "receptor_gene": "HTR2A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "Aripiprazole's intervention in hyperprolactinemia primarily targets the following core proteins: Solute Carrier Family 6 Member 3 (SLC6A3), monoami...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Exploring the potential pharmacological mechanism of aripiprazole against hyperprolactinemia based on network pharmacology and molecular docking.",
+      "year": "2024",
+      "journal": "Schizophrenia (Heidelberg, Germany)",
+      "doi": "10.1038/s41537-024-00523-8"
+    }
+  },
+  {
+    "pmid": "39511179",
+    "receptor_gene": "HTR2C",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "Aripiprazole's intervention in hyperprolactinemia primarily targets the following core proteins: Solute Carrier Family 6 Member 3 (SLC6A3), monoami...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Exploring the potential pharmacological mechanism of aripiprazole against hyperprolactinemia based on network pharmacology and molecular docking.",
+      "year": "2024",
+      "journal": "Schizophrenia (Heidelberg, Germany)",
+      "doi": "10.1038/s41537-024-00523-8"
+    }
+  },
+  {
+    "pmid": "41237175",
+    "receptor_gene": "HTR7",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT7 receptor",
+    "mentioned_ligands": [],
+    "snippet": "We used several public databases to perform a comprehensive pan-cancer analysis to determine the potential role of HTR7 in diagnosing tumors, predi...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Comprehensive bioinformatic analysis of HTR7: A potential biomarker for diagnosis, survival, and immunotherapy in pan-cancer.",
+      "year": "2025",
+      "journal": "PloS one",
+      "doi": "10.1371/journal.pone.0335398"
+    }
+  },
+  {
+    "pmid": "27698822",
+    "receptor_gene": "HTR7",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT7 receptor",
+    "mentioned_ligands": [],
+    "snippet": "Downregulated genes in module 2, such as cholecystokinin (CCK), gastrin (GAST), adenylate cyclase 2 (brain) (ADCY2) and 5-hydroxytryptamine (seroto...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Bioinformatics analysis of the molecular mechanism of diffuse intrinsic pontine glioma.",
+      "year": "2016",
+      "journal": "Oncology letters",
+      "doi": "10.3892/ol.2016.5024"
+    }
+  },
+  {
+    "pmid": "27460988",
+    "receptor_gene": "ADRA1A",
+    "receptor_name": null,
+    "receptor_family": "alpha-1 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "In functional assays, the combined effects of these drugs were stimulation of Gi/o signaling by activating the dopamine receptors D2R and D4R, as w...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Synergistically acting agonists and antagonists of G protein-coupled receptors prevent photoreceptor cell degeneration.",
+      "year": "2016",
+      "journal": "Science signaling",
+      "doi": "10.1126/scisignal.aag0245"
+    }
+  },
+  {
+    "pmid": "33402011",
+    "receptor_gene": "ADRA1A",
+    "receptor_name": null,
+    "receptor_family": "alpha-1 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Thus far, we have used this method to quantify t</i>1/2</sub> for all nine adrenergic (ADRA1A, ADRA1B, ADRA1D, ADRA2A, ADRA2B, ADRA2C, ADRB1, ADRB2...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Development of a Novel SNAP-Epitope Tag/Near-Infrared Imaging Assay to Quantify G Protein-Coupled Receptor Degradation in Human Cells.",
+      "year": "2021",
+      "journal": "SLAS discovery : advancing life sciences R & D",
+      "doi": "10.1177/2472555220979793"
+    }
+  },
+  {
+    "pmid": "33402011",
+    "receptor_gene": "ADRA2A",
+    "receptor_name": null,
+    "receptor_family": "alpha-2 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Thus far, we have used this method to quantify t</i>1/2</sub> for all nine adrenergic (ADRA1A, ADRA1B, ADRA1D, ADRA2A, ADRA2B, ADRA2C, ADRB1, ADRB2...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Development of a Novel SNAP-Epitope Tag/Near-Infrared Imaging Assay to Quantify G Protein-Coupled Receptor Degradation in Human Cells.",
+      "year": "2021",
+      "journal": "SLAS discovery : advancing life sciences R & D",
+      "doi": "10.1177/2472555220979793"
+    }
+  },
+  {
+    "pmid": "33402011",
+    "receptor_gene": "ADRB1",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Thus far, we have used this method to quantify t</i>1/2</sub> for all nine adrenergic (ADRA1A, ADRA1B, ADRA1D, ADRA2A, ADRA2B, ADRA2C, ADRB1, ADRB2...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Development of a Novel SNAP-Epitope Tag/Near-Infrared Imaging Assay to Quantify G Protein-Coupled Receptor Degradation in Human Cells.",
+      "year": "2021",
+      "journal": "SLAS discovery : advancing life sciences R & D",
+      "doi": "10.1177/2472555220979793"
+    }
+  },
+  {
+    "pmid": "33402011",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Thus far, we have used this method to quantify t</i>1/2</sub> for all nine adrenergic (ADRA1A, ADRA1B, ADRA1D, ADRA2A, ADRA2B, ADRA2C, ADRB1, ADRB2...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Development of a Novel SNAP-Epitope Tag/Near-Infrared Imaging Assay to Quantify G Protein-Coupled Receptor Degradation in Human Cells.",
+      "year": "2021",
+      "journal": "SLAS discovery : advancing life sciences R & D",
+      "doi": "10.1177/2472555220979793"
+    }
+  },
+  {
+    "pmid": "41726659",
+    "receptor_gene": "ADRA1A",
+    "receptor_name": null,
+    "receptor_family": "alpha-1 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "An SVM model was trained on 144 ligands (66 agonists, 78 antagonists), listed in the IUPHAR/BPS Guide to Pharmacology, from 12 structurally related...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "A Machine Learning-Guided Approach for Identifying Potential HCAR1 Antagonists in Lactate-Driven Cancers.",
+      "year": "2026",
+      "journal": "ACS omega",
+      "doi": "10.1021/acsomega.5c09253"
+    }
+  },
+  {
+    "pmid": "33862102",
+    "receptor_gene": "ADRA1A",
+    "receptor_name": null,
+    "receptor_family": "alpha-1 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "The results of enrichment analysis revealed that HRT2B, ADRA1A, ADRA1D, and CHRM2 could be the key targets of WCAP in IBS-D, and 11 signalling path...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "The mechanisms of action of WeiChang'An Pill (WCAP) treat diarrhoea-predominant irritable bowel syndrome (IBS-D) using network pharmacology approach and in vivo studies.",
+      "year": "2021",
+      "journal": "Journal of ethnopharmacology",
+      "doi": "10.1016/j.jep.2021.114119"
+    }
+  },
+  {
+    "pmid": "33862102",
+    "receptor_gene": "CHRM2",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "The results of enrichment analysis revealed that HRT2B, ADRA1A, ADRA1D, and CHRM2 could be the key targets of WCAP in IBS-D, and 11 signalling path...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "The mechanisms of action of WeiChang'An Pill (WCAP) treat diarrhoea-predominant irritable bowel syndrome (IBS-D) using network pharmacology approach and in vivo studies.",
+      "year": "2021",
+      "journal": "Journal of ethnopharmacology",
+      "doi": "10.1016/j.jep.2021.114119"
+    }
+  },
+  {
+    "pmid": "42237231",
+    "receptor_gene": "ADRA1A",
+    "receptor_name": null,
+    "receptor_family": "alpha-1 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Conversely, concentrations of Aab against ATR1, ADRA1A, ADRB2, and ETAR were significantly higher in children compared to adults",
+    "is_query_receptor": true,
+    "source": {
+      "title": "G protein-coupled receptor autoantibody expression patterns in adults with decelerated biological aging mirror pediatric profiles.",
+      "year": "2026",
+      "journal": "BMC immunology",
+      "doi": "10.1186/s12865-026-00862-4"
+    }
+  },
+  {
+    "pmid": "42237231",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Conversely, concentrations of Aab against ATR1, ADRA1A, ADRB2, and ETAR were significantly higher in children compared to adults",
+    "is_query_receptor": false,
+    "source": {
+      "title": "G protein-coupled receptor autoantibody expression patterns in adults with decelerated biological aging mirror pediatric profiles.",
+      "year": "2026",
+      "journal": "BMC immunology",
+      "doi": "10.1186/s12865-026-00862-4"
+    }
+  },
+  {
+    "pmid": "38788722",
+    "receptor_gene": "ADRA2A",
+    "receptor_name": null,
+    "receptor_family": "alpha-2 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Here, we identify α2A</sub>-adrenergic receptor (ADRA2A) as a highly expressed GPCR in ISCs",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Enterococcus-derived tyramine hijacks α<sub>2A</sub>-adrenergic receptor in intestinal stem cells to exacerbate colitis.",
+      "year": "2024",
+      "journal": "Cell host & microbe",
+      "doi": "10.1016/j.chom.2024.04.020"
+    }
+  },
+  {
+    "pmid": "27376152",
+    "receptor_gene": "ADRA2A",
+    "receptor_name": null,
+    "receptor_family": "alpha-2 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Leu68Phe) affecting a highly conserved residue in adrenoceptor α 2A (ADRA2A</i>) was found in all affected subjects but not in unaffected relatives",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Whole-exome sequencing identifies <i>ADRA2A</i> mutation in atypical familial partial lipodystrophy.",
+      "year": "2016",
+      "journal": "JCI insight",
+      "doi": "10.1172/jci.insight.86870"
+    }
+  },
+  {
+    "pmid": "38230433",
+    "receptor_gene": "ADRA2A",
+    "receptor_name": null,
+    "receptor_family": "alpha-2 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Here, we demonstrate that depletion of coiled-coil α-helical rod protein 1 (CCHCR1) by siRNA and CRISPR-Cas9 significantly inhibits surface express...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Segregation of nascent GPCRs in the ER-to-Golgi transport by CCHCR1 via direct interaction.",
+      "year": "2024",
+      "journal": "Journal of cell science",
+      "doi": "10.1242/jcs.261685"
+    }
+  },
+  {
+    "pmid": "40663777",
+    "receptor_gene": "ADRA2A",
+    "receptor_name": null,
+    "receptor_family": "alpha-2 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "EECs had 30 downregulated genes, including KL and ADRA2A, while ESCs had 429 downregulated genes, such as PTGIS, PTGDS, and PTGES, with seven commo...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Unveiling the molecular mechanisms of human platelet lysate in enhancing endometrial receptivity.",
+      "year": "2025",
+      "journal": "Human reproduction (Oxford, England)",
+      "doi": "10.1093/humrep/deaf118"
+    }
+  },
+  {
+    "pmid": "36253428",
+    "receptor_gene": "ADRA2A",
+    "receptor_name": null,
+    "receptor_family": "alpha-2 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "In combined treatment with cisplatin, siRNAs against five genes (ADRA2A, F2RL3, NPSR1, NPY and TACR3) enhanced the anti-proliferation efficacy on c...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Screening of the siGPCR library in combination with cisplatin against lung cancers.",
+      "year": "2022",
+      "journal": "Scientific reports",
+      "doi": "10.1038/s41598-022-21063-0"
+    }
+  },
+  {
+    "pmid": "32703433",
+    "receptor_gene": "ADRB1",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "We expressed OMP and non-desensitizing CNGA2 channels in HEK293T cells together with β1-adrenergic receptors (ADRB1) or photo-sensitive β2-adrenerg...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Olfactory marker protein captures cAMP produced via Gαs-protein-coupled receptor activation.",
+      "year": "2020",
+      "journal": "Biochemical and biophysical research communications",
+      "doi": "10.1016/j.bbrc.2020.06.017"
+    }
+  },
+  {
+    "pmid": "40364562",
+    "receptor_gene": "ADRB1",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "An optimal prognostic signature was identified, including OR51E1, LGR4, ADRB1, ADGRD1, and ADGRE3",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Therapeutic and Prognostic Potential of G Protein-Coupled Receptors in Lung Adenocarcinoma: Evidence From Transcriptome Data and In Vitro Experiments.",
+      "year": "2025",
+      "journal": "The clinical respiratory journal",
+      "doi": "10.1111/crj.70080"
+    }
+  },
+  {
+    "pmid": "33372534",
+    "receptor_gene": "ADRB1",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Background ADRB1 (adrenergic receptor beta 1) responds to neuroendocrine stimulations, which have great implications in hypertension",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Paroxetine Attenuates Cardiac Hypertrophy Via Blocking GRK2 and ADRB1 Interaction in Hypertension.",
+      "year": "2021",
+      "journal": "Journal of the American Heart Association",
+      "doi": "10.1161/JAHA.120.016364"
+    }
+  },
+  {
+    "pmid": "41734179",
+    "receptor_gene": "ADRB1",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "ELISA measurement of GPCR autoantibodies encompassed autoantibodies to Angiotensin-II-Receptor-1 (AGTR2), Beta-1 Adrenergic Receptor (ADRB1), Beta-...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Association of G-Protein-Coupled Receptors autoantibodies with vasoregulation in Post-COVID.",
+      "year": "2026",
+      "journal": "PloS one",
+      "doi": "10.1371/journal.pone.0343264"
+    }
+  },
+  {
+    "pmid": "41734179",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "ELISA measurement of GPCR autoantibodies encompassed autoantibodies to Angiotensin-II-Receptor-1 (AGTR2), Beta-1 Adrenergic Receptor (ADRB1), Beta-...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Association of G-Protein-Coupled Receptors autoantibodies with vasoregulation in Post-COVID.",
+      "year": "2026",
+      "journal": "PloS one",
+      "doi": "10.1371/journal.pone.0343264"
+    }
+  },
+  {
+    "pmid": "41734179",
+    "receptor_gene": "CHRM3",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "ELISA measurement of GPCR autoantibodies encompassed autoantibodies to Angiotensin-II-Receptor-1 (AGTR2), Beta-1 Adrenergic Receptor (ADRB1), Beta-...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Association of G-Protein-Coupled Receptors autoantibodies with vasoregulation in Post-COVID.",
+      "year": "2026",
+      "journal": "PloS one",
+      "doi": "10.1371/journal.pone.0343264"
+    }
+  },
+  {
+    "pmid": "41734179",
+    "receptor_gene": "CHRM4",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "ELISA measurement of GPCR autoantibodies encompassed autoantibodies to Angiotensin-II-Receptor-1 (AGTR2), Beta-1 Adrenergic Receptor (ADRB1), Beta-...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Association of G-Protein-Coupled Receptors autoantibodies with vasoregulation in Post-COVID.",
+      "year": "2026",
+      "journal": "PloS one",
+      "doi": "10.1371/journal.pone.0343264"
+    }
+  },
+  {
+    "pmid": "29514624",
+    "receptor_gene": "ADRB1",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Several small studies have investigated associations between three different loci; the β1-adrenic receptor (ADRB1), G-protein-coupled receptor kina...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Lack of genetic susceptibility in takotsubo cardiomyopathy: a case-control study.",
+      "year": "2018",
+      "journal": "BMC medical genetics",
+      "doi": "10.1186/s12881-018-0544-6"
+    }
+  },
+  {
+    "pmid": "34280464",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Furthermore, deletion of ADRB2 receptor, which is thought to mediate sympathetic nervous system regulation of HFSCs, was sufficient to block HFSC a...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Defining a Role for G-Protein Coupled Receptor/cAMP/CRE-Binding Protein Signaling in Hair Follicle Stem Cell Activation.",
+      "year": "2022",
+      "journal": "The Journal of investigative dermatology",
+      "doi": "10.1016/j.jid.2021.05.031"
+    }
+  },
+  {
+    "pmid": "41545427",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": null,
+    "is_query_receptor": true,
+    "source": {
+      "title": "An artificial cell capable of signal transduction mediated by ADRB2 for the regulation of glycogenolysis.",
+      "year": "2026",
+      "journal": "Nature communications",
+      "doi": "10.1038/s41467-026-68503-3"
+    }
+  },
+  {
+    "pmid": "36731712",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Finally, we set-up an Amplified Luminescent Proximity Homogeneous AlphaScreen® assay to detect the interaction between purified ADRB2 receptor and ...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Characterization of anti-GASP motif antibodies that inhibit the interaction between GPRASP1 and G protein-coupled receptors.",
+      "year": "2023",
+      "journal": "Analytical biochemistry",
+      "doi": "10.1016/j.ab.2023.115062"
+    }
+  },
+  {
+    "pmid": "31408338",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "First, we analyze a microsecond long molecular dynamic simulation of the human ß2-adrenergic receptor (ADRB2)",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Unsupervised Classification of G-Protein Coupled Receptors and Their Conformational States Using IChem Intramolecular Interaction Patterns.",
+      "year": "2019",
+      "journal": "Journal of chemical information and modeling",
+      "doi": "10.1021/acs.jcim.9b00054"
+    }
+  },
+  {
+    "pmid": "39769358",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "The NGS analysis revealed specific combinations of SNPs in GPCR genes in these patients, where SNPs in ADRB2</i> (rs1042713), GIPR</i> (rs1800437),...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "SNPs in GPCR Genes and Impaired Osteogenic Potency in Osteoporotic Patient Lines-Based Study.",
+      "year": "2024",
+      "journal": "International journal of molecular sciences",
+      "doi": "10.3390/ijms252413594"
+    }
+  },
+  {
+    "pmid": "36244968",
+    "receptor_gene": "CHRM1",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "CHRM1 was selected as a key gene in strychnine toxicity",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Network toxicology and molecular docking analyses on strychnine indicate CHRM1 is a potential neurotoxic target.",
+      "year": "2022",
+      "journal": "BMC complementary medicine and therapies",
+      "doi": "10.1186/s12906-022-03753-4"
+    }
+  },
+  {
+    "pmid": "30564629",
+    "receptor_gene": "CHRM1",
+    "receptor_name": "M4 receptor",
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "The family of muscarinic acetylcholine receptors (mAChRs) consists of five members in mammals, encoded by the CHRM1</i>-5 genes",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Evolution of the Muscarinic Acetylcholine Receptors in Vertebrates.",
+      "year": "2018",
+      "journal": "eNeuro",
+      "doi": "10.1523/ENEURO.0340-18.2018"
+    }
+  },
+  {
+    "pmid": "30564629",
+    "receptor_gene": "CHRM2",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "After these events, one gene had duplicated, resulting in CHRM2</i> and CHRM4</i>; and the other had triplicated, forming the CHRM1</i>, CHRM3</i>,...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Evolution of the Muscarinic Acetylcholine Receptors in Vertebrates.",
+      "year": "2018",
+      "journal": "eNeuro",
+      "doi": "10.1523/ENEURO.0340-18.2018"
+    }
+  },
+  {
+    "pmid": "30564629",
+    "receptor_gene": "CHRM3",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "After these events, one gene had duplicated, resulting in CHRM2</i> and CHRM4</i>; and the other had triplicated, forming the CHRM1</i>, CHRM3</i>,...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Evolution of the Muscarinic Acetylcholine Receptors in Vertebrates.",
+      "year": "2018",
+      "journal": "eNeuro",
+      "doi": "10.1523/ENEURO.0340-18.2018"
+    }
+  },
+  {
+    "pmid": "30564629",
+    "receptor_gene": "CHRM4",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "The mAChRs are G-protein-coupled receptors, which can be divided into the following two subfamilies: M2 and M4 receptors coupling to Gi/o</sub>; an...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Evolution of the Muscarinic Acetylcholine Receptors in Vertebrates.",
+      "year": "2018",
+      "journal": "eNeuro",
+      "doi": "10.1523/ENEURO.0340-18.2018"
+    }
+  },
+  {
+    "pmid": "36068422",
+    "receptor_gene": "CHRM1",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "The PPI network of 351 related genes revealed that VCL, GNB3, MYH11, LMNA, MLLT4, EZH2, PAK3, and CHRM1 have important roles in PCOS",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Integrated bioinformatics analysis and screening of hub genes in polycystic ovary syndrome.",
+      "year": "2022",
+      "journal": "Endocrine",
+      "doi": "10.1007/s12020-022-03181-x"
+    }
+  },
+  {
+    "pmid": "39026356",
+    "receptor_gene": "CHRM1",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Key genes such as EDN1, GPR17, FPR2, and CHRM1, involved in the G protein-coupled receptor (GPCR) signaling pathway and playing roles in cell diffe...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Integrative analysis of bulk and single-cell RNA sequencing reveals the gene expression profile and the critical signaling pathways of type II CPAM.",
+      "year": "2024",
+      "journal": "Cell & bioscience",
+      "doi": "10.1186/s13578-024-01276-8"
+    }
+  },
+  {
+    "pmid": "35370785",
+    "receptor_gene": "CHRM1",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "MR subtypes, M1</sub>R-M5</sub>R, encoded by CHRM1-CHRM5</i>, expressed widely throughout the gastrointestinal (GI) tract, modulate a range of crit...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Mechanistic Clues Provided by Concurrent Changes in the Expression of Genes Encoding the M<sub>1</sub> Muscarinic Receptor, β-Catenin Signaling Proteins, and Downstream Targets in Adenocarcinomas of the Colon.",
+      "year": "2022",
+      "journal": "Frontiers in physiology",
+      "doi": "10.3389/fphys.2022.857563"
+    }
+  },
+  {
+    "pmid": "35370785",
+    "receptor_gene": "CHRM3",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "CHRM3</i>/M3</sub>R overexpression in colon cancer is associated with increased cell proliferation, metastasis, and a worse outcome, but little is ...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Mechanistic Clues Provided by Concurrent Changes in the Expression of Genes Encoding the M<sub>1</sub> Muscarinic Receptor, β-Catenin Signaling Proteins, and Downstream Targets in Adenocarcinomas of the Colon.",
+      "year": "2022",
+      "journal": "Frontiers in physiology",
+      "doi": "10.3389/fphys.2022.857563"
+    }
+  },
+  {
+    "pmid": "37775760",
+    "receptor_gene": "CHRM2",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "The upregulated DEGs in the hypothalamus (hub genes: Nod2, Serpine1, Cebpb, Nfkbil1, Ripk2, Zfp36, Traf6, Akap8, Gfer, Cxcl10, Tnfaip3, Icam1, Fcgr...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Unbiased multitissue transcriptomic analysis reveals complex neuroendocrine regulatory networks mediated by spinal cord injury-induced immunodeficiency.",
+      "year": "2023",
+      "journal": "Journal of neuroinflammation",
+      "doi": "10.1186/s12974-023-02906-7"
+    }
+  },
+  {
+    "pmid": "41985299",
+    "receptor_gene": "CHRM2",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "A total of 110 compounds yielded 252 common targets, with CHRM2 (GPCR) and NR1H3 (non-GPCR) identified as key hubs",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Integrative network pharmacology delineates dual GPCR and non-GPCR mechanisms of blended and individual Taikong Blue lavender and Pingyin rose essential oils in neurodegenerative and psychiatric disorders.",
+      "year": "2026",
+      "journal": "Computers in biology and medicine",
+      "doi": "10.1016/j.compbiomed.2026.111681"
+    }
+  },
+  {
+    "pmid": "39740827",
+    "receptor_gene": "CHRM2",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Methylation levels of CHRM2 were significantly raised in HNSCC samples compared to corresponding normal tissues (p<0",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Epigenetic Modification of Muscarinic Acetylcholine Receptors in Squamous Cell Carcinoma of the Head and Neck.",
+      "year": "2025",
+      "journal": "Anticancer research",
+      "doi": "10.21873/anticanres.17395"
+    }
+  },
+  {
+    "pmid": "29133212",
+    "receptor_gene": "ADRA2A",
+    "receptor_name": null,
+    "receptor_family": "alpha-2 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "ADRA2A, ADRA2C and CHRM2) were associated with cardiovascular complications (e",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Quantitative and systems pharmacology 2. In silico polypharmacology of G protein-coupled receptor ligands via network-based approaches.",
+      "year": "2018",
+      "journal": "Pharmacological research",
+      "doi": "10.1016/j.phrs.2017.11.005"
+    }
+  },
+  {
+    "pmid": "29133212",
+    "receptor_gene": "CHRM2",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "ADRA2A, ADRA2C and CHRM2) were associated with cardiovascular complications (e",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Quantitative and systems pharmacology 2. In silico polypharmacology of G protein-coupled receptor ligands via network-based approaches.",
+      "year": "2018",
+      "journal": "Pharmacological research",
+      "doi": "10.1016/j.phrs.2017.11.005"
+    }
+  },
+  {
+    "pmid": "38010846",
+    "receptor_gene": "CHRM3",
+    "receptor_name": "M3 receptor",
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Recent studies have reported the role of the M3 muscarinic acetylcholine receptor (M3R), a member of the G-protein coupled receptor superfamily, en...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Associations of genetic variations in the M3 receptor with salt sensitivity, longitudinal changes in blood pressure and the incidence of hypertension in Chinese adults.",
+      "year": "2024",
+      "journal": "Journal of clinical hypertension (Greenwich, Conn.)",
+      "doi": "10.1111/jch.14753"
+    }
+  },
+  {
+    "pmid": "38047980",
+    "receptor_gene": "CHRM3",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "oconnori, including GIRK1, CHRM3, NPY2R, GABRA3, GnRH3, mGluR1α, GPER1, GDF9, HSP90, and ESR2",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Transcriptome analysis of Schizothorax oconnori (Cypriniformes: Cyprinidae) oocytes: The role of K<sup>+</sup> in promoting yolk globule fusion and regulating oocyte maturation.",
+      "year": "2024",
+      "journal": "Fish physiology and biochemistry",
+      "doi": "10.1007/s10695-023-01272-8"
+    }
+  },
+  {
+    "pmid": "34314386",
+    "receptor_gene": "CHRM3",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": null,
+    "is_query_receptor": true,
+    "source": {
+      "title": "Pancreas-specific CHRM3 activation causes pancreatitis in mice.",
+      "year": "2021",
+      "journal": "JCI insight",
+      "doi": "10.1172/jci.insight.132585"
+    }
+  },
+  {
+    "pmid": "33398073",
+    "receptor_gene": "CHRM4",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "NGF regulates NEPC differentiation by physically interacting with a G-protein-coupled receptor, cholinergic receptor muscarinic 4 (CHRM4), after ADT",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Nerve growth factor interacts with CHRM4 and promotes neuroendocrine differentiation of prostate cancer and castration resistance.",
+      "year": "2021",
+      "journal": "Communications biology",
+      "doi": "10.1038/s42003-020-01549-1"
+    }
+  },
+  {
+    "pmid": "42163039",
+    "receptor_gene": "CHRM4",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Using WGCNA and machine learning, nine hub GPCR genes (SSTR2, GPR61, SSTR1, OR2H2, CHRM4, P2RY2, GPR63, OPN3, GRPR) were identified",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Uncovering G Protein-Coupled Receptors: Novel Targets and Biomarkers for Predicting Glioma Prognosis.",
+      "year": "2026",
+      "journal": "Annals of clinical and translational neurology",
+      "doi": "10.1002/acn3.70438"
+    }
+  },
+  {
+    "pmid": "38248654",
+    "receptor_gene": "HTR2A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "In selectivity profiling against 168 GPCR targets using the β-arrestin functional assay, we found that 4</b> antagonizes GPR119, NPSR1b, CCR9, CHRM...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Chlorinated Enyne Fatty Acid Amides from a Marine Cyanobacterium: Discovery of Taveuniamides L-M and Pharmacological Characterization of Taveuniamide F as a GPCR Antagonist with CNR1 Selectivity.",
+      "year": "2023",
+      "journal": "Marine drugs",
+      "doi": "10.3390/md22010028"
+    }
+  },
+  {
+    "pmid": "38248654",
+    "receptor_gene": "CHRM4",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "In selectivity profiling against 168 GPCR targets using the β-arrestin functional assay, we found that 4</b> antagonizes GPR119, NPSR1b, CCR9, CHRM...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Chlorinated Enyne Fatty Acid Amides from a Marine Cyanobacterium: Discovery of Taveuniamides L-M and Pharmacological Characterization of Taveuniamide F as a GPCR Antagonist with CNR1 Selectivity.",
+      "year": "2023",
+      "journal": "Marine drugs",
+      "doi": "10.3390/md22010028"
+    }
+  },
+  {
+    "pmid": "41620186",
+    "receptor_gene": "GRM1",
+    "receptor_name": null,
+    "receptor_family": "group I metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "Group 1 metabotropic glutamate receptors (mGluRs) are a family of G protein-coupled receptors (GPCRs) including mGluR1 and mGluR5",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Impedance-based phenotypic profiling of metabotropic glutamate receptor ligand responses in SCA1 human iPSC-derived neuronal cultures.",
+      "year": "2026",
+      "journal": "Neurobiology of disease",
+      "doi": "10.1016/j.nbd.2026.107296"
+    }
+  },
+  {
+    "pmid": "41620186",
+    "receptor_gene": "GRM5",
+    "receptor_name": null,
+    "receptor_family": "group I metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "Group 1 metabotropic glutamate receptors (mGluRs) are a family of G protein-coupled receptors (GPCRs) including mGluR1 and mGluR5",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Impedance-based phenotypic profiling of metabotropic glutamate receptor ligand responses in SCA1 human iPSC-derived neuronal cultures.",
+      "year": "2026",
+      "journal": "Neurobiology of disease",
+      "doi": "10.1016/j.nbd.2026.107296"
+    }
+  },
+  {
+    "pmid": "29416686",
+    "receptor_gene": "GRM1",
+    "receptor_name": "metabotropic glutamate receptor 1",
+    "receptor_family": "group I metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "A neuronal receptor, metabotropic glutamate receptor 1 (GRM1), when ectopically expressed in melanocytes, induces in vitro</i> melanocytic transfor...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Exosomes released by metabotropic glutamate receptor 1 (GRM1) expressing melanoma cells increase cell migration and invasiveness.",
+      "year": "2018",
+      "journal": "Oncotarget",
+      "doi": "10.18632/oncotarget.23455"
+    }
+  },
+  {
+    "pmid": "37391170",
+    "receptor_gene": "GRM1",
+    "receptor_name": null,
+    "receptor_family": "group I metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "Here we report 4 cases of blue melanocytic neoplasms devoid of these mutations but harboring GRM1 gene fusions",
+    "is_query_receptor": true,
+    "source": {
+      "title": "GRM1 Gene Fusions as an Alternative Molecular Driver in Blue Nevi and Related Melanomas.",
+      "year": "2023",
+      "journal": "Modern pathology : an official journal of the United States and Canadian Academy of Pathology, Inc",
+      "doi": "10.1016/j.modpat.2023.100264"
+    }
+  },
+  {
+    "pmid": "33412755",
+    "receptor_gene": "GRM2",
+    "receptor_name": null,
+    "receptor_family": "group II metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "Through a protein network analysis, we identified the following top 10 hub genes associated with AD: PTGER3, C3AR1, NPY, ADCY2, CXCL12, CCR5, MTNR1...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Prediction of hub genes of Alzheimer's disease using a protein interaction network and functional enrichment analysis.",
+      "year": "2020",
+      "journal": "Genomics & informatics",
+      "doi": "10.5808/GI.2020.18.4.e39"
+    }
+  },
+  {
+    "pmid": "40109668",
+    "receptor_gene": "GRM5",
+    "receptor_name": "metabotropic glutamate receptor 5",
+    "receptor_family": "group I metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "In this review, we focus on the dopamine D1 receptors (D1R) and metabotropic glutamate receptor 5 (mGLUR5 or GRM5)-two GPCRs that have been critica...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Astrocytic G Protein-Coupled Receptors in Drug Addiction.",
+      "year": "2025",
+      "journal": "Engineering (Beijing, China)",
+      "doi": "10.1016/j.eng.2024.12.016"
+    }
+  },
+  {
+    "pmid": "36079577",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "According to the degree of gene targets in the network, ACE, SLC3A6, NR3CI, MAPK1, PTGS2, PIK3CA, RELA, GRIN1, GRM5, IL1B, and DRD2 were found to b...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Network Pharmacology-Based Investigation on Therapeutic Mechanisms of the <i>Angelica dahurica</i> Radix and <i>Ligusticum chuanxiong</i> Rhizoma Herb Pair for Anti-Migraine Effect.",
+      "year": "2022",
+      "journal": "Plants (Basel, Switzerland)",
+      "doi": "10.3390/plants11172196"
+    }
+  },
+  {
+    "pmid": "36079577",
+    "receptor_gene": "GRM5",
+    "receptor_name": null,
+    "receptor_family": "group I metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "According to the degree of gene targets in the network, ACE, SLC3A6, NR3CI, MAPK1, PTGS2, PIK3CA, RELA, GRIN1, GRM5, IL1B, and DRD2 were found to b...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Network Pharmacology-Based Investigation on Therapeutic Mechanisms of the <i>Angelica dahurica</i> Radix and <i>Ligusticum chuanxiong</i> Rhizoma Herb Pair for Anti-Migraine Effect.",
+      "year": "2022",
+      "journal": "Plants (Basel, Switzerland)",
+      "doi": "10.3390/plants11172196"
+    }
+  },
+  {
+    "pmid": "32205144",
+    "receptor_gene": "GRM5",
+    "receptor_name": null,
+    "receptor_family": "group I metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "In spring castrates, reduced npy, tac1 and nrcam and increased ank3 expression suggested testicular effects on the appetite, prolactin release and ...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Seasonal reproductive state determines gene expression in the hypothalamus of a latitudinal migratory songbird during the spring and autumn migration.",
+      "year": "2020",
+      "journal": "Molecular and cellular endocrinology",
+      "doi": "10.1016/j.mce.2020.110794"
+    }
+  },
+  {
+    "pmid": "33785412",
+    "receptor_gene": "GRM5",
+    "receptor_name": null,
+    "receptor_family": "group I metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "We also found upregulation of fragile X mental retardation protein (FMRP) target genes including GRM5, which is implicated as a common trait betwee...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Transcriptome analysis of human neural cells derived from isogenic embryonic stem cells with 16p11.2 deletion.",
+      "year": "2021",
+      "journal": "Neuroscience research",
+      "doi": "10.1016/j.neures.2021.03.005"
+    }
+  },
+  {
+    "pmid": "33500274",
+    "receptor_gene": "GRM7",
+    "receptor_name": "metabotropic glutamate receptor 7",
+    "receptor_family": "group III metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "Metabotropic glutamate receptor 7 (mGlu7) is an inhibitory heterotrimeric G-protein-coupled receptor that modulates neurotransmitter release and sy...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Pathogenic <i>GRM7</i> Mutations Associated with Neurodevelopmental Disorders Impair Axon Outgrowth and Presynaptic Terminal Development.",
+      "year": "2021",
+      "journal": "The Journal of neuroscience : the official journal of the Society for Neuroscience",
+      "doi": "10.1523/JNEUROSCI.2108-20.2021"
+    }
+  },
+  {
+    "pmid": "40637957",
+    "receptor_gene": "GRM7",
+    "receptor_name": "metabotropic glutamate receptor 7",
+    "receptor_family": "group III metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "Metabotropic glutamate receptor 7 (mGlu7</sub>) is a G protein-coupled receptor (GPCR) involved in neurotransmitter release throughout the central ...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Overexpression of mGlu<sub>7B</sub> in Mice: Implications for Neurodevelopmental Disorders.",
+      "year": "2025",
+      "journal": "Molecular neurobiology",
+      "doi": "10.1007/s12035-025-05183-y"
+    }
+  },
+  {
+    "pmid": "33476302",
+    "receptor_gene": "GRM7",
+    "receptor_name": "metabotropic glutamate receptor 7",
+    "receptor_family": "group III metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "The metabotropic glutamate receptor 7 (mGlu7) is a G protein-coupled receptor that has been recently linked to neurodevelopmental disorders",
+    "is_query_receptor": true,
+    "source": {
+      "title": "A GRM7 mutation associated with developmental delay reduces mGlu7 expression and produces neurological phenotypes.",
+      "year": "2021",
+      "journal": "JCI insight",
+      "doi": "10.1172/jci.insight.143324"
+    }
+  },
+  {
+    "pmid": "36532433",
+    "receptor_gene": "GRM7",
+    "receptor_name": null,
+    "receptor_family": "group III metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "japonicum</i> and named them Sj</i>GRM7 (Sjc_001309, similar to GRM7) and Sj</i>GRM (Sjc_001163, similar to mGluR)",
+    "is_query_receptor": true,
+    "source": {
+      "title": "A metabotropic glutamate receptor affects the growth and development of <i>Schistosoma japonicum</i>.",
+      "year": "2022",
+      "journal": "Frontiers in microbiology",
+      "doi": "10.3389/fmicb.2022.1045490"
+    }
+  },
+  {
+    "pmid": "33607172",
+    "receptor_gene": "GRM7",
+    "receptor_name": null,
+    "receptor_family": "group III metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "While no genome-wide significant SNPs were identified, suggestively significant SNPs (P < 1 × 10-5</sup>) were mapped to several interesting genes,...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Genome-wide association analysis of cognitive function in Danish long-lived individuals.",
+      "year": "2021",
+      "journal": "Mechanisms of ageing and development",
+      "doi": "10.1016/j.mad.2021.111463"
+    }
+  },
+  {
+    "pmid": "41792070",
+    "receptor_gene": "GABBR1",
+    "receptor_name": null,
+    "receptor_family": "GABA_B receptor",
+    "mentioned_ligands": [],
+    "snippet": "Three core genes associated with RA were identified, including IGHG1, HLA-DOB, and GABBR1",
+    "is_query_receptor": true,
+    "source": {
+      "title": "<em>IGHG1, HLA-DOB, </em>and <em>GABBR1</em>: Genetic Insights into Rheumatoid Arthritis Using Mendelian Randomisation and Single-Cell RNA Sequencing.",
+      "year": "2026",
+      "journal": "Journal of the College of Physicians and Surgeons--Pakistan : JCPSP",
+      "doi": "10.29271/jcpsp.2026.01.71"
+    }
+  },
+  {
+    "pmid": "33996539",
+    "receptor_gene": "GABBR1",
+    "receptor_name": null,
+    "receptor_family": "GABA_B receptor",
+    "mentioned_ligands": [],
+    "snippet": "89% (89/90) of patient plasma biopsy samples, and 19 coding variants located in 10 cancer-related genes [ACVR2A, PCLO, TBCK</i>, adhesion G protein...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Differential Mutation Detection Capability Through Capture-Based Targeted Sequencing in Plasma Samples in Hepatocellular Carcinoma.",
+      "year": "2021",
+      "journal": "Frontiers in oncology",
+      "doi": "10.3389/fonc.2021.596789"
+    }
+  },
+  {
+    "pmid": "34000025",
+    "receptor_gene": "GABBR2",
+    "receptor_name": null,
+    "receptor_family": "GABA_B receptor",
+    "mentioned_ligands": [],
+    "snippet": "In PTC, 24 receptors were deregulated, 7 of which were also identified by bioinformatics analyses of publicly available datasets on primary thyroid...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "G Protein-coupled Receptors in Radioiodine-refractory Thyroid Cancer in the Era of Precision Medicine.",
+      "year": "2021",
+      "journal": "The Journal of clinical endocrinology and metabolism",
+      "doi": "10.1210/clinem/dgab343"
+    }
+  },
+  {
+    "pmid": "38458750",
+    "receptor_gene": "HRH1",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Histamine receptor H1 (HRH1) and HRH2 were predominantly expressed in CCA cells and CAFs, respectively",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Function of mast cell and bile-cholangiocarcinoma interplay in cholangiocarcinoma microenvironment.",
+      "year": "2024",
+      "journal": "Gut",
+      "doi": "10.1136/gutjnl-2023-331715"
+    }
+  },
+  {
+    "pmid": "38458750",
+    "receptor_gene": "HRH2",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Histamine receptor H1 (HRH1) and HRH2 were predominantly expressed in CCA cells and CAFs, respectively",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Function of mast cell and bile-cholangiocarcinoma interplay in cholangiocarcinoma microenvironment.",
+      "year": "2024",
+      "journal": "Gut",
+      "doi": "10.1136/gutjnl-2023-331715"
+    }
+  },
+  {
+    "pmid": "40600649",
+    "receptor_gene": "HRH1",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Overall, MRGPRX2 mediates cell-induced endometriosis pain through sensory neurons sensitization via the histamine/HRH1/TRPV1 signaling pathway and ...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "MRGPRX2 Mediates Mast Cell-Induced Endometriosis Pain Through the Sensitization of Sensory Neurons via Histamine/HRH1/TRPV1 Signaling Pathway.",
+      "year": "2025",
+      "journal": "FASEB journal : official publication of the Federation of American Societies for Experimental Biology",
+      "doi": "10.1096/fj.202501493R"
+    }
+  },
+  {
+    "pmid": "40288207",
+    "receptor_gene": "HRH1",
+    "receptor_name": "histamine H1 receptor",
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Expression of the histamine H1 receptor (HRH1), a G protein-coupled receptor which is blocked by approved H1-antihistamines, is increased by ∼20-fo...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Histamine H1 Receptor: A potential therapeutic target for pancreatic ductal adenocarcinoma.",
+      "year": "2025",
+      "journal": "The Journal of pharmacology and experimental therapeutics",
+      "doi": "10.1016/j.jpet.2025.103573"
+    }
+  },
+  {
+    "pmid": "29467651",
+    "receptor_gene": "HRH1",
+    "receptor_name": "histamine H1 receptor",
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Human histamine H1</sub> receptor (HRH1) is one of the most studied GPCRs",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Functional G-Protein-Coupled Receptor (GPCR) Synthesis: The Pharmacological Analysis of Human Histamine H1 Receptor (HRH1) Synthesized by a Wheat Germ Cell-Free Protein Synthesis System Combined with Asolectin Glycerosomes.",
+      "year": "2018",
+      "journal": "Frontiers in pharmacology",
+      "doi": "10.3389/fphar.2018.00038"
+    }
+  },
+  {
+    "pmid": "41946080",
+    "receptor_gene": "HRH1",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Histamine receptors (HRH1-HRH4) are G-protein coupled receptors (GPCRs) that mediate essential physiological functions, including neurotransmission...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Quantitative deciphering of mammalian histamine receptors through mathematical genomics.",
+      "year": "2026",
+      "journal": "Biochemical and biophysical research communications",
+      "doi": "10.1016/j.bbrc.2026.153717"
+    }
+  },
+  {
+    "pmid": "41946080",
+    "receptor_gene": "HRH2",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "HRH2 and HRH1 were highly conserved among primates, HRH3 showed strong cohesion within rodents, while HRH4 exhibited pronounced divergence consiste...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Quantitative deciphering of mammalian histamine receptors through mathematical genomics.",
+      "year": "2026",
+      "journal": "Biochemical and biophysical research communications",
+      "doi": "10.1016/j.bbrc.2026.153717"
+    }
+  },
+  {
+    "pmid": "41946080",
+    "receptor_gene": "HRH3",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "HRH2 and HRH1 were highly conserved among primates, HRH3 showed strong cohesion within rodents, while HRH4 exhibited pronounced divergence consiste...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Quantitative deciphering of mammalian histamine receptors through mathematical genomics.",
+      "year": "2026",
+      "journal": "Biochemical and biophysical research communications",
+      "doi": "10.1016/j.bbrc.2026.153717"
+    }
+  },
+  {
+    "pmid": "41946080",
+    "receptor_gene": "HRH4",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Histamine receptors (HRH1-HRH4) are G-protein coupled receptors (GPCRs) that mediate essential physiological functions, including neurotransmission...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Quantitative deciphering of mammalian histamine receptors through mathematical genomics.",
+      "year": "2026",
+      "journal": "Biochemical and biophysical research communications",
+      "doi": "10.1016/j.bbrc.2026.153717"
+    }
+  },
+  {
+    "pmid": "31369218",
+    "receptor_gene": "HRH2",
+    "receptor_name": "histamine H2 receptor",
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "The histamine H2 receptor (H2R) is a G protein-coupled receptor that mediates cyclic AMP production, protein kinase A activation, and MAP kinase si...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Phagocytosis by macrophages depends on histamine H2 receptor signaling and scavenger receptor 1.",
+      "year": "2019",
+      "journal": "MicrobiologyOpen",
+      "doi": "10.1002/mbo3.908"
+    }
+  },
+  {
+    "pmid": "34761361",
+    "receptor_gene": "HRH1",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Whereas only one histamine receptor 1 gene (hrh1) is known, two copies of histamine receptor 2 (hrh2a and hrh2b) have been identified",
+    "is_query_receptor": false,
+    "source": {
+      "title": "The Histamine System in Zebrafish Brain: Organization, Receptors, and Behavioral Roles.",
+      "year": "2022",
+      "journal": "Current topics in behavioral neurosciences",
+      "doi": "10.1007/7854_2021_259"
+    }
+  },
+  {
+    "pmid": "34761361",
+    "receptor_gene": "HRH2",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Whereas only one histamine receptor 1 gene (hrh1) is known, two copies of histamine receptor 2 (hrh2a and hrh2b) have been identified",
+    "is_query_receptor": true,
+    "source": {
+      "title": "The Histamine System in Zebrafish Brain: Organization, Receptors, and Behavioral Roles.",
+      "year": "2022",
+      "journal": "Current topics in behavioral neurosciences",
+      "doi": "10.1007/7854_2021_259"
+    }
+  },
+  {
+    "pmid": "34761361",
+    "receptor_gene": "HRH3",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Although initially only one gene encoding for histamine receptor 3 (hrh3) was recognized in zebrafish, the genome database contains information for...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "The Histamine System in Zebrafish Brain: Organization, Receptors, and Behavioral Roles.",
+      "year": "2022",
+      "journal": "Current topics in behavioral neurosciences",
+      "doi": "10.1007/7854_2021_259"
+    }
+  },
+  {
+    "pmid": "39117262",
+    "receptor_gene": "HRH2",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Genome studies identified another putative H2</sub> receptor (Hrh2) with ∼50% sequence identity with H2</sub> receptor orthologs",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Pharmacological characterization of the zebrafish Hrh2a histamine H<sub>2</sub> receptor.",
+      "year": "2024",
+      "journal": "European journal of pharmacology",
+      "doi": "10.1016/j.ejphar.2024.176870"
+    }
+  },
+  {
+    "pmid": "35930594",
+    "receptor_gene": "HRH2",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Histamine receptor 2 (HRH2</sub>) activation in the stomach results in gastric acid secretion, and HRH2</sub> blockers are used for the treatment o...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Discovery of 8-Hydroxyquinoline as a Histamine Receptor 2 Blocker Scaffold.",
+      "year": "2022",
+      "journal": "ACS synthetic biology",
+      "doi": "10.1021/acssynbio.2c00205"
+    }
+  },
+  {
+    "pmid": "37366936",
+    "receptor_gene": "HRH2",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Histamine receptor 2 (HRH2</sub>) blockers are used to treat peptic ulcers and gastric reflux",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Insight into the Mode of Action of 8-Hydroxyquinoline-Based Blockers on the Histamine Receptor 2.",
+      "year": "2023",
+      "journal": "Biosensors",
+      "doi": "10.3390/bios13060571"
+    }
+  },
+  {
+    "pmid": "30742585",
+    "receptor_gene": "HRH1",
+    "receptor_name": "histamine H1 receptor",
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "The pleiotropic effects of histamine are mediated by four types of receptors that belong to the G-protein-coupled receptor family: histamine H1 rec...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Effect of the Fexofenadine on the expression of HRH-1 and HRH-4 receptor in Peripheral Blood Mononuclear Cell isolated from children with diagnosed allergy - in vitro study Short communication.",
+      "year": "2019",
+      "journal": "Journal of pharmacy & pharmaceutical sciences : a publication of the Canadian Society for Pharmaceutical Sciences, Societe canadienne des sciences pharmaceutiques",
+      "doi": "10.18433/jpps29971"
+    }
+  },
+  {
+    "pmid": "30742585",
+    "receptor_gene": "HRH4",
+    "receptor_name": "histamine H2 receptor",
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "The pleiotropic effects of histamine are mediated by four types of receptors that belong to the G-protein-coupled receptor family: histamine H1 rec...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Effect of the Fexofenadine on the expression of HRH-1 and HRH-4 receptor in Peripheral Blood Mononuclear Cell isolated from children with diagnosed allergy - in vitro study Short communication.",
+      "year": "2019",
+      "journal": "Journal of pharmacy & pharmaceutical sciences : a publication of the Canadian Society for Pharmaceutical Sciences, Societe canadienne des sciences pharmaceutiques",
+      "doi": "10.18433/jpps29971"
+    }
+  },
+  {
+    "pmid": "30658649",
+    "receptor_gene": "HRH4",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "05) in expression of genes associated with eosinophils and basophils, such as CLC, IL-5Rα, and PRSS33; immune-signaling complex genes (FCER1A); G-p...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Modulation of blood inflammatory markers by benralizumab in patients with eosinophilic airway diseases.",
+      "year": "2019",
+      "journal": "Respiratory research",
+      "doi": "10.1186/s12931-018-0968-8"
+    }
+  },
+  {
+    "pmid": "31541002",
+    "receptor_gene": "DRD1",
+    "receptor_name": "dopamine receptor D1",
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "Alterations in Nr4a1</i> expression leads to dysregulation of multiple mRNAs of members of the dopamine receptor D1</sub> signal transduction system",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Nuclear Receptor Nr4a1 Regulates Striatal Striosome Development and Dopamine D<sub>1</sub> Receptor Signaling.",
+      "year": "2019",
+      "journal": "eNeuro",
+      "doi": "10.1523/ENEURO.0305-19.2019"
+    }
+  },
+  {
+    "pmid": "37252844",
+    "receptor_gene": "DRD1",
+    "receptor_name": null,
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "DRD1 activation causes enhanced TrkB translocation to the cell surface and increased sensitivity for BDNF",
+    "is_query_receptor": true,
+    "source": {
+      "title": "DRD1 signaling modulates TrkB turnover and BDNF sensitivity in direct pathway striatal medium spiny neurons.",
+      "year": "2023",
+      "journal": "Cell reports",
+      "doi": "10.1016/j.celrep.2023.112575"
+    }
+  },
+  {
+    "pmid": "33992835",
+    "receptor_gene": "DRD1",
+    "receptor_name": null,
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "Dopamine D1 receptor (DRD1), a G protein-coupled receptor, is crucial for the development and function of the nervous system; additionally, it also...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Dopamine D1 receptor alleviates doxorubicin-induced cardiac injury by inhibiting NLRP3 inflammasome.",
+      "year": "2021",
+      "journal": "Biochemical and biophysical research communications",
+      "doi": "10.1016/j.bbrc.2021.04.098"
+    }
+  },
+  {
+    "pmid": "37024146",
+    "receptor_gene": "DRD1",
+    "receptor_name": "dopamine receptor D1",
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "Of the 14 G α</i> s GPCRs we found to be expressed in lung fibroblasts, the dopamine receptor D1 (DRD1</i>) was one of only two not repressed by TG...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Dopamine Receptor D1 Is Exempt from Transforming Growth Factor <i>β</i>-Mediated Antifibrotic G Protein-Coupled Receptor Landscape Tampering in Lung Fibroblasts.",
+      "year": "2023",
+      "journal": "The Journal of pharmacology and experimental therapeutics",
+      "doi": "10.1124/jpet.122.001442"
+    }
+  },
+  {
+    "pmid": "40516629",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "Network pharmacology identified 19 core targets related to depression, including MAOB, ADRB2, DRD2, and SLC6A3, which showed strong binding affinit...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Exploring the relationship between atenolol use and depression: A network pharmacology approach using NHANES data.",
+      "year": "2025",
+      "journal": "Journal of affective disorders",
+      "doi": "10.1016/j.jad.2025.119675"
+    }
+  },
+  {
+    "pmid": "40516629",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Network pharmacology identified 19 core targets related to depression, including MAOB, ADRB2, DRD2, and SLC6A3, which showed strong binding affinit...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Exploring the relationship between atenolol use and depression: A network pharmacology approach using NHANES data.",
+      "year": "2025",
+      "journal": "Journal of affective disorders",
+      "doi": "10.1016/j.jad.2025.119675"
+    }
+  },
+  {
+    "pmid": "35203352",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "In MTC, we found 14 GPCR DEGs, including an upregulation of the dopamine receptor (DRD2</i>) and adenosine receptor (ADORA2B</i>), which were the t...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Identification of Dysregulated Expression of G Protein Coupled Receptors in Endocrine Tumors by Bioinformatics Analysis: Potential Drug Targets?",
+      "year": "2022",
+      "journal": "Cells",
+      "doi": "10.3390/cells11040703"
+    }
+  },
+  {
+    "pmid": "36807226",
+    "receptor_gene": "DRD1",
+    "receptor_name": null,
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "This augmentation by L-DOPA was not observed in cells co-expressing GPR143 and DRD1 or DRD3",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Coupling between GPR143 and dopamine D2 receptor is required for selective potentiation of dopamine D2 receptor function by L-3,4-dihydroxyphenylalanine in the dorsal striatum.",
+      "year": "2023",
+      "journal": "Journal of neurochemistry",
+      "doi": "10.1111/jnc.15789"
+    }
+  },
+  {
+    "pmid": "36807226",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "We here show that L-DOPA potentiates DA D2 receptor (DRD2) signaling through GPR143, the gene product of X-linked ocular albinism 1, a G-protein-co...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Coupling between GPR143 and dopamine D2 receptor is required for selective potentiation of dopamine D2 receptor function by L-3,4-dihydroxyphenylalanine in the dorsal striatum.",
+      "year": "2023",
+      "journal": "Journal of neurochemistry",
+      "doi": "10.1111/jnc.15789"
+    }
+  },
+  {
+    "pmid": "38879471",
+    "receptor_gene": "HTR1A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT1 receptor",
+    "mentioned_ligands": [],
+    "snippet": "Furthermore, reduced levels of 5-HT hindered the activation of T lymphocytes (H9 cells) via the PKC (Protein kinase C) and NF-κB (Nuclear factor ka...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Shaoyao Decoction reduced T lymphocyte activation by regulating of intestinal flora and 5-hydroxytryptamine metabolism in ulcerative colitis.",
+      "year": "2024",
+      "journal": "Chinese medicine",
+      "doi": "10.1186/s13020-024-00958-2"
+    }
+  },
+  {
+    "pmid": "41396999",
+    "receptor_gene": "HTR1A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT1 receptor",
+    "mentioned_ligands": [],
+    "snippet": "YPet increases the dynamic range of hGPCR-based sensors in general, enabling the engineering of HTR4-, MC4R- S1PR2-, HTR1A-, and Mel1A-based sensor...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Tuning the Response of GPCR-Based Yeast Sensors Using Fluorescent Reporters.",
+      "year": "2026",
+      "journal": "ACS synthetic biology",
+      "doi": "10.1021/acssynbio.5c00466"
+    }
+  },
+  {
+    "pmid": "37848733",
+    "receptor_gene": "HTR2A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": ", cortical Htr2a, Maoa increased in females but all serotonin targets unchanged or decreased in males); redox-related expression increased in parav...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Anti-angiogenic mechanisms and serotonergic dysfunction in the Rgs2 knockout model for the study of psycho-obstetric risk.",
+      "year": "2024",
+      "journal": "Neuropsychopharmacology : official publication of the American College of Neuropsychopharmacology",
+      "doi": "10.1038/s41386-023-01749-3"
+    }
+  },
+  {
+    "pmid": "36671883",
+    "receptor_gene": "DRD1",
+    "receptor_name": null,
+    "receptor_family": "dopamine D1-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "In this work, split TEV GPCR β-arrestin-2 recruitment assays were optimized to monitor the endogenous ligand-induced activities of six GPCRs (DRD1,...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Improved Split TEV GPCR β-arrestin-2 Recruitment Assays via Systematic Analysis of Signal Peptide and β-arrestin Binding Motif Variants.",
+      "year": "2022",
+      "journal": "Biosensors",
+      "doi": "10.3390/bios13010048"
+    }
+  },
+  {
+    "pmid": "36671883",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "In this work, split TEV GPCR β-arrestin-2 recruitment assays were optimized to monitor the endogenous ligand-induced activities of six GPCRs (DRD1,...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Improved Split TEV GPCR β-arrestin-2 Recruitment Assays via Systematic Analysis of Signal Peptide and β-arrestin Binding Motif Variants.",
+      "year": "2022",
+      "journal": "Biosensors",
+      "doi": "10.3390/bios13010048"
+    }
+  },
+  {
+    "pmid": "36671883",
+    "receptor_gene": "HTR2A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "In this work, split TEV GPCR β-arrestin-2 recruitment assays were optimized to monitor the endogenous ligand-induced activities of six GPCRs (DRD1,...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Improved Split TEV GPCR β-arrestin-2 Recruitment Assays via Systematic Analysis of Signal Peptide and β-arrestin Binding Motif Variants.",
+      "year": "2022",
+      "journal": "Biosensors",
+      "doi": "10.3390/bios13010048"
+    }
+  },
+  {
+    "pmid": "28208011",
+    "receptor_gene": "HTR2A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "In the present study, it was verified for the first time that GS can activate mouse serotonin receptor 2a (mHtr2a) and 2b (mHtr2b), but not 2c (mHt...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Glucosylsphingosine Activates Serotonin Receptor 2a and 2b: Implication of a Novel Itch Signaling Pathway.",
+      "year": "2017",
+      "journal": "Biomolecules & therapeutics",
+      "doi": "10.4062/biomolther.2016.207"
+    }
+  },
+  {
+    "pmid": "30009772",
+    "receptor_gene": "ADRA2A",
+    "receptor_name": null,
+    "receptor_family": "alpha-2 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "By using immunofluorescence study and quantitating the fluorescence intensity morphometrically in liver biopsied specimens from NASH and ASH patien...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Different roles of FAT10, FOXO1, and ADRA2A in hepatocellular carcinoma tumorigenesis in patients with alcoholic steatohepatitis (ASH) vs non-alcoholic steatohepatitis (NASH).",
+      "year": "2018",
+      "journal": "Experimental and molecular pathology",
+      "doi": "10.1016/j.yexmp.2018.07.005"
+    }
+  },
+  {
+    "pmid": "36238301",
+    "receptor_gene": "ADRA2A",
+    "receptor_name": null,
+    "receptor_family": "alpha-2 adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Classification using random forest indicated AABs targeting ADRB2, STAB1, and ADRA2A as the strongest classifiers (AABs stratifying patients accord...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Dysregulated autoantibodies targeting vaso- and immunoregulatory receptors in Post COVID Syndrome correlate with symptom severity.",
+      "year": "2022",
+      "journal": "Frontiers in immunology",
+      "doi": "10.3389/fimmu.2022.981532"
+    }
+  },
+  {
+    "pmid": "36238301",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Classification using random forest indicated AABs targeting ADRB2, STAB1, and ADRA2A as the strongest classifiers (AABs stratifying patients accord...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Dysregulated autoantibodies targeting vaso- and immunoregulatory receptors in Post COVID Syndrome correlate with symptom severity.",
+      "year": "2022",
+      "journal": "Frontiers in immunology",
+      "doi": "10.3389/fimmu.2022.981532"
+    }
+  },
+  {
+    "pmid": "30569177",
+    "receptor_gene": "ADRB1",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "This combination was comprised of the following genes: Dehydrogenase E1 and transketolase domain containing 1 (DHTKD1), osteoclast stimulating fact...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Identification of gene biomarkers in patients with postmenopausal osteoporosis.",
+      "year": "2019",
+      "journal": "Molecular medicine reports",
+      "doi": "10.3892/mmr.2018.9752"
+    }
+  },
+  {
+    "pmid": "26773201",
+    "receptor_gene": "ADRB1",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "HT2RB, ADRB1), whereas others demonstrated enhanced agonist efficacies (i",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Dynamic mass redistribution reveals diverging importance of PDZ-ligands for G protein-coupled receptor pharmacodynamics.",
+      "year": "2016",
+      "journal": "Pharmacological research",
+      "doi": "10.1016/j.phrs.2016.01.003"
+    }
+  },
+  {
+    "pmid": "36107363",
+    "receptor_gene": "ADRB1",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Polymorphisms in the beta-1 adrenergic receptor (ADRB1) and G protein-coupled receptor kinase 5 (GRK5) genes are associated with variable responses...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Effect of Clinical and Genetic Factors on the Development of Postoperative Atrial Fibrillation After Coronary Artery Bypass Grafting (CABG) in Egyptian Patients Receiving Beta-Blockers.",
+      "year": "2024",
+      "journal": "Cardiovascular drugs and therapy",
+      "doi": "10.1007/s10557-022-07380-6"
+    }
+  },
+  {
+    "pmid": "28501616",
+    "receptor_gene": "ADRB1",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "β1-adrenergic receptor (Adrb1) belongs to the superfamily of G-protein-coupled receptors (GPCRs) and plays a critical role in the regulation of hea...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Identification of phosphorylation sites on β1-adrenergic receptor in the mouse heart.",
+      "year": "2017",
+      "journal": "Biochemical and biophysical research communications",
+      "doi": "10.1016/j.bbrc.2017.05.054"
+    }
+  },
+  {
+    "pmid": "41303600",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Subsequent screening via Sanger sequencing identified three SNPs for further analysis: rs1991517 in the thyroid-stimulating hormone receptor gene (...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Novel SNP Combination for Predictive Osteoporotic Diagnosis.",
+      "year": "2025",
+      "journal": "International journal of molecular sciences",
+      "doi": "10.3390/ijms262211117"
+    }
+  },
+  {
+    "pmid": "40564937",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "According to network toxicology analysis, uridine interacts with important targets such as SRC, FYN, LYN, ADRB2, and GSK3B",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Uridine, a Therapeutic Nucleoside, Exacerbates Alcoholic Liver Disease via SRC Kinase Activation: A Network Toxicology and Molecular Dynamics Perspective.",
+      "year": "2025",
+      "journal": "International journal of molecular sciences",
+      "doi": "10.3390/ijms26125473"
+    }
+  },
+  {
+    "pmid": "41700814",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "Notable GPCRs such as ADRB2, CHRM1, DRD2, and HTR2A are important therapeutic targets linked to conditions ranging from asthma to schizophrenia",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Integrating qHTS and QSAR Models to Identify Safe GPCR-Targeted Compounds: A Focus on hERG-Dependent Cardiotoxicity.",
+      "year": "2026",
+      "journal": "Journal of chemical information and modeling",
+      "doi": "10.1021/acs.jcim.5c02291"
+    }
+  },
+  {
+    "pmid": "41700814",
+    "receptor_gene": "HTR2A",
+    "receptor_name": null,
+    "receptor_family": "serotonin 5-HT2 receptor",
+    "mentioned_ligands": [],
+    "snippet": "Notable GPCRs such as ADRB2, CHRM1, DRD2, and HTR2A are important therapeutic targets linked to conditions ranging from asthma to schizophrenia",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Integrating qHTS and QSAR Models to Identify Safe GPCR-Targeted Compounds: A Focus on hERG-Dependent Cardiotoxicity.",
+      "year": "2026",
+      "journal": "Journal of chemical information and modeling",
+      "doi": "10.1021/acs.jcim.5c02291"
+    }
+  },
+  {
+    "pmid": "41700814",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Notable GPCRs such as ADRB2, CHRM1, DRD2, and HTR2A are important therapeutic targets linked to conditions ranging from asthma to schizophrenia",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Integrating qHTS and QSAR Models to Identify Safe GPCR-Targeted Compounds: A Focus on hERG-Dependent Cardiotoxicity.",
+      "year": "2026",
+      "journal": "Journal of chemical information and modeling",
+      "doi": "10.1021/acs.jcim.5c02291"
+    }
+  },
+  {
+    "pmid": "41700814",
+    "receptor_gene": "CHRM1",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Notable GPCRs such as ADRB2, CHRM1, DRD2, and HTR2A are important therapeutic targets linked to conditions ranging from asthma to schizophrenia",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Integrating qHTS and QSAR Models to Identify Safe GPCR-Targeted Compounds: A Focus on hERG-Dependent Cardiotoxicity.",
+      "year": "2026",
+      "journal": "Journal of chemical information and modeling",
+      "doi": "10.1021/acs.jcim.5c02291"
+    }
+  },
+  {
+    "pmid": "42134865",
+    "receptor_gene": "DRD2",
+    "receptor_name": null,
+    "receptor_family": "dopamine D2-like receptor",
+    "mentioned_ligands": [],
+    "snippet": "The protein-protein interaction network analysis revealed 19 hub genes, with core targets including MMP9, ADRB2, PTGS1, SLC6A4, ERBB2, MAPT, AR, SL...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Investigating the Impact of Bisphenol A on Gastric Cancer Through Network Toxicology and Molecular Docking.",
+      "year": "2026",
+      "journal": "International journal of toxicology",
+      "doi": "10.1177/10915818261451203"
+    }
+  },
+  {
+    "pmid": "42134865",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "The protein-protein interaction network analysis revealed 19 hub genes, with core targets including MMP9, ADRB2, PTGS1, SLC6A4, ERBB2, MAPT, AR, SL...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Investigating the Impact of Bisphenol A on Gastric Cancer Through Network Toxicology and Molecular Docking.",
+      "year": "2026",
+      "journal": "International journal of toxicology",
+      "doi": "10.1177/10915818261451203"
+    }
+  },
+  {
+    "pmid": "42134865",
+    "receptor_gene": "CHRM1",
+    "receptor_name": null,
+    "receptor_family": "muscarinic acetylcholine receptor",
+    "mentioned_ligands": [],
+    "snippet": "The protein-protein interaction network analysis revealed 19 hub genes, with core targets including MMP9, ADRB2, PTGS1, SLC6A4, ERBB2, MAPT, AR, SL...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Investigating the Impact of Bisphenol A on Gastric Cancer Through Network Toxicology and Molecular Docking.",
+      "year": "2026",
+      "journal": "International journal of toxicology",
+      "doi": "10.1177/10915818261451203"
+    }
+  },
+  {
+    "pmid": "42134865",
+    "receptor_gene": "HRH2",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "Prognostic analysis identified six hub genes (CALCR, ADRB3, CNR1, HRH2, KCNH2, and AR) significantly associated with patient survival",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Investigating the Impact of Bisphenol A on Gastric Cancer Through Network Toxicology and Molecular Docking.",
+      "year": "2026",
+      "journal": "International journal of toxicology",
+      "doi": "10.1177/10915818261451203"
+    }
+  },
+  {
+    "pmid": "32248644",
+    "receptor_gene": "GRM7",
+    "receptor_name": "metabotropic glutamate receptor 7",
+    "receptor_family": "group III metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "One such gene, GRM7, encodes the metabotropic glutamate receptor 7 (mGlu7</sub> ), a G protein-coupled receptor that regulates presynaptic neurotra...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Phenotypic profiling of mGlu<sub>7</sub> knockout mice reveals new implications for neurodevelopmental disorders.",
+      "year": "2020",
+      "journal": "Genes, brain, and behavior",
+      "doi": "10.1111/gbb.12654"
+    }
+  },
+  {
+    "pmid": "41594647",
+    "receptor_gene": "ADRB2",
+    "receptor_name": null,
+    "receptor_family": "beta adrenoceptor",
+    "mentioned_ligands": [],
+    "snippet": "Further structural analysis and RT-qPCR validation identified eight GPCRs involved in molting regulation: GRM7</i> and moody</i> were specific to t...",
+    "is_query_receptor": false,
+    "source": {
+      "title": "Integrated Analysis of ATAC-Seq and RNA-Seq Reveals the Signal Transduction Regulation of the Molting Cycle in the Muscle of Chinese Mitten Crab (<i>Eriocheir sinensis</i>).",
+      "year": "2026",
+      "journal": "Biomolecules",
+      "doi": "10.3390/biom16010108"
+    }
+  },
+  {
+    "pmid": "41594647",
+    "receptor_gene": "GRM7",
+    "receptor_name": null,
+    "receptor_family": "group III metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "Further structural analysis and RT-qPCR validation identified eight GPCRs involved in molting regulation: GRM7</i> and moody</i> were specific to t...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Integrated Analysis of ATAC-Seq and RNA-Seq Reveals the Signal Transduction Regulation of the Molting Cycle in the Muscle of Chinese Mitten Crab (<i>Eriocheir sinensis</i>).",
+      "year": "2026",
+      "journal": "Biomolecules",
+      "doi": "10.3390/biom16010108"
+    }
+  },
+  {
+    "pmid": "36528230",
+    "receptor_gene": "GRM7",
+    "receptor_name": null,
+    "receptor_family": "group III metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "However, either off-target activity at the sigma-1 receptor or activity at a target not elucidated by large ancillary pharmacology panels led to se...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Persistent challenges in the development of an mGlu<sub>7</sub> PAM in vivo tool compound: The discovery of VU6046980.",
+      "year": "2023",
+      "journal": "Bioorganic & medicinal chemistry letters",
+      "doi": "10.1016/j.bmcl.2022.129106"
+    }
+  },
+  {
+    "pmid": "35484098",
+    "receptor_gene": "GRM7",
+    "receptor_name": null,
+    "receptor_family": "group III metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "The GWAS revealed a significant association between several SNPs and treatment response, such as three GRM7 SNPs (rs141134664, rs57521140, and rs73...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Different responses to risperidone treatment in Schizophrenia: a multicenter genome-wide association and whole exome sequencing joint study.",
+      "year": "2022",
+      "journal": "Translational psychiatry",
+      "doi": "10.1038/s41398-022-01942-w"
+    }
+  },
+  {
+    "pmid": "30616226",
+    "receptor_gene": "GRM7",
+    "receptor_name": "metabotropic glutamate receptor 7",
+    "receptor_family": "group III metabotropic glutamate receptor",
+    "mentioned_ligands": [],
+    "snippet": "The metabotropic glutamate receptor 7 (GRM7) gene is a G protein-coupled receptor that suppresses the cyclic AMP cascade after activation by glutamate",
+    "is_query_receptor": true,
+    "source": {
+      "title": "A single nucleotide polymorphism in the metabotropic glutamate receptor 7 gene is associated with multiple sclerosis in Iranian population.",
+      "year": "2019",
+      "journal": "Multiple sclerosis and related disorders",
+      "doi": "10.1016/j.msard.2019.01.012"
+    }
+  },
+  {
+    "pmid": "36732336",
+    "receptor_gene": "HRH1",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "The roles of histamine and histamine receptor H1 (HRH1) in cancer pathogenesis remain controversial",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Simultaneous activation of CXC chemokine receptor 4 and histamine receptor H1 enhances calcium signaling and cancer cell migration.",
+      "year": "2023",
+      "journal": "Scientific reports",
+      "doi": "10.1038/s41598-023-28531-1"
+    }
+  },
+  {
+    "pmid": "40158234",
+    "receptor_gene": "HRH1",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "To address these limitations, we developed a biosensor for PTx detection based on histamine receptor H1 (HRH1)-induced calcium signaling in MDA-MB-...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Sensitive detection of pertussis toxin in acellular pertussis vaccines using HRH1-mediated calcium signaling.",
+      "year": "2025",
+      "journal": "Vaccine",
+      "doi": "10.1016/j.vaccine.2025.127056"
+    }
+  },
+  {
+    "pmid": "31500698",
+    "receptor_gene": "HRH1",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "MRGPRX4 is expressed in human dorsal root ganglion (hDRG) neurons and co-expresses with itch receptor HRH1",
+    "is_query_receptor": true,
+    "source": {
+      "title": "MRGPRX4 is a bile acid receptor for human cholestatic itch.",
+      "year": "2019",
+      "journal": "eLife",
+      "doi": "10.7554/eLife.48431"
+    }
+  },
+  {
+    "pmid": "36688618",
+    "receptor_gene": "HRH1",
+    "receptor_name": null,
+    "receptor_family": "histamine receptor",
+    "mentioned_ligands": [],
+    "snippet": "We conjectured that upregulated HRH1 and ATXN3 were targeted by both piRNAs and miRNAs, and along with BRAF and CCND1 might induce cell proliferati...",
+    "is_query_receptor": true,
+    "source": {
+      "title": "Integrative analysis of small non-coding RNAs predicts a piRNA/miRNA-CCND1/BRAF/HRH1/ATXN3 regulatory circuit that drives oncogenesis in glioblastoma.",
+      "year": "2023",
+      "journal": "Molecular omics",
+      "doi": "10.1039/d2mo00245k"
+    }
+  }
+]
