@@ -75,23 +75,24 @@ def analyze_entry(entry, test_data):
     has_function = bool(entry.get("function"))
     num_function_fields = sum([has_location, has_cell_type, has_pathway, has_function])
 
-    # 4. 客观 discard 判定
-    # 判定条件：
+    # 4. 客观 discard 判定（只对 LOW 置信度条目）
+    # 判定条件（LOW 才会触发）：
     # a. 只在背景部分出现
     # b. 词频 <= 2
     # c. 没有任何功能相关字段
     discard = False
     discard_reasons = []
 
-    if in_background and not in_result:
-        discard = True
-        discard_reasons.append("只在背景部分出现")
-    if mention_count <= 2:
-        discard = True
-        discard_reasons.append(f"只出现 {mention_count} 次")
-    if num_function_fields == 0:
-        discard = True
-        discard_reasons.append("没有位置/细胞/通路/功能信息")
+    if confidence == "low":
+        if in_background and not in_result:
+            discard = True
+            discard_reasons.append("只在背景部分出现")
+        if mention_count <= 2:
+            discard = True
+            discard_reasons.append(f"只出现 {mention_count} 次")
+        if num_function_fields == 0:
+            discard = True
+            discard_reasons.append("没有位置/细胞/通路/功能信息")
 
     # 5. 优化后的需要审核判定
     # 如果不是 discard，且有部分信息但置信度低，才需要审核
@@ -129,7 +130,7 @@ discard_count = sum(1 for r in results if r["discard"])
 total = len(results)
 
 print("=" * 100)
-print("客观 discard 规则演示")
+print("客观 discard 规则演示（只对 LOW 置信度）")
 print("=" * 100)
 
 print(f"\n总条目数：{total}")
