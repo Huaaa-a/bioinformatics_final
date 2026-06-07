@@ -54,8 +54,8 @@ DEFAULT_OUTPUT = REPO_ROOT / "data" / "pubmed_extracted.json"
 DEFAULT_LOG = REPO_ROOT / "data" / "extract_run.log"
 DEFAULT_XLSX = REPO_ROOT / "receptor_list_classic_neurotransmitter_gpcr.xlsx"
 
-QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-DEFAULT_MODEL = "qwen-plus"
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+DEFAULT_MODEL = "anthropic/claude-opus-4"
 PROMPT_VERSION = "v4"
 
 logging.basicConfig(
@@ -487,7 +487,15 @@ def normalize_entry(
 # ---------- API 调用 ----------
 
 def make_client(api_key: str) -> OpenAI:
-    return OpenAI(api_key=api_key, base_url=QWEN_BASE_URL, timeout=60.0)
+    return OpenAI(
+        api_key=api_key,
+        base_url=OPENROUTER_BASE_URL,
+        timeout=60.0,
+        default_headers={
+            "HTTP-Referer": "https://github.com/bioinfo-extract",
+            "X-Title": "BioInfo Extract",
+        },
+    )
 
 
 def call_qwen(client: OpenAI, model: str, system: str, user: str, max_retries: int = 3, max_tokens: int = 2000):
@@ -519,13 +527,12 @@ def call_qwen(client: OpenAI, model: str, system: str, user: str, max_retries: i
 
 def load_env() -> tuple[str, str]:
     load_dotenv(REPO_ROOT / "scripts" / ".env")
-    api_key = os.getenv("QWEN_API_KEY", "").strip()
+    api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
     if not api_key:
         sys.stderr.write(
-            "缺少 QWEN_API_KEY,先在 scripts/.env 中配置(参考 scripts/.env.example)\n"
+            "缺少 OPENROUTER_API_KEY,先在 scripts/.env 中配置(参考 scripts/.env.example)\n"
         )
-        sys.exit(1)
-    model = os.getenv("QWEN_MODEL", "").strip() or DEFAULT_MODEL
+    model = os.getenv("OPENROUTER_MODEL", "").strip() or DEFAULT_MODEL
     return api_key, model
 
 

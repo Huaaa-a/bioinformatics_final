@@ -199,7 +199,7 @@ def _strip_html(text: str):
     return text
 
 
-def _truncate_evidence(text: str, max_words: int = 30):
+def _truncate_evidence(text: str, max_words: int = 80):
     words = text.split()
     if len(words) <= max_words:
         return text
