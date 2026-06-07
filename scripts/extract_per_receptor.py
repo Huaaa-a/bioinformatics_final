@@ -17,13 +17,13 @@ import openpyxl
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_INPUT = REPO_ROOT / "data" / "pubmed_test_set.json"
-DEFAULT_OUTPUT = REPO_ROOT / "data" / "pubmed_extracted.v4.json"
-DEFAULT_LOG = REPO_ROOT / "data" / "extract_v4.log"
+DEFAULT_OUTPUT = REPO_ROOT / "data" / "pubmed_extracted.v5.json"
+DEFAULT_LOG = REPO_ROOT / "data" / "extract_v5.log"
 DEFAULT_XLSX = REPO_ROOT / "receptor_list_classic_neurotransmitter_gpcr.xlsx"
 
-QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
-DEFAULT_MODEL = "qwen-plus"
-PROMPT_VERSION = "v4_per_receptor"
+OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
+DEFAULT_MODEL = "anthropic/claude-opus-4"
+PROMPT_VERSION = "v5_per_receptor_with_discard"
 
 logging.basicConfig(
     level=logging.INFO,
@@ -132,7 +132,12 @@ Strict rules:
 - tested_compound: drug/synthetic compound actually tested that acts on {target_receptor_gene}; null if none.
 - source ∈ {{"review", "original_research"}}.
 - literature = {{"pmid", "doi", "title", "year", "journal"}}.
-- evidence: SHORTEST sentence mentioning {target_receptor_gene} or its aliases; verbatim, ≤ 30 words.
+- evidence: the SHORTEST sentence(s) in the abstract that directly support the
+  receptor+ligand+function claim. Verbatim quote, MUST NOT exceed 80 words total.
+  Prefer a single complete sentence; if one sentence loses necessary context
+  (e.g. missing ligand OR missing function), you may concatenate 2-3 adjacent
+  sentences with a single space. NEVER output the full abstract or any
+  multi-paragraph block.
 - reasoning (≤ 80 words): explain (a) how you determined ligand vs tested_compound, (b) confidence rationale.
 - confidence:
   * "high": receptor, ligand/tested_compound, and at least one of location/cell_type/pathway/function are clear.
@@ -206,6 +211,42 @@ def _truncate_evidence(text: str, max_words: int = 30):
     return truncated
 
 
+def _compute_discard(confidence: str, receptor_gene: str, abstract: str, num_function_fields: int):
+    """客观 discard 判定（只对 LOW 置信度生效）"""
+    if confidence != "low":
+        return False, []
+
+    reasons = []
+    # 1. 位置分析：受体是否只在背景部分出现
+    abstract_clean = _strip_html(abstract).lower()
+    abstract_norm = re.sub(r"-", "", abstract_clean)
+    abstract_len = len(abstract_norm)
+    background_cutoff = int(abstract_len * 0.3) if abstract_len > 0 else 0
+
+    # 查找受体在摘要中的位置
+    positions = []
+    gene_lower = receptor_gene.lower()
+    gene_norm = re.sub(r"-", "", gene_lower)
+    for m in re.finditer(r"\b" + re.escape(gene_norm) + r"\b", abstract_norm):
+        positions.append(m.start())
+
+    in_background = any(p < background_cutoff for p in positions)
+    in_result = any(p >= background_cutoff for p in positions)
+
+    if in_background and not in_result:
+        reasons.append("只在背景部分出现")
+
+    # 2. 词频分析
+    if len(positions) <= 2:
+        reasons.append(f"只出现 {len(positions)} 次")
+
+    # 3. 字段完整性
+    if num_function_fields == 0:
+        reasons.append("没有位置/细胞/通路/功能信息")
+
+    return bool(reasons), reasons
+
+
 def normalize_entry(
     parsed: dict,
     source_pmid: str,
@@ -213,6 +254,7 @@ def normalize_entry(
     target_gene: str,
     family_map: dict,
     valid_genes: set,
+    abstract: str = "",
 ):
     pmid = _normalize_str(parsed.get("pmid")) or source_pmid
 
@@ -298,6 +340,13 @@ def normalize_entry(
         order = {"high": "medium", "medium": "low"}
         confidence = order.get(confidence, confidence)
 
+    # 客观 discard 判定（只对 LOW 置信度）
+    num_function_fields = sum(1 for v in (location, cell_type, downstream_pathway, function) if v)
+    discard, discard_reasons = _compute_discard(confidence, receptor_gene, abstract, num_function_fields)
+
+    # 优化后的 needs_human_review：discard 的不需要审核
+    needs_human_review = (confidence == "low" or mismatch or ligand_mismatch) and not discard
+
     return {
         "pmid": pmid,
         "source": source,
@@ -317,11 +366,13 @@ def normalize_entry(
         "tested_compound": tested_compound,
         "ligand_mismatch": ligand_mismatch,
         "ligand_mismatch_reason": ligand_mismatch_reason,
-        "needs_human_review": confidence == "low" or mismatch or ligand_mismatch,
+        "needs_human_review": needs_human_review,
+        "discard": discard,
+        "discard_reasons": discard_reasons,
         "receptor_gene_query": query_gene,
         "receptor_gene_mismatch": mismatch,
         "extraction_meta": {
-            "model": "qwen-plus",
+            "model": DEFAULT_MODEL,
             "prompt_version": PROMPT_VERSION,
             "extracted_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         },
@@ -396,11 +447,18 @@ def main():
         pubmed_records = pubmed_records[: args.limit]
 
     load_dotenv(REPO_ROOT / "scripts" / ".env")
-    api_key = os.getenv("QWEN_API_KEY", "").strip()
+    api_key = os.getenv("OPENROUTER_API_KEY", "").strip()
     if not api_key:
-        log.error("Missing QWEN_API_KEY; configure in scripts/.env")
+        log.error("Missing OPENROUTER_API_KEY; configure in scripts/.env")
         sys.exit(1)
-    client = OpenAI(api_key=api_key, base_url=QWEN_BASE_URL)
+    client = OpenAI(
+        api_key=api_key,
+        base_url=OPENROUTER_BASE_URL,
+        default_headers={
+            "HTTP-Referer": "https://github.com/bioinfo-extract",
+            "X-Title": "BioInfo Extract",
+        },
+    )
 
     extracted = []
     for idx, record in enumerate(pubmed_records):
@@ -446,6 +504,7 @@ def main():
                 target_gene,
                 family_map,
                 valid_genes,
+                abstract=abstract,
             )
             extracted.append(normalized)
             log.info("  Success: confidence=%s", normalized["confidence"])
